@@ -136,17 +136,6 @@ class _SearchPageState extends State<SearchPage> {
                 fontSize: 18),
             cursorColor: Colors.black87,
             decoration: InputDecoration(
-                suffixIcon: IconButton(
-                  onPressed: () {
-                    _controller.clear();
-                    setState(() {});
-                  },
-                  icon: const Icon(
-                    Icons.clear,
-                    size: 20,
-                    color: Colors.black54,
-                  ),
-                ),
                 prefixIcon: IconButton(
                   onPressed: () {
                     Navigator.pop(context);
