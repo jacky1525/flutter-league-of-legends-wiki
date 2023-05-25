@@ -6,6 +6,7 @@ import 'package:flutter_json/pages/champion_list_page.dart';
 import 'package:flutter_json/pages/items_page.dart';
 import 'package:flutter_json/pages/runes_page.dart';
 import 'package:flutter_json/pages/summoner_spells_page.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class HomePage extends StatefulWidget {
@@ -50,7 +51,7 @@ class _HomePageState extends State<HomePage> {
     return CurvedNavigationBar(
       color: Colors.lime,
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      height: 60,
+      height: ScreenUtil().orientation == Orientation.portrait ? 60 : 40,
       animationDuration: const Duration(milliseconds: 500),
       onTap: (value) {
         setState(() {

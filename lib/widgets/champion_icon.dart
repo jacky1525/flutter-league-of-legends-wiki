@@ -11,7 +11,7 @@ class ChampionIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var championImage = 'http://ddragon.leagueoflegends.com/cdn/12.21.1/img/champion/${champion.image.full}';
+    var championImage = 'http://ddragon.leagueoflegends.com/cdn/13.10.1/img/champion/${champion.image.full}';
     return Align(
       alignment: Alignment.bottomRight,
       child: CircleAvatar(

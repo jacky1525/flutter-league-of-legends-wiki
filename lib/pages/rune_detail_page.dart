@@ -18,6 +18,7 @@ class _RuneDetailPageState extends State<RuneDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.transparent,
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -26,12 +27,12 @@ class _RuneDetailPageState extends State<RuneDetailPage> {
               image: AssetImage(widget.imgPath),
               fit: ScreenUtil().orientation == Orientation.portrait
                   ? BoxFit.fill
-                  : BoxFit.cover),
+                  : BoxFit.fitHeight),
         ),
         child: Padding(
           padding: ScreenUtil().orientation == Orientation.portrait
-              ? EdgeInsets.all(72.0)
-              : EdgeInsets.only(left: 250, right: 250, top: 20),
+              ? const EdgeInsets.only(left: 75,right: 75,top: 150)
+              : const EdgeInsets.only(left: 330, right: 330,top: 10),
           child: Column(
             children: [
               InkWell(

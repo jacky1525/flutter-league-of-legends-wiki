@@ -41,7 +41,7 @@ class Constants {
     return TextStyle(
         color: Colors.lime,
         fontWeight: FontWeight.bold,
-        fontSize: _calculateFontSize(23));
+        fontSize: _calculateFontSize(22));
   }
 
   static TextStyle championSearchNameStyle() {
@@ -59,7 +59,7 @@ class Constants {
   }
 
   static TextStyle championTagStyle() {
-    return TextStyle(color: Colors.lime, fontSize: _calculateFontSize(13));
+    return TextStyle(color: Colors.lime, fontSize: _calculateFontSize(12));
   }
 
   static TextStyle championSearchTagStyle() {
@@ -71,7 +71,7 @@ class Constants {
 
   static double calculateIconSize() {
     if (ScreenUtil().orientation == Orientation.portrait) {
-      return 0.1.sw;
+      return 0.08.sw;
     } else {
       return 0.1.sh;
     }

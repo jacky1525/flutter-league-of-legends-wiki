@@ -12,7 +12,7 @@ class ItemsItem extends StatelessWidget {
   Widget build(BuildContext context) {
     String textItemName = parse(item.name).body!.text;
     var itemImage =
-        'http://ddragon.leagueoflegends.com/cdn/13.1.1/img/item/${item.image.full}';
+        'http://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${item.image.full}';
     return Column(
       children: [
         InkWell(

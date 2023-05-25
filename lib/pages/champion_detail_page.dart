@@ -43,15 +43,12 @@ class _ChampionDetailPageState extends State<ChampionDetailPage> {
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 0),
-                    child: Text(
-                      widget.championInfo.name.toUpperCase(),
-                      style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
-                    ),
+                  Text(
+                    widget.championInfo.name.toUpperCase(),
+                    style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
                   ),
                   const SizedBox(
                     width: 15,

@@ -32,9 +32,9 @@ class RuneItem extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              width: 350,
+              width: ScreenUtil().orientation == Orientation.portrait ? 350 : 200,
               height:
-                  ScreenUtil().orientation == Orientation.portrait ? 450 : 220,
+                  ScreenUtil().orientation == Orientation.portrait ? 450 : 200,
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.lime, width: 2),
                 image: DecorationImage(
@@ -48,7 +48,7 @@ class RuneItem extends StatelessWidget {
               ),
               height:
                   ScreenUtil().orientation == Orientation.portrait ? 60 : 30,
-              width: 350,
+              width: ScreenUtil().orientation == Orientation.portrait ? 350 : 200,
               child: Center(
                 child: Text(
                   rune.name,

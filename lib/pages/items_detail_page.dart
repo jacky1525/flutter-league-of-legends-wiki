@@ -13,7 +13,7 @@ class ItemDetailPage extends StatelessWidget {
     String textItemInfo = parse(item.description).body!.text;
 
     var itemImage =
-        'http://ddragon.leagueoflegends.com/cdn/13.1.1/img/item/${item.image.full}';
+        'http://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${item.image.full}';
     String textItemName = parse(item.name).body!.text;
 
     return Scaffold(

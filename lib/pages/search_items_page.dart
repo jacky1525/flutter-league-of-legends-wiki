@@ -151,7 +151,7 @@ class _SearchItemPageState extends State<SearchItemPage> {
 
   Padding _displayItem(index) {
     var itemImage =
-        'http://ddragon.leagueoflegends.com/cdn/13.1.1/img/item/${_itemsDisplayList[index].image.full}';
+        'http://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${_itemsDisplayList[index].image.full}';
 
     return Padding(
       padding: const EdgeInsets.all(12.0),

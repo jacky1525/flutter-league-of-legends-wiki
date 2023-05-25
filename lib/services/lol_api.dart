@@ -1,7 +1,4 @@
 // ignore_for_file: constant_identifier_names
-
-import 'dart:convert';
-
 import 'package:dio/dio.dart';
 import 'package:flutter_json/model/champion_info_model.dart';
 import 'package:flutter_json/model/champions_model.dart';
@@ -13,7 +10,7 @@ class LolApi {
   static late ChampionsModel champion;
 
   static const String _ChampionsUrl =
-      'http://ddragon.leagueoflegends.com/cdn/13.1.1/data/tr_TR/champion.json';
+      'http://ddragon.leagueoflegends.com/cdn/13.10.1/data/tr_TR/champion.json';
 
   static Future<List<ChampionsModel>> getChampionList() async {
     List<ChampionsModel> championList = [];
@@ -40,7 +37,7 @@ class LolApi {
   }
 
   static const String _summonerUrl =
-      'http://ddragon.leagueoflegends.com/cdn/13.1.1/data/tr_TR/summoner.json';
+      'http://ddragon.leagueoflegends.com/cdn/13.10.1/data/tr_TR/summoner.json';
 
   static Future<List<SummonerSpellModel>> getSummonerSpellList() async {
     List<SummonerSpellModel> summonerSpellList = [];
@@ -65,7 +62,7 @@ class LolApi {
   }
 
   static const String _runeUrl =
-      'http://ddragon.leagueoflegends.com/cdn/13.1.1/data/tr_TR/runesReforged.json';
+      'http://ddragon.leagueoflegends.com/cdn/13.10.1/data/tr_TR/runesReforged.json';
 
   static Future<List<RuneModel>> getRuneList() async {
     List<RuneModel> runeList = [];
@@ -89,7 +86,7 @@ class LolApi {
   }
 
   static const String _itemUrl =
-      'http://ddragon.leagueoflegends.com/cdn/13.1.1/data/tr_TR/item.json';
+      'http://ddragon.leagueoflegends.com/cdn/13.10.1/data/tr_TR/item.json';
 
   static Future<List<ItemModel>> getItemList() async {
     List<ItemModel> itemList = [];
@@ -114,7 +111,7 @@ class LolApi {
   }
 
   static String championOutUrl =
-      'http://ddragon.leagueoflegends.com/cdn/13.1.1/data/tr_TR/champion/${champion.id}.json';
+      'http://ddragon.leagueoflegends.com/cdn/13.10.1/data/tr_TR/champion/${champion.id}.json';
 
   static Future<List<ChampionInfoModel>> getChampionInfoList() async {
     List<ChampionInfoModel> championInfoList = [];

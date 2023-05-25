@@ -15,15 +15,15 @@ class ChampionInfoSpells extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String passiveImage =
-        "http://ddragon.leagueoflegends.com/cdn/13.3.1/img/passive/${championInfo.passive.image.full}";
+        "http://ddragon.leagueoflegends.com/cdn/13.10.1/img/passive/${championInfo.passive.image.full}";
     String qImage =
-        "http://ddragon.leagueoflegends.com/cdn/13.3.1/img/spell/${championInfo.spells[0].image.full}";
+        "http://ddragon.leagueoflegends.com/cdn/13.10.1/img/spell/${championInfo.spells[0].image.full}";
     String wImage =
-        "http://ddragon.leagueoflegends.com/cdn/13.3.1/img/spell/${championInfo.spells[1].image.full}";
+        "http://ddragon.leagueoflegends.com/cdn/13.10.1/img/spell/${championInfo.spells[1].image.full}";
     String eImage =
-        "http://ddragon.leagueoflegends.com/cdn/13.3.1/img/spell/${championInfo.spells[2].image.full}";
+        "http://ddragon.leagueoflegends.com/cdn/13.10.1/img/spell/${championInfo.spells[2].image.full}";
     String rImage =
-        "http://ddragon.leagueoflegends.com/cdn/13.3.1/img/spell/${championInfo.spells[3].image.full}";
+        "http://ddragon.leagueoflegends.com/cdn/13.10.1/img/spell/${championInfo.spells[3].image.full}";
     return Column(
       children: [
         const Padding(

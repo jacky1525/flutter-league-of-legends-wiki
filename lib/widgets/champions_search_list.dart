@@ -23,7 +23,7 @@ class _ChampionSearchListState extends State<ChampionSearchList> {
     List<ChampionInfoModel> ChampionSearchList = [];
 
     String championOutUrl =
-        'http://ddragon.leagueoflegends.com/cdn/13.3.1/data/tr_TR/champion/${widget.champion!.id}.json';
+        'http://ddragon.leagueoflegends.com/cdn/13.10.1/data/tr_TR/champion/${widget.champion!.id}.json';
 
     var response = await Dio().get(championOutUrl);
 
