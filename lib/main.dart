@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_json/pages/home_page.dart';
+import 'package:flutter_json/pages/select_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyHttpOverrides extends HttpOverrides {
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'League of Legends',
         theme: ThemeData.dark().copyWith(),
-        home: const HomePage(),
+        home: const SelectPage(),
       ),
     );
   }

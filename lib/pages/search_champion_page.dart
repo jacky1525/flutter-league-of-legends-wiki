@@ -4,6 +4,7 @@ import 'package:flutter_json/constants/ui_helper.dart';
 import 'package:flutter_json/model/champions_model.dart';
 import 'package:flutter_json/services/lol_api.dart';
 import 'package:flutter_json/widgets/champions_search_list.dart';
+import 'package:flutter_json/widgets/loading_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SearchPage extends StatefulWidget {
@@ -76,8 +77,8 @@ class _SearchPageState extends State<SearchPage> {
                 child: Text('Hata 404'),
               );
             } else {
-              return const Center(
-                child: CircularProgressIndicator(),
+              return Center(
+                child: CustomLoadingWidget(),
               );
             }
           },

@@ -619,6 +619,7 @@ class ChampionInfoSpells extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(height: 30,)
             ],
           ),
         ),

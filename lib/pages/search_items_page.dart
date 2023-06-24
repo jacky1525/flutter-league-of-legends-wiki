@@ -3,6 +3,7 @@ import 'package:flutter_json/constants/ui_helper.dart';
 import 'package:flutter_json/model/item_model.dart';
 import 'package:flutter_json/pages/items_detail_page.dart';
 import 'package:flutter_json/services/lol_api.dart';
+import 'package:flutter_json/widgets/loading_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:html/parser.dart';
 
@@ -68,8 +69,8 @@ class _SearchItemPageState extends State<SearchItemPage> {
               child: Text("Hata : 404"),
             );
           } else {
-            return const Center(
-              child: CircularProgressIndicator(),
+            return Center(
+              child: CustomLoadingWidget(),
             );
           }
         },

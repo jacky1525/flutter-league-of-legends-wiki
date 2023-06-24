@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_json/model/item_model.dart';
 import 'package:flutter_json/services/lol_api.dart';
 import 'package:flutter_json/widgets/items_item.dart';
+import 'package:flutter_json/widgets/loading_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ItemList extends StatefulWidget {
@@ -40,8 +41,8 @@ class _ItemListState extends State<ItemList> {
             child: Text('Hata 404'),
           );
         } else {
-          return const Center(
-            child: CircularProgressIndicator(),
+          return Center(
+            child: CustomLoadingWidget(),
           );
         }
       },

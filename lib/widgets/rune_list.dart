@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_json/model/rune_model.dart';
 import 'package:flutter_json/services/lol_api.dart';
+import 'package:flutter_json/widgets/loading_widget.dart';
 import 'package:flutter_json/widgets/rune_item.dart';
 
 class RuneList extends StatefulWidget {
@@ -60,8 +61,8 @@ class _RuneListState extends State<RuneList> {
             child: Text('Hata 404'),
           );
         } else {
-          return const Center(
-            child: CircularProgressIndicator(),
+          return  Center(
+            child: CustomLoadingWidget(),
           );
         }
       },

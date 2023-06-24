@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_json/model/champion_info_model.dart';
 import 'package:flutter_json/model/champions_model.dart';
 import 'package:flutter_json/pages/champion_skins_page.dart';
+import 'package:flutter_json/widgets/loading_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../pages/champion_detail_page.dart';
@@ -79,8 +80,8 @@ class _ChampionSearchListState extends State<ChampionSearchList> {
             child: Text('Hata 404'),
           );
         } else {
-          return const Center(
-            child: CircularProgressIndicator(),
+          return Center(
+            child: CustomLoadingWidget(),
           );
         }
       },
