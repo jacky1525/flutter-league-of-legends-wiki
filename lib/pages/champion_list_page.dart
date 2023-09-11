@@ -2,14 +2,20 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:flutter_json/widgets/app_title_champion.dart';
 import 'package:flutter_json/widgets/champion_list.dart';
 
+import '../cubit/main/cubit_cubit.dart';
+
 class ChampionsPage extends StatefulWidget {
+  final CubitCubit cubit;
   const ChampionsPage({
     Key? key,
     required this.scroll_visibility,
     required this.scrollController,
+    required this.cubit,
   }) : super(key: key);
 
   final bool scroll_visibility;
@@ -34,30 +40,28 @@ class _ChampionsPageState extends State<ChampionsPage> {
       if (scrollController.offset > showOffset &&
           scrollController.position.userScrollDirection ==
               ScrollDirection.forward) {
-        showButton = true;
-        setState(() {});
+        widget.cubit.showButton(true);
+        showButton = widget.cubit.state.showButton;
       } else if (scrollController.position.userScrollDirection ==
           ScrollDirection.reverse) {
-        showButton = false;
-        setState(() {});
+        widget.cubit.showButton(false);
+        showButton = widget.cubit.state.showButton;
       } else {
-        showButton = false;
-        setState(() {});
+        widget.cubit.showButton(false);
+        showButton = widget.cubit.state.showButton;
+      }
+
+      if (scrollController.position.userScrollDirection ==
+          ScrollDirection.forward) {
+        widget.cubit.showScrol(true);
+
+        scroll_visibility = widget.cubit.state.scrollVisibility;
+      } else if (scrollController.position.userScrollDirection ==
+          ScrollDirection.reverse) {
+        widget.cubit.showScrol(false);
+        scroll_visibility = widget.cubit.state.scrollVisibility;
       }
     });
-
-    scrollController.addListener(
-      () {
-        if (scrollController.position.userScrollDirection ==
-            ScrollDirection.forward) {
-          scroll_visibility = true;
-        } else if (scrollController.position.userScrollDirection ==
-            ScrollDirection.reverse) {
-          scroll_visibility = false;
-        }
-        setState(() {});
-      },
-    );
   }
 
   @override
@@ -66,9 +70,14 @@ class _ChampionsPageState extends State<ChampionsPage> {
       body: OrientationBuilder(
         builder: (context, orientation) => Column(
           children: [
-            Visibility(
-              visible: scroll_visibility,
-              child: const AppTitleChampion(),
+            BlocBuilder<CubitCubit, CubitState>(
+              bloc: widget.cubit,
+              builder: (context, state) {
+                return Visibility(
+                  visible: scroll_visibility,
+                  child: AppTitleChampion(cubit: widget.cubit),
+                );
+              },
             ),
             Expanded(child: ChampionList(controller: scrollController)),
           ],
@@ -78,25 +87,30 @@ class _ChampionsPageState extends State<ChampionsPage> {
     );
   }
 
-  AnimatedOpacity _goTopButton() {
-    return AnimatedOpacity(
-      duration: const Duration(milliseconds: 1000),
-      opacity: showButton ? 1.0 : 0.0,
-      child: FloatingActionButton(
-        backgroundColor: Colors.transparent,
-        child: const Icon(
-          Icons.arrow_upward_rounded,
-          color: Colors.lime,
-          size: 40,
-        ),
-        onPressed: () {
-          scrollController.animateTo(
-            0,
-            duration: const Duration(milliseconds: 500),
-            curve: Curves.fastOutSlowIn,
-          );
-        },
-      ),
+  Widget _goTopButton() {
+    return BlocBuilder<CubitCubit, CubitState>(
+      bloc: widget.cubit,
+      builder: (context, state) {
+        return AnimatedOpacity(
+          duration: const Duration(milliseconds: 1000),
+          opacity: showButton ? 1.0 : 0.0,
+          child: FloatingActionButton(
+            backgroundColor: Colors.transparent,
+            child: const Icon(
+              Icons.arrow_upward_rounded,
+              color: Colors.lime,
+              size: 40,
+            ),
+            onPressed: () {
+              scrollController.animateTo(
+                0,
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.fastOutSlowIn,
+              );
+            },
+          ),
+        );
+      },
     );
   }
 }

@@ -9,7 +9,7 @@ class SummonerSpellInfoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var spellImage =
-        'http://ddragon.leagueoflegends.com/cdn/12.21.1/img/spell/${spell.id}.png';
+        'http://ddragon.leagueoflegends.com/cdn/13.17.1/img/spell/${spell.id}.png';
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,7 +46,7 @@ class SummonerSpellInfoPage extends StatelessWidget {
                           Row(
                             children: [
                               const Text(
-                                "Sihirdar Seviyesi: ",
+                                "Summoner level: ",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 14),
                               ),
@@ -63,7 +63,7 @@ class SummonerSpellInfoPage extends StatelessWidget {
                           Row(
                             children: [
                               const Text(
-                                "Bekleme Süresi:  ",
+                                "Cooldown:  ",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 14),
                               ),

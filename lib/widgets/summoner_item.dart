@@ -9,8 +9,10 @@ class SummonerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var spellImage =
-        'http://ddragon.leagueoflegends.com/cdn/12.21.1/img/spell/${spell.id}.png';
+        'http://ddragon.leagueoflegends.com/cdn/13.17.1/img/spell/${spell.id}.png';
     return InkWell(
+      splashColor: Colors.lime,
+      highlightColor: Colors.transparent,
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(

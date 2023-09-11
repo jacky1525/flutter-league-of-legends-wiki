@@ -32,6 +32,7 @@ class ChampionSkinsPage extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.only(top: 30),
           child: PageView.builder(
+            physics: BouncingScrollPhysics(),
             reverse: false,
             itemCount: championInfo.skins.length,
             itemBuilder: (BuildContext context, int index) {
@@ -45,7 +46,9 @@ class ChampionSkinsPage extends StatelessWidget {
                       highlightColor: Colors.lime,
                       child: Text(
                         textAlign: TextAlign.center,
-                        championInfo.skins[index].name,
+                        championInfo.skins[index].name == "default"
+                            ? championInfo.name
+                            : championInfo.skins[index].name,
                         style: const TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,

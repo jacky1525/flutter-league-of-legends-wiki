@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
+
+//import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_json/model/rune_model.dart';
+
 import 'package:html/parser.dart';
 
 class RuneExtraDetailPage extends StatefulWidget {
@@ -85,6 +88,7 @@ class _RuneExtraDetailPageState extends State<RuneExtraDetailPage> {
                         "keywordstealth",
                         "flavortext",
                         "scaleap",
+                        "scalelevel",
                         "onhit",
                         "physicaldamage",
                         "scalearmor",
@@ -99,7 +103,8 @@ class _RuneExtraDetailPageState extends State<RuneExtraDetailPage> {
                         "truedamage",
                         "scalead",
                         "lol-uikit-tooltipped-keyword",
-                        "font"
+                        "font",
+                        "statgood",
                       ]),
                     style: {
                       "maintext":
@@ -116,7 +121,10 @@ class _RuneExtraDetailPageState extends State<RuneExtraDetailPage> {
                           fontSize: FontSize.large, color: Colors.redAccent),
                       "rules": Style(
                           fontSize: FontSize.large, color: Colors.deepOrange),
-                      "speed": Style(fontSize: FontSize.large, color: Colors.red),
+                      "speed":
+                          Style(fontSize: FontSize.large, color: Colors.red),
+                      "statgood":
+                          Style(fontSize: FontSize.large, color: Colors.red),
                       "status":
                           Style(fontSize: FontSize.large, color: Colors.lime),
                       "ornnbonus":
@@ -129,7 +137,10 @@ class _RuneExtraDetailPageState extends State<RuneExtraDetailPage> {
                           Style(fontSize: FontSize.large, color: Colors.red),
                       "scalead":
                           Style(fontSize: FontSize.large, color: Colors.red),
-                      "onhit": Style(fontSize: FontSize.large, color: Colors.red),
+                      "onhit":
+                          Style(fontSize: FontSize.large, color: Colors.red),
+                      "scalelevel":
+                          Style(fontSize: FontSize.large, color: Colors.red),
                       "physicaldamage":
                           Style(fontSize: FontSize.large, color: Colors.blue),
                       "scalemr":
@@ -163,116 +174,124 @@ class _RuneExtraDetailPageState extends State<RuneExtraDetailPage> {
                     },
                     customRender: {
                       "maintext": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
+                      },
+                      "statgood": (context, parsedChild) {
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
+                      },
+                      "scalelevel": (context, parsedChild) {
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "stats": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "attention": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "lol-uikit-tooltipped-keyword": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "passive": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "raritymythic": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "raritylegendary": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "rules": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "speed": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "status": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "ornnbonus": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "keywordstealth": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "flavortext": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "scaleap": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "font": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "scalead": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "onhit": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "physicaldamage": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "scalearmor": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "scalemr": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "scalemana": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "raritygeneric": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "magicdamage": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "active": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "scalehealth": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "keywordmajor": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "shield": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                       "truedamage": (context, parsedChild) {
-                        Text(widget
-                            .rune.slots[widget.num].runes[widget.index].longDesc);
+                        Text(widget.rune.slots[widget.num].runes[widget.index]
+                            .longDesc);
                       },
                     },
                   ),

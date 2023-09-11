@@ -1,25 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_json/cubit/item/item_cubit.dart';
 import 'package:flutter_json/model/item_model.dart';
 import 'package:flutter_json/pages/items_detail_page.dart';
 import 'package:html/parser.dart';
-import 'package:flutter_html/flutter_html.dart';
+//import 'package:flutter_html/flutter_html.dart';
 
 class ItemsItem extends StatelessWidget {
   final ItemModel item;
-  const ItemsItem({super.key, required this.item});
+  final ItemCubit itemCubit;
+
+  ItemsItem({super.key, required this.item, required this.itemCubit});
+ 
+
 
   @override
   Widget build(BuildContext context) {
     String textItemName = parse(item.name).body!.text;
     var itemImage =
-        'http://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${item.image.full}';
+        'http://ddragon.leagueoflegends.com/cdn/13.17.1/img/item/${item.image.full}';
     return Column(
       children: [
         InkWell(
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => ItemDetailPage(item: item),
+                builder: (context) => ItemDetailPage(
+                  item: item,
+                  itemCubit: itemCubit,
+                ),
               ),
             );
           },

@@ -8,8 +8,16 @@ class UIHelper {
     return ScreenUtil().orientation == Orientation.portrait ? 0.15.sh : 0.15.sw;
   }
 
+  static double summonerSearchBarWH(double value) {
+    return ScreenUtil().orientation == Orientation.portrait ? value.sh : 0.15.sw;
+  }
+
+  static double appTftChampionTitleWH() {
+    return ScreenUtil().orientation == Orientation.portrait ? 0.1.sh : 0.1.sw;
+  }
+
   static double appTitleRuneWH() {
-    return ScreenUtil().orientation == Orientation.portrait ? 0.10.sh : 0.10.sw;
+    return ScreenUtil().orientation == Orientation.portrait ? 0.12.sh : 0.10.sw;
   }
 
   static double iconWH() {
@@ -33,11 +41,11 @@ class UIHelper {
     }
   }
 
-  static EdgeInsets getDefaultPadding() {
+  static EdgeInsets getDefaultPadding({double hValue = 10, double wValue = 8}) {
     if (ScreenUtil().orientation == Orientation.portrait) {
-      return EdgeInsets.all(10.h);
+      return EdgeInsets.all(hValue.h);
     } else {
-      return EdgeInsets.all(8.w);
+      return EdgeInsets.all(wValue.w);
     }
   }
 }

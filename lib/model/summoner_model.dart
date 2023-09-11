@@ -43,13 +43,13 @@ class SummonerSpellModel {
   final String description;
   final String tooltip;
   final int maxrank;
-  final List<int> cooldown;
+  final List<dynamic> cooldown;
   final String cooldownBurn;
   final List<int> cost;
   final String costBurn;
   final Datavalues datavalues;
-  final List<List<dynamic>> effect;
-  final List<String> effectBurn;
+  final List<List<dynamic>>? effect;
+  final List<String>? effectBurn;
   final List<dynamic> vars;
   final String key;
   final int summonerLevel;
@@ -68,15 +68,21 @@ class SummonerSpellModel {
         description: json["description"],
         tooltip: json["tooltip"],
         maxrank: json["maxrank"],
-        cooldown: List<int>.from(json["cooldown"].map((x) => x)),
+        cooldown: List<dynamic>.from(json["cooldown"].map((x) => x)),
         cooldownBurn: json["cooldownBurn"],
         cost: List<int>.from(json["cost"].map((x) => x)),
         costBurn: json["costBurn"],
         datavalues: Datavalues.fromMap(json["datavalues"]),
-        effect: List<List<dynamic>>.from(json["effect"]
-            .map((x) => x == null ? null : List<dynamic>.from(x.map((x) => x)))),
-        effectBurn: List<String>.from(
-            json["effectBurn"].map((x) => x == null ? null : x)),
+        effect: json["effect"] != null
+            ? (json["effect"] as List<dynamic>?)
+                ?.map<List<dynamic>>(
+                    (x) => x != null ? (x as List<dynamic>?) ?? [] : [])
+                .toList()
+            : null,
+        effectBurn: json["effectBurn"] != null
+            ? List<String>.from(
+                json["effectBurn"].map((x) => x != null ? x.toString() : ''))
+            : null,
         vars: List<dynamic>.from(json["vars"].map((x) => x)),
         key: json["key"],
         summonerLevel: json["summonerLevel"],
@@ -100,10 +106,10 @@ class SummonerSpellModel {
         "cost": List<dynamic>.from(cost.map((x) => x)),
         "costBurn": costBurn,
         "datavalues": datavalues.toMap(),
-        "effect": List<dynamic>.from(effect.map(
+        "effect": List<dynamic>.from(effect!.map(
             (x) => x == null ? null : List<dynamic>.from(x.map((x) => x)))),
         "effectBurn":
-            List<dynamic>.from(effectBurn.map((x) => x == null ? null : x)),
+            List<dynamic>.from(effectBurn!.map((x) => x == null ? null : x)),
         "vars": List<dynamic>.from(vars.map((x) => x)),
         "key": key,
         "summonerLevel": summonerLevel,

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_json/pages/videos/champion_skills_videos_page_p.dart';
-import 'package:flutter_json/pages/videos/champion_skills_videos_page_q.dart';
-import 'package:flutter_json/pages/videos/champion_skills_videos_page_w.dart';
+
+import 'package:flutter_json/videos/champion_skills_videos_page_p.dart';
+import 'package:flutter_json/videos/champion_skills_videos_page_q.dart';
+import 'package:flutter_json/videos/champion_skills_videos_page_w.dart';
 
 import '../model/champion_info_model.dart';
-import '../pages/videos/champion_skills_videos_page_e.dart';
-import '../pages/videos/champion_skills_videos_page_r.dart';
+import '../videos/champion_skills_videos_page_e.dart';
+import '../videos/champion_skills_videos_page_r.dart';
 
 class ChampionInfoSpells extends StatelessWidget {
   final ChampionInfoModel championInfo;
@@ -15,15 +16,15 @@ class ChampionInfoSpells extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String passiveImage =
-        "http://ddragon.leagueoflegends.com/cdn/13.10.1/img/passive/${championInfo.passive.image.full}";
+        "http://ddragon.leagueoflegends.com/cdn/13.17.1/img/passive/${championInfo.passive.image.full}";
     String qImage =
-        "http://ddragon.leagueoflegends.com/cdn/13.10.1/img/spell/${championInfo.spells[0].image.full}";
+        "http://ddragon.leagueoflegends.com/cdn/13.17.1/img/spell/${championInfo.spells[0].image.full}";
     String wImage =
-        "http://ddragon.leagueoflegends.com/cdn/13.10.1/img/spell/${championInfo.spells[1].image.full}";
+        "http://ddragon.leagueoflegends.com/cdn/13.17.1/img/spell/${championInfo.spells[1].image.full}";
     String eImage =
-        "http://ddragon.leagueoflegends.com/cdn/13.10.1/img/spell/${championInfo.spells[2].image.full}";
+        "http://ddragon.leagueoflegends.com/cdn/13.17.1/img/spell/${championInfo.spells[2].image.full}";
     String rImage =
-        "http://ddragon.leagueoflegends.com/cdn/13.10.1/img/spell/${championInfo.spells[3].image.full}";
+        "http://ddragon.leagueoflegends.com/cdn/13.17.1/img/spell/${championInfo.spells[3].image.full}";
     return Column(
       children: [
         const Padding(
@@ -31,8 +32,8 @@ class ChampionInfoSpells extends StatelessWidget {
           child: Align(
             alignment: Alignment.centerLeft,
             child: Text(
-              "Yetenekler",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              "Spells",
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
           ),
         ),
@@ -42,7 +43,7 @@ class ChampionInfoSpells extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                "Pasif",
+                "Passive",
                 style: TextStyle(fontSize: 15),
               ),
               const SizedBox(
@@ -142,62 +143,60 @@ class ChampionInfoSpells extends StatelessWidget {
                         ]),
                       style: {
                         "body": Style(
-                          fontSize: const FontSize(16),
+                          fontSize: FontSize(16),
                         ),
-                        "maintext": Style(
-                            fontSize: const FontSize(16), color: Colors.white),
-                        "stats": Style(
-                            fontSize: const FontSize(16), color: Colors.white),
-                        "attention": Style(
-                            fontSize: const FontSize(16), color: Colors.lime),
-                        "passive": Style(
-                            fontSize: const FontSize(16), color: Colors.lime),
-                        "raritymythic": Style(
-                            fontSize: const FontSize(16), color: Colors.orange),
+                        "maintext":
+                            Style(fontSize: FontSize(16), color: Colors.white),
+                        "stats":
+                            Style(fontSize: FontSize(16), color: Colors.white),
+                        "attention":
+                            Style(fontSize: FontSize(16), color: Colors.lime),
+                        "passive":
+                            Style(fontSize: FontSize(16), color: Colors.lime),
+                        "raritymythic":
+                            Style(fontSize: FontSize(16), color: Colors.orange),
                         "raritylegendary": Style(
-                            fontSize: const FontSize(16),
-                            color: Colors.redAccent),
+                            fontSize: FontSize(16), color: Colors.redAccent),
                         "rules": Style(
-                            fontSize: const FontSize(16),
-                            color: Colors.deepOrange),
-                        "speed": Style(
-                            fontSize: const FontSize(16), color: Colors.red),
-                        "status": Style(
-                            fontSize: const FontSize(16), color: Colors.lime),
-                        "ornnbonus": Style(
-                            fontSize: const FontSize(16), color: Colors.lime),
-                        "keywordstealth": Style(
-                            fontSize: const FontSize(16), color: Colors.red),
-                        "flavortext": Style(
-                            fontSize: const FontSize(16), color: Colors.pink),
-                        "scaleap": Style(
-                            fontSize: const FontSize(16), color: Colors.red),
-                        "onhit": Style(
-                            fontSize: const FontSize(16), color: Colors.red),
-                        "physicaldamage": Style(
-                            fontSize: const FontSize(16), color: Colors.blue),
-                        "scalemr": Style(
-                            fontSize: const FontSize(16), color: Colors.red),
-                        "scalearmor": Style(
-                            fontSize: const FontSize(16), color: Colors.red),
-                        "scalemana": Style(
-                            fontSize: const FontSize(16), color: Colors.blue),
-                        "raritygeneric": Style(
-                            fontSize: const FontSize(16), color: Colors.blue),
-                        "magicdamage": Style(
-                            fontSize: const FontSize(16), color: Colors.red),
-                        "active": Style(
-                            fontSize: const FontSize(16), color: Colors.lime),
-                        "scalehealth": Style(
-                            fontSize: const FontSize(16), color: Colors.red),
-                        "keywordmajor": Style(
-                            fontSize: const FontSize(16), color: Colors.red),
-                        "shield": Style(
-                            fontSize: const FontSize(16), color: Colors.red),
-                        "truedamage": Style(
-                            fontSize: const FontSize(16), color: Colors.red),
-                        "healing": Style(
-                            fontSize: const FontSize(16), color: Colors.red),
+                            fontSize: FontSize(16), color: Colors.deepOrange),
+                        "speed":
+                            Style(fontSize: FontSize(16), color: Colors.red),
+                        "status":
+                            Style(fontSize: FontSize(16), color: Colors.lime),
+                        "ornnbonus":
+                            Style(fontSize: FontSize(16), color: Colors.lime),
+                        "keywordstealth":
+                            Style(fontSize: FontSize(16), color: Colors.red),
+                        "flavortext":
+                            Style(fontSize: FontSize(16), color: Colors.pink),
+                        "scaleap":
+                            Style(fontSize: FontSize(16), color: Colors.red),
+                        "onhit":
+                            Style(fontSize: FontSize(16), color: Colors.red),
+                        "physicaldamage":
+                            Style(fontSize: FontSize(16), color: Colors.blue),
+                        "scalemr":
+                            Style(fontSize: FontSize(16), color: Colors.red),
+                        "scalearmor":
+                            Style(fontSize: FontSize(16), color: Colors.red),
+                        "scalemana":
+                            Style(fontSize: FontSize(16), color: Colors.blue),
+                        "raritygeneric":
+                            Style(fontSize: FontSize(16), color: Colors.blue),
+                        "magicdamage":
+                            Style(fontSize: FontSize(16), color: Colors.red),
+                        "active":
+                            Style(fontSize: FontSize(16), color: Colors.lime),
+                        "scalehealth":
+                            Style(fontSize: FontSize(16), color: Colors.red),
+                        "keywordmajor":
+                            Style(fontSize: FontSize(16), color: Colors.red),
+                        "shield":
+                            Style(fontSize: FontSize(16), color: Colors.red),
+                        "truedamage":
+                            Style(fontSize: FontSize(16), color: Colors.red),
+                        "healing":
+                            Style(fontSize: FontSize(16), color: Colors.red),
                         "li": Style(
                           backgroundColor: Colors.transparent,
                           padding: EdgeInsets.all(10),
@@ -366,7 +365,7 @@ class ChampionInfoSpells extends StatelessWidget {
                       data: championInfo.spells[0].description,
                       style: {
                         "body": Style(
-                          fontSize: const FontSize(16),
+                          fontSize: FontSize(16),
                         ),
                       },
                     ),
@@ -450,7 +449,7 @@ class ChampionInfoSpells extends StatelessWidget {
                   Expanded(
                     child: Html(
                       data: championInfo.spells[1].description,
-                      style: {"body": Style(fontSize: const FontSize(16))},
+                      style: {"body": Style(fontSize: FontSize(16))},
                     ),
                   ),
                 ],
@@ -532,7 +531,7 @@ class ChampionInfoSpells extends StatelessWidget {
                   Expanded(
                     child: Html(
                       data: championInfo.spells[2].description,
-                      style: {"body": Style(fontSize: const FontSize(16))},
+                      style: {"body": Style(fontSize: FontSize(16))},
                     ),
                   ),
                 ],
@@ -614,12 +613,14 @@ class ChampionInfoSpells extends StatelessWidget {
                   Expanded(
                     child: Html(
                       data: championInfo.spells[3].description,
-                      style: {"body": Style(fontSize: const FontSize(16))},
+                      style: {"body": Style(fontSize: FontSize(16))},
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 30,)
+              SizedBox(
+                height: 30,
+              )
             ],
           ),
         ),

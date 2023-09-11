@@ -2,12 +2,14 @@
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_json/model/champion_info_model.dart';
 import 'package:flutter_json/model/champions_model.dart';
 import 'package:flutter_json/pages/champion_skins_page.dart';
 import 'package:flutter_json/widgets/loading_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../cubit/main/cubit_cubit.dart';
 import '../pages/champion_detail_page.dart';
 
 class ChampionSearchList extends StatefulWidget {
@@ -20,11 +22,11 @@ class ChampionSearchList extends StatefulWidget {
 }
 
 class _ChampionSearchListState extends State<ChampionSearchList> {
+  late CubitCubit cubit;
   Future<List<ChampionInfoModel>> getChampionSearchList() async {
     List<ChampionInfoModel> ChampionSearchList = [];
-
     String championOutUrl =
-        'http://ddragon.leagueoflegends.com/cdn/13.10.1/data/tr_TR/champion/${widget.champion!.id}.json';
+        'http://ddragon.leagueoflegends.com/cdn/13.17.1/data/en_US/champion/${widget.champion!.id}.json';
 
     var response = await Dio().get(championOutUrl);
 
@@ -51,6 +53,7 @@ class _ChampionSearchListState extends State<ChampionSearchList> {
   @override
   void initState() {
     super.initState();
+    cubit = BlocProvider.of<CubitCubit>(context);
     _ChampionSearchListFuture = getChampionSearchList();
   }
 
@@ -63,15 +66,19 @@ class _ChampionSearchListState extends State<ChampionSearchList> {
           List<ChampionInfoModel> myInfoList = snapshot.data!;
 
           return GridView.builder(
+            padding: EdgeInsets.zero,
+            physics: NeverScrollableScrollPhysics(),
             itemCount: myInfoList.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               childAspectRatio: 0.625,
               crossAxisCount:
                   ScreenUtil().orientation == Orientation.portrait ? 1 : 1,
-              mainAxisExtent:
-                  ScreenUtil().orientation == Orientation.portrait ? 650 : 385,
+              mainAxisExtent: ScreenUtil().orientation == Orientation.portrait
+                  ? 1000
+                  : 1000,
             ),
             itemBuilder: (context, index) => ChampionDetailPage(
+              cubit: cubit,
               championInfo: myInfoList[index],
             ),
           );

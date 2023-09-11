@@ -1,27 +1,79 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_json/model/item_model.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_json/constants/constants.dart';
+import 'package:flutter_json/cubit/item/item_cubit.dart';
+
+import 'package:flutter_json/model/item_model.dart';
+
+//import 'package:flutter_html/flutter_html.dart';
 import 'package:html/parser.dart';
 
 class ItemDetailPage extends StatelessWidget {
+  final ItemCubit itemCubit;
+
   final ItemModel item;
 
-  const ItemDetailPage({super.key, required this.item});
+  ItemDetailPage({super.key, required this.item, required this.itemCubit});
+
+  List into = [];
+  List from = [];
+
+  List<ItemModel> intoList = [];
+  List<ItemModel> fromList = [];
+
+  void fromItem() {
+/*     from = item.into.join(", ");
+ */
+
+    into.addAll(item.into);
+    from.addAll(item.from);
+    print(item.name);
+    print("Tags : ${item.tags}");
+    print("From : ${item.from}");
+    print("Into : ${item.into}");
+    String id = item.image.full.split(".")[0];
+    print(id);
+    if (into.isNotEmpty) {
+      for (int i = 0; i < into.length; i++) {
+        ItemModel intoItem = itemCubit.state.initialItemList.firstWhere(
+          (item) => item.image.full.split(".")[0] == into[i],
+        );
+        intoList.add(intoItem);
+      }
+    }
+
+    if (from.isNotEmpty) {
+      for (int i = 0; i < from.length; i++) {
+        ItemModel fromItem = itemCubit.state.initialItemList.firstWhere(
+          (item) => item.image.full.split(".")[0] == from[i],
+        );
+        fromList.add(fromItem);
+      }
+    }
+
+    /* 
+    itemCubit.state.itemList.where((item) => item.from.ad)
+
+    itemCubit.state.itemList.where((item) => item.from.); */
+  }
 
   @override
   Widget build(BuildContext context) {
+    fromItem();
     String textItemInfo = parse(item.description).body!.text;
 
     var itemImage =
-        'http://ddragon.leagueoflegends.com/cdn/13.10.1/img/item/${item.image.full}';
+        'http://ddragon.leagueoflegends.com/cdn/13.17.1/img/item/${item.image.full}';
     String textItemName = parse(item.name).body!.text;
 
     return Scaffold(
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 40,
+              height: 50,
             ),
             Row(
               children: [
@@ -46,15 +98,15 @@ class ItemDetailPage extends StatelessWidget {
                         textItemName,
                         style: const TextStyle(
                             color: Colors.lime,
-                            fontSize: 20,
+                            fontSize: 16,
                             fontWeight: FontWeight.bold),
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 16),
                       child: Text(
-                        "Toplam : ${item.gold.total} altın (Taban : ${item.gold.base} altın)",
-                        style: const TextStyle(fontSize: 16),
+                        "Total : ${item.gold.total} gold (Base : ${item.gold.base} gold)",
+                        style: const TextStyle(fontSize: 12),
                       ),
                     ),
                   ],
@@ -89,10 +141,15 @@ class ItemDetailPage extends StatelessWidget {
                   "raritygeneric",
                   "magicdamage",
                   "active",
+                  "buffedstat",
                   "scalehealth",
                   "keywordmajor",
                   "shield",
                   "truedamage",
+                  "unique",
+                  "goldgain",
+                  "nerfedstat",
+                  "recast"
                 ]),
               style: {
                 "maintext":
@@ -101,6 +158,11 @@ class ItemDetailPage extends StatelessWidget {
                 "attention":
                     Style(fontSize: FontSize.large, color: Colors.lime),
                 "passive": Style(fontSize: FontSize.large, color: Colors.lime),
+                "nerfedstat":
+                    Style(fontSize: FontSize.large, color: Colors.lime),
+                "goldgain": Style(fontSize: FontSize.large, color: Colors.lime),
+                "buffedstat":
+                    Style(fontSize: FontSize.large, color: Colors.lime),
                 "raritymythic":
                     Style(fontSize: FontSize.large, color: Colors.orange),
                 "raritylegendary":
@@ -113,6 +175,8 @@ class ItemDetailPage extends StatelessWidget {
                     Style(fontSize: FontSize.large, color: Colors.lime),
                 "keywordstealth":
                     Style(fontSize: FontSize.large, color: Colors.red),
+                "recast": Style(fontSize: FontSize.large, color: Colors.red),
+                "unique": Style(fontSize: FontSize.large, color: Colors.red),
                 "flavortext":
                     Style(fontSize: FontSize.large, color: Colors.pink),
                 "scaleap": Style(fontSize: FontSize.large, color: Colors.red),
@@ -137,18 +201,31 @@ class ItemDetailPage extends StatelessWidget {
                 "truedamage":
                     Style(fontSize: FontSize.large, color: Colors.red),
                 "li": Style(
+                  display: Display.BLOCK,
                   backgroundColor: Colors.transparent,
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                 ),
               },
               customRender: {
                 "maintext": (context, parsedChild) {
                   Text(item.description);
                 },
+                "goldgain": (context, parsedChild) {
+                  Text(item.description);
+                },
+                "nerfedstat": (context, parsedChild) {
+                  Text(item.description);
+                },
                 "stats": (context, parsedChild) {
                   Text(item.description);
                 },
+                "recast": (context, parsedChild) {
+                  Text(item.description);
+                },
                 "attention": (context, parsedChild) {
+                  Text(item.description);
+                },
+                "buffedstat": (context, parsedChild) {
                   Text(item.description);
                 },
                 "passive": (context, parsedChild) {
@@ -158,6 +235,9 @@ class ItemDetailPage extends StatelessWidget {
                   Text(item.description);
                 },
                 "raritylegendary": (context, parsedChild) {
+                  Text(item.description);
+                },
+                "unique": (context, parsedChild) {
                   Text(item.description);
                 },
                 "rules": (context, parsedChild) {
@@ -219,6 +299,254 @@ class ItemDetailPage extends StatelessWidget {
                 },
               },
             ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Text(
+                item.plaintext,
+                style: Constants.championSearchTagStyle(),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                "Into",
+                style: TextStyle(color: Colors.lime, fontSize: 24),
+              ),
+            ),
+            intoList.isNotEmpty == true
+                ? Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListView.builder(
+                      padding: EdgeInsets.zero,
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                      itemCount: intoList.length,
+                      itemBuilder: (context, index) {
+                        var intoItemImage =
+                            'http://ddragon.leagueoflegends.com/cdn/13.17.1/img/item/${intoList[index].image.full}';
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return ItemDetailPage(
+                                      item: intoList[index],
+                                      itemCubit: itemCubit);
+                                },
+                              ),
+                            );
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Colors.lime, width: 2),
+                                    borderRadius: BorderRadius.circular(0),
+                                    image: DecorationImage(
+                                        image: NetworkImage(intoItemImage)),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 20,
+                                ),
+                                Text(
+                                  intoList[index].name,
+                                  style: const TextStyle(color: Colors.white),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  )
+                : const SizedBox(),
+            const SizedBox(
+              height: 10,
+            ),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                "From",
+                style: TextStyle(color: Colors.lime, fontSize: 24),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: fromList.isNotEmpty
+                        ? Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                height: 50,
+                                width: 50,
+                                decoration: BoxDecoration(
+                                  border:
+                                      Border.all(color: Colors.lime, width: 2),
+                                  borderRadius: BorderRadius.circular(0),
+                                  image: DecorationImage(
+                                      image: NetworkImage(itemImage)),
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 20,
+                              ),
+                              Text(
+                                item.name,
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ],
+                          )
+                        : SizedBox(),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 50),
+                    child: Container(
+                      child: ListView.builder(
+                        padding: EdgeInsets.zero,
+                        shrinkWrap: true,
+                        physics: NeverScrollableScrollPhysics(),
+                        itemCount: fromList.length,
+                        itemBuilder: (context, index) {
+                          var fromItemImage =
+                              'http://ddragon.leagueoflegends.com/cdn/13.17.1/img/item/${fromList[index].image.full}';
+                          List secondFrom = [];
+                          List<ItemModel> secondFromList = [];
+                          secondFrom.addAll(fromList[index].from);
+
+                          if (secondFrom.isNotEmpty) {
+                            for (int i = 0; i < secondFrom.length; i++) {
+                              ItemModel secondFromItem =
+                                  itemCubit.state.initialItemList.firstWhere(
+                                (item) =>
+                                    item.image.full.split(".")[0] ==
+                                    secondFrom[i],
+                              );
+                              secondFromList.add(secondFromItem);
+                            }
+                          }
+
+                          return Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (context) {
+                                          return ItemDetailPage(
+                                              item: fromList[index],
+                                              itemCubit: itemCubit);
+                                        },
+                                      ),
+                                    );
+                                  },
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        height: 50,
+                                        width: 50,
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Colors.lime, width: 2),
+                                          borderRadius:
+                                              BorderRadius.circular(0),
+                                          image: DecorationImage(
+                                              image:
+                                                  NetworkImage(fromItemImage)),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 20,
+                                      ),
+                                      Text(
+                                        fromList[index].name,
+                                        style: const TextStyle(
+                                            color: Colors.white),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(left: 50, top: 10),
+                                  child: ListView.builder(
+                                    padding: EdgeInsets.zero,
+                                    shrinkWrap: true,
+                                    physics: NeverScrollableScrollPhysics(),
+                                    itemCount: secondFromList.length,
+                                    itemBuilder: (context, secondIndex) {
+                                      var secondFromItemImage =
+                                          'http://ddragon.leagueoflegends.com/cdn/13.17.1/img/item/${secondFromList[secondIndex].image.full}';
+                                      return GestureDetector(
+                                          onTap: () {
+                                            Navigator.of(context).push(
+                                              MaterialPageRoute(
+                                                builder: (context) {
+                                                  return ItemDetailPage(
+                                                      item: secondFromList[
+                                                          secondIndex],
+                                                      itemCubit: itemCubit);
+                                                },
+                                              ),
+                                            );
+                                          },
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(4.0),
+                                            child: Row(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Container(
+                                                  height: 40,
+                                                  width: 40,
+                                                  decoration: BoxDecoration(
+                                                    border: Border.all(
+                                                        color: Colors.lime,
+                                                        width: 2),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            0),
+                                                    image: DecorationImage(
+                                                        image: NetworkImage(
+                                                            secondFromItemImage)),
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  width: 20,
+                                                ),
+                                                Text(secondFromList[secondIndex]
+                                                    .name),
+                                              ],
+                                            ),
+                                          ));
+                                    },
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),

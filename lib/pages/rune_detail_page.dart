@@ -32,7 +32,7 @@ class _RuneDetailPageState extends State<RuneDetailPage> {
         child: Padding(
           padding: ScreenUtil().orientation == Orientation.portrait
               ? const EdgeInsets.only(left: 75,right: 75,top: 150)
-              : const EdgeInsets.only(left: 330, right: 330,top: 10),
+              : const EdgeInsets.only(left: 350, right: 350,top: 10),
           child: Column(
             children: [
               InkWell(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_json/pages/home_page.dart';
-import 'package:flutter_json/pages/tft_page.dart';
+import 'package:flutter_json/tft/pages/tft_page.dart';
 import 'package:flutter_json/widgets/loading_widget.dart';
 
 class SelectPage extends StatelessWidget {

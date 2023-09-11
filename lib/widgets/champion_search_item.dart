@@ -24,6 +24,8 @@ class ChampionSearchItem extends StatelessWidget {
           style: Constants.championSearchNameStyle(),
         ),
         InkWell(
+          splashColor: Colors.lime,
+          highlightColor: Colors.transparent,
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(

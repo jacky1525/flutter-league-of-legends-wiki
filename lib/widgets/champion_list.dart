@@ -34,6 +34,8 @@ class _ChampionListState extends State<ChampionList> {
         if (snapshot.hasData) {
           List<ChampionsModel> myList = snapshot.data!;
           return GridView.builder(
+            padding: EdgeInsets.zero,
+            physics: BouncingScrollPhysics(),
             controller: widget.controller,
             itemCount: myList.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

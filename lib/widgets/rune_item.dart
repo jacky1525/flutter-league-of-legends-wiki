@@ -18,11 +18,15 @@ class RuneItem extends StatelessWidget {
     var runeImage5 = "assets/images/büyücülük.jpg";
     List images = [runeImage1, runeImage2, runeImage3, runeImage4, runeImage5];
     return InkWell(
+      splashColor: Colors.lime,
+      highlightColor: Colors.transparent,
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => RuneDetailPage(
-              imgPath: images[index], rune: rune, index: index,
+              imgPath: images[index],
+              rune: rune,
+              index: index,
             ),
           ),
         );
@@ -32,7 +36,8 @@ class RuneItem extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              width: ScreenUtil().orientation == Orientation.portrait ? 350 : 200,
+              width:
+                  ScreenUtil().orientation == Orientation.portrait ? 350 : 200,
               height:
                   ScreenUtil().orientation == Orientation.portrait ? 450 : 200,
               decoration: BoxDecoration(
@@ -48,7 +53,8 @@ class RuneItem extends StatelessWidget {
               ),
               height:
                   ScreenUtil().orientation == Orientation.portrait ? 60 : 30,
-              width: ScreenUtil().orientation == Orientation.portrait ? 350 : 200,
+              width:
+                  ScreenUtil().orientation == Orientation.portrait ? 350 : 200,
               child: Center(
                 child: Text(
                   rune.name,

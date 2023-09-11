@@ -1,0 +1,2018 @@
+{
+  "augments": [
+    {
+      "apiName": "WarmupRoutine",
+      "calculations": {},
+      "dataValues": {
+        "DamagePerStack": 0.009999999776482582,
+        "MaxStacks": 24.0
+      },
+      "desc": "<spellName>Is\u0131nma Hareketleri</spellName> sihirdar b\u00fcy\u00fcs\u00fcn\u00fc kazan\u0131rs\u0131n.<br><br><rules><spellName>Is\u0131nma Hareketleri</spellName>, yo\u011funla\u015farak turun geri kalan\u0131 boyunca hasar\u0131n\u0131 artt\u0131rman\u0131 sa\u011flar.</rules>",
+      "iconLarge": "assets/ux/cherry/augments/icons/warmuproutine_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/warmuproutine_small.2v2_mode_fighters.png",
+      "id": 93,
+      "name": "Is\u0131nma Hareketleri",
+      "rarity": 0,
+      "tooltip": "Yo\u011funla\u015farak hasar\u0131n\u0131 her saniye %2 artt\u0131r\u0131rs\u0131n. Bu oran en fazla %24 olabilir.<br><br>Bu Tur Verilen \u0130lave Hasar: @f1@<br>Toplam \u0130lave Hasar: @f2@"
+    },
+    {
+      "apiName": "Vanish",
+      "calculations": {},
+      "dataValues": {
+        "StealthDuration": 4.0
+      },
+      "desc": "<spellName>Kaybol</spellName> sihirdar b\u00fcy\u00fcs\u00fcn\u00fc kazan\u0131rs\u0131n.<br><br><rules><spellName>Kaybol</spellName>, seni <stealth>g\u00f6r\u00fcnmez</stealth> hale getirir.</rules>",
+      "iconLarge": "assets/ux/cherry/augments/icons/vanish_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/vanish_small.2v2_mode_fighters.png",
+      "id": 89,
+      "name": "Kaybol",
+      "rarity": 4,
+      "tooltip": "@StealthDuration@ saniyeli\u011fine, bir sald\u0131r\u0131 yapana veya yetenek kullanana dek <stealth>g\u00f6r\u00fcnmez</stealth> olursun.<br>Bu g\u00f6r\u00fcnmezlik etkisi Sihirli Taray\u0131c\u0131 ziyneti taraf\u0131ndan a\u00e7\u0131\u011fa \u00e7\u0131kar\u0131lamaz."
+    },
+    {
+      "apiName": "Typhoon",
+      "calculations": {
+        "Damage": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "StatByNamedDataValueCalculationPart",
+              "mDataValue": "ADRatio",
+              "mStat": 2
+            }
+          ]
+        }
+      },
+      "dataValues": {
+        "ADRatio": 0.30000001192092896
+      },
+      "desc": "Sald\u0131r\u0131lar\u0131n ilaveten bir hedefe daha at\u0131\u015f g\u00f6ndererek isabet etkilerini uygular. Bu at\u0131\u015f, sald\u0131r\u0131na k\u0131yasla daha az hasar verir.",
+      "iconLarge": "assets/ux/cherry/augments/icons/typhoon_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/typhoon_small.2v2_mode_fighters.png",
+      "id": 87,
+      "name": "Tayfun",
+      "rarity": 0,
+      "tooltip": "Sald\u0131r\u0131lar\u0131n fazladan bir hedefe %@ADRatio*100@ Hasar veren ve isabet etkilerini uygulayan bir at\u0131\u015f g\u00f6nderir."
+    },
+    {
+      "apiName": "QuantumComputing",
+      "calculations": {},
+      "dataValues": {
+        "AutoCastCooldown": 15.0
+      },
+      "desc": "Her 15 saniyede bir etraf\u0131ndaki daire bi\u00e7imindeki alana <keywordMajor>otomatik olarak</keywordMajor> sald\u0131r\u0131rs\u0131n. Dairenin d\u0131\u015f kenar\u0131ndaki rakipler ilave hasar al\u0131r.<br><br><keywordMajor>Otomatik</keywordMajor> eklentiler yetenek h\u0131z\u0131ndan etkilenir.",
+      "iconLarge": "assets/ux/cherry/augments/icons/quantumcomputing_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/quantumcomputing_small.2v2_mode_fighters.png",
+      "id": 66,
+      "name": "Kuantum Teknolojisi",
+      "rarity": 8,
+      "tooltip": "Her 15 saniyede bir etraf\u0131ndaki daire bi\u00e7imindeki alana <keywordMajor>otomatik olarak</keywordMajor> sald\u0131r\u0131rs\u0131n. Dairenin d\u0131\u015f kenar\u0131ndaki rakipler ilave hasar al\u0131r.<br><br><keywordMajor>Otomatik</keywordMajor> eklentiler yetenek h\u0131z\u0131ndan etkilenir.<br><br>Verilen Toplam Hasar: @f1@<br>Yap\u0131lan Toplam \u0130yile\u015ftirme: @f2@"
+    },
+    {
+      "apiName": "DemonsDance",
+      "calculations": {},
+      "dataValues": {
+        "FFHealAPRatio": 0.20000000298023224,
+        "FFHealBase": 10.0,
+        "FFHealBonusADRatio": 0.30000001192092896,
+        "FFHealCritMod": 0,
+        "FFHealMax": 100.0,
+        "FFMSBuff": 0.20000000298023224,
+        "FFMSBuffMelee": 0.20000000298023224,
+        "FFMSDuration": 1.0,
+        "GRMaxHealthPerProc": 7.0,
+        "GRMeleeFlatHeal": 3.0,
+        "GRPercentHealthDamage": 3.5,
+        "GRPercentHealthHeal": 0.012000000104308128,
+        "GRRangedHealthPerProc": 4.0,
+        "GRRangedPenaltyMod": 0.4000000059604645,
+        "GRTriggerTime": 4.0,
+        "GRWindow": 5.0
+      },
+      "desc": "<spellName>Aya\u011f\u0131 \u00c7abuk</spellName> ve <spellName>Hortla\u011f\u0131n Pen\u00e7esi</spellName> anahtar r\u00fcnlerini kazan\u0131rs\u0131n.<br>",
+      "iconLarge": "assets/ux/cherry/augments/icons/demonsdance_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/demonsdance_small.2v2_mode_fighters.png",
+      "id": 23,
+      "name": "\u0130blis Dans\u0131",
+      "rarity": 4,
+      "tooltip": "<spellName>Aya\u011f\u0131 \u00c7abuk</spellName> ve <spellName>Hortla\u011f\u0131n Pen\u00e7esi</spellName> anahtar r\u00fcnlerini kazan\u0131rs\u0131n.<br><br>Bu Tur Yap\u0131lan \u0130yile\u015ftirme: @f1@<br>Yap\u0131lan Toplam \u0130yile\u015ftirme: @f2@<br>Kazan\u0131lan Azami Can: @f3@"
+    },
+    {
+      "apiName": "DefensiveManeuvers",
+      "calculations": {
+        "HealAmount": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 318.0,
+              "mStartValue": 80.0
+            }
+          ]
+        },
+        "{53e567dc}": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 411.0,
+              "mStartValue": 105.0
+            }
+          ]
+        }
+      },
+      "dataValues": {},
+      "desc": "<spellName>Savunma Manevralar\u0131</spellName> sihirdar b\u00fcy\u00fcs\u00fcn\u00fc kazan\u0131rs\u0131n.<br><br><rules><spellName>Savunma Manevralar\u0131</spellName>, senin ve tak\u0131m arkada\u015f\u0131n\u0131n \u00fcst\u00fcnde hem <spellName>Bariyer</spellName> hem de <spellName>\u015eifa</spellName> sihirdar b\u00fcy\u00fclerini kullan\u0131r.</rules>",
+      "iconLarge": "assets/ux/cherry/augments/icons/defensivemaneuvers_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/defensivemaneuvers_small.2v2_mode_fighters.png",
+      "id": 21,
+      "name": "Savunma Manevralar\u0131",
+      "rarity": 4,
+      "tooltip": "Kendin ve tak\u0131m arkada\u015f\u0131n\u0131n \u00fcst\u00fcnde <abilityName>Bariyer</abilityName> ve <abilityName>\u015eifa</abilityName> sihirdar b\u00fcy\u00fclerini kullan\u0131rs\u0131n. <shield>@BarrierAmount@ Kalkan</shield> kazand\u0131r\u0131r, <healing>@HealAmount@ Can</healing> yeniler ve 1 saniyeli\u011fine <speed>%30 Hareket H\u0131z\u0131</speed> sa\u011flar.<br><br>Yap\u0131lan Toplam \u0130yile\u015ftirme: @f1@<br>Olu\u015fturulan Toplam Kalkan: @f2@"
+    },
+    {
+      "apiName": "Chauffeur",
+      "calculations": {},
+      "dataValues": {
+        "AttackSpeed": 0.5,
+        "Haste": 100.0
+      },
+      "desc": "Tak\u0131m arkada\u015f\u0131na yap\u0131\u015f\u0131rs\u0131n ve kendi ba\u015f\u0131na hareket edemezsin. Tak\u0131m arkada\u015f\u0131n senin ilave hareket h\u0131z\u0131n\u0131 elde eder. Sen de <scaleLevel>yetenek h\u0131z\u0131</scaleLevel> ve <attackSpeed>sald\u0131r\u0131 h\u0131z\u0131</attackSpeed> kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/chauffeur_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/chauffeur_small.2v2_mode_fighters.png",
+      "id": 14,
+      "name": "\u00d6zel \u015eof\u00f6r",
+      "rarity": 8,
+      "tooltip": "Tak\u0131m arkada\u015f\u0131na yap\u0131\u015f\u0131rs\u0131n. Tak\u0131m arkada\u015f\u0131n senin ilave hareket h\u0131z\u0131n\u0131 elde eder. Sen de <scaleLevel>@Haste@ Yetenek H\u0131z\u0131</scaleLevel> ve <attackSpeed>%@AttackSpeed*100@ Sald\u0131r\u0131 H\u0131z\u0131</attackSpeed> kazan\u0131rs\u0131n. <br><br>At\u0131lma veya \u0131\u015f\u0131nlanma yetene\u011fi kullanmak bu ba\u011f\u0131 1,5 saniyeli\u011fine kald\u0131r\u0131r. Ard\u0131ndan tak\u0131m arkada\u015f\u0131na yeniden yap\u0131\u015f\u0131rs\u0131n."
+    },
+    {
+      "apiName": "BladeWaltz",
+      "calculations": {
+        "Damage": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 150.0,
+              "mStartValue": 30.0
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 0.10000000149011612,
+              "mStat": 2,
+              "mStatFormula": 2
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 0.05999999865889549
+            }
+          ],
+          "{37070a8d}": 4,
+          "{cbcac618}": 4,
+          "{e6eebb2f}": 4
+        }
+      },
+      "dataValues": {
+        "TotalHits": 8.0
+      },
+      "desc": "<spellName>K\u0131l\u0131\u00e7 Valsi</spellName> sihirdar b\u00fcy\u00fcs\u00fcn\u00fc kazan\u0131rs\u0131n.<br><br><rules><spellName>K\u0131l\u0131\u00e7 Valsi</spellName>, hedef al\u0131namaz haldeyken rakiplere at\u0131l\u0131p @TotalHits@ defa hasar vermeni sa\u011flar.</rules>",
+      "iconLarge": "assets/ux/cherry/augments/icons/bladewaltz_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/bladewaltz_small.2v2_mode_fighters.png",
+      "id": 6,
+      "name": "K\u0131l\u0131\u00e7 Valsi",
+      "rarity": 8,
+      "tooltip": "<rules>Hedef al\u0131namaz haldeyken rakiplere at\u0131l\u0131p @TotalHits@ defa @Damage@ Hasar vermeni (isabet halinde %50 Hasar) sa\u011flar.</rules><br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@<br>"
+    },
+    {
+      "apiName": "WillingSacrifice",
+      "calculations": {},
+      "dataValues": {
+        "AllyHealthThreshold": 0.30000001192092896,
+        "CurrentHealthToDrain": 0.30000001192092896
+      },
+      "desc": "Tak\u0131m arkada\u015f\u0131n\u0131n <health>can\u0131 %@AllyHealthThreshold*100@ de\u011ferinin</health> alt\u0131na d\u00fc\u015ft\u00fc\u011f\u00fcnde kendi can\u0131n\u0131n bir k\u0131sm\u0131n\u0131 feda ederek ona <shield>kalkan</shield> sa\u011flars\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/willingsacrifice_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/willingsacrifice_small.2v2_mode_fighters.png",
+      "id": 94,
+      "name": "Fedak\u00e2rl\u0131k",
+      "rarity": 4,
+      "tooltip": "Tak\u0131m arkada\u015f\u0131n\u0131n <health>can\u0131 %@AllyHealthThreshold*100@ de\u011ferinin</health> alt\u0131na d\u00fc\u015ft\u00fc\u011f\u00fcnde <health>mevcut can\u0131n\u0131n %@CurrentHealthToDrain*100@ kadar\u0131n\u0131</health> feda ederek ona ayn\u0131 miktarda <shield>kalkan</shield> sa\u011flars\u0131n.<br><br>Bu Tur Olu\u015fturulan Kalkan: @f1@<br>Olu\u015fturulan Toplam Kalkan: @f2@"
+    },
+    {
+      "apiName": "IceCold",
+      "calculations": {},
+      "dataValues": {
+        "ExtraSlowAmount": 100.0
+      },
+      "desc": "Uygulad\u0131\u011f\u0131n <status>yava\u015flatma</status> etkileri, hedefinin hareket h\u0131z\u0131n\u0131 fazladan 100 azalt\u0131r.",
+      "iconLarge": "assets/ux/cherry/augments/icons/icecold_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/icecold_small.2v2_mode_fighters.png",
+      "id": 44,
+      "name": "Buz Gibi",
+      "rarity": 0,
+      "tooltip": "Uygulad\u0131\u011f\u0131n <status>yava\u015flatma</status> etkileri, hedefinin hareket h\u0131z\u0131n\u0131 fazladan 100 azalt\u0131r."
+    },
+    {
+      "apiName": "BannerofCommand",
+      "calculations": {},
+      "dataValues": {
+        "BuffDuration": 10.0,
+        "EmpowermentValue": 0.20000000298023224
+      },
+      "desc": "<spellName>Komuta Sanca\u011f\u0131</spellName> sihirdar b\u00fcy\u00fcs\u00fcn\u00fc kazan\u0131rs\u0131n.<br><br><rules><spellName>Komuta Sanca\u011f\u0131</spellName>, tak\u0131m arkada\u015f\u0131n\u0131 k\u0131sa s\u00fcreli\u011fine g\u00fc\u00e7lendirir.</rules>",
+      "iconLarge": "assets/ux/cherry/augments/icons/bannerofcommand_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/bannerofcommand_small.2v2_mode_fighters.png",
+      "id": 5,
+      "name": "Komuta Sanca\u011f\u0131",
+      "rarity": 4,
+      "tooltip": "Orta\u011f\u0131n 10 saniyeli\u011fine fazladan %@EmpowermentValue*100@ <scaleHealth>Can</scaleHealth>, <scaleAD>Sald\u0131r\u0131 G\u00fcc\u00fc</scaleAD>, <scaleAP>Yetenek G\u00fcc\u00fc</scaleAP> ve <attackSpeed>Sald\u0131r\u0131 H\u0131z\u0131</attackSpeed> kazan\u0131r."
+    },
+    {
+      "apiName": "TankItOrLeaveIt",
+      "calculations": {},
+      "dataValues": {
+        "CritChance": 0.20000000298023224,
+        "DamageReduction": 0.30000001192092896,
+        "MaxChance": 0.6000000238418579
+      },
+      "desc": "Kritik vuru\u015f ihtimalini (en fazla %@MaxChance*100@) kullanarak <crit>kritik savunma</crit> yapabilirsin. Kritik savunma, ald\u0131\u011f\u0131n hasar\u0131 azaltma ihtimaline sahiptir. Ayr\u0131ca %@CritChance*100@ Kritik Vuru\u015f \u0130htimali kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/tankitorleaveit_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/tankitorleaveit_small.2v2_mode_fighters.png",
+      "id": 80,
+      "name": "Ya Tankla Ya Terk Et",
+      "rarity": 0,
+      "tooltip": "Kritik vuru\u015f ihtimalini (en fazla %@MaxChance*100@) kullanarak <crit>kritik savunma</crit> yapabilirsin. Kritik savunma, ald\u0131\u011f\u0131n hasar\u0131 %@DamageReduction*100@ azaltma ihtimaline sahiptir. Ayr\u0131ca %@CritChance*100@ Kritik Vuru\u015f \u0130htimali kazan\u0131rs\u0131n.<br><br>Bu Tur Azalt\u0131lan Hasar: @f1@<br>Azalt\u0131lan Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "WitchfulThinking",
+      "calculations": {},
+      "dataValues": {
+        "AP": 70.0
+      },
+      "desc": "<scaleAP>@AP@ Yetenek G\u00fcc\u00fc</scaleAP> kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/witchfulthinking_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/witchfulthinking_small.2v2_mode_fighters.png",
+      "id": 97,
+      "name": "Abra Kadabra",
+      "rarity": 0,
+      "tooltip": "<scaleAP>@AP@ Yetenek G\u00fcc\u00fc</scaleAP> kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "Vengeance",
+      "calculations": {},
+      "dataValues": {
+        "DamageAmp": 0.30000001192092896,
+        "Omnivamp": 0.30000001192092896
+      },
+      "desc": "Tak\u0131m arkada\u015f\u0131n katledildi\u011finde y\u00fcksek miktarda hasar art\u0131\u015f\u0131 ve mutlak s\u00f6m\u00fcr\u00fc kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/vengeance_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/vengeance_small.2v2_mode_fighters.png",
+      "id": 90,
+      "name": "\u0130ntikam",
+      "rarity": 4,
+      "tooltip": "Tak\u0131m arkada\u015f\u0131n katledildi\u011finde %@DamageAmp*100@ Hasar Art\u0131\u015f\u0131 ve %@Omnivamp*100@ Mutlak S\u00f6m\u00fcr\u00fc kazan\u0131rs\u0131n.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "Erosion",
+      "calculations": {},
+      "dataValues": {
+        "MaxStacks": 20.0,
+        "Shred": 0.014999999664723873,
+        "ShredDuration": 4.0
+      },
+      "desc": "Hasar verdi\u011fin rakiplerinin <scaleArmor>z\u0131rh\u0131n\u0131</scaleArmor> ve <scaleMR>b\u00fcy\u00fc direncini</scaleMR> @ShredDuration@ saniyeli\u011fine eksiltirsin. ",
+      "iconLarge": "assets/ux/cherry/augments/icons/erosion_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/erosion_small.2v2_mode_fighters.png",
+      "id": 28,
+      "name": "Erozyon",
+      "rarity": 0,
+      "tooltip": "Hasar verdi\u011fin rakiplerinin <scaleArmor>z\u0131rh\u0131n\u0131</scaleArmor> ve <scaleMR>b\u00fcy\u00fc direncini</scaleMR> @ShredDuration@ saniyeli\u011fine %@Shred*100@ eksiltirsin. <br><br>Bu etki en fazla @MaxStacks@ defa birikir."
+    },
+    {
+      "apiName": "ZhonyasEpiphany",
+      "calculations": {},
+      "dataValues": {
+        "Duration": 3.0
+      },
+      "desc": "<spellName>Zhonya'n\u0131n Ayd\u0131nlanmas\u0131</spellName> sihirdar b\u00fcy\u00fcs\u00fcn\u00fc kazan\u0131rs\u0131n.<br><br><spellName>Zhonya'n\u0131n Ayd\u0131nlanmas\u0131</spellName>, 3 saniyeli\u011fine zaman\u0131 durdurarak seni hedef al\u0131namaz ve hasar g\u00f6rmez hale getirir ancak bu s\u0131rada bir eylemde bulunman\u0131 engeller. Ayr\u0131ca temel yeteneklerinin bekleme s\u00fcrelerini s\u0131f\u0131rlar.",
+      "iconLarge": "assets/ux/cherry/augments/icons/zhonyasepiphany_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/zhonyasepiphany_small.2v2_mode_fighters.png",
+      "id": 99,
+      "name": "Zhonya'n\u0131n Ayd\u0131nlanmas\u0131",
+      "rarity": 8,
+      "tooltip": "3 saniyeli\u011fine zaman\u0131 durdurarak seni hedef al\u0131namaz ve hasar g\u00f6rmez hale getirir ancak bu s\u0131rada bir eylemde bulunman\u0131 engeller. Ayr\u0131ca temel yeteneklerinin bekleme s\u00fcrelerini s\u0131f\u0131rlar."
+    },
+    {
+      "apiName": "MasterofDuality",
+      "calculations": {
+        "{b3b41896}": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 18.0,
+              "mStartValue": 6.0
+            }
+          ],
+          "{37070a8d}": 4,
+          "{cbcac618}": 4,
+          "{e6eebb2f}": 4
+        },
+        "{fe35e71a}": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 9.0,
+              "mStartValue": 3.0
+            }
+          ],
+          "{37070a8d}": 4,
+          "{cbcac618}": 4,
+          "{e6eebb2f}": 4
+        }
+      },
+      "dataValues": {},
+      "desc": "Sald\u0131r\u0131lar\u0131n birikecek \u015fekilde <scaleAP>yetenek g\u00fcc\u00fc</scaleAP>, yeteneklerin de birikecek \u015fekilde <scaleAD>sald\u0131r\u0131 g\u00fcc\u00fc</scaleAD> kazand\u0131r\u0131r.",
+      "iconLarge": "assets/ux/cherry/augments/icons/masterofduality_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/masterofduality_small.2v2_mode_fighters.png",
+      "id": 54,
+      "name": "Denge Uzman\u0131",
+      "rarity": 8,
+      "tooltip": "Sald\u0131r\u0131lar\u0131n <scaleAP>@APGained@ Yetenek G\u00fcc\u00fc</scaleAP>, yeteneklerin <scaleAD>@ADGained@ Sald\u0131r\u0131 G\u00fcc\u00fc</scaleAD> kazand\u0131r\u0131r. Bu etki, tur sonuna kadar s\u0131n\u0131rs\u0131z kez birikebilir."
+    },
+    {
+      "apiName": "LightemUp",
+      "calculations": {
+        "Damage": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 105.0,
+              "mStartValue": 15.0
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 0.44999998807907104,
+              "mStat": 2,
+              "mStatFormula": 2
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 0.1899999976158142
+            }
+          ],
+          "{37070a8d}": 4,
+          "{cbcac618}": 4,
+          "{e6eebb2f}": 4
+        },
+        "{a8cd7e6f}": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 420.0,
+              "mStartValue": 60.0
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 1.7999999523162842,
+              "mStat": 2,
+              "mStatFormula": 2
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 0.7599999904632568
+            }
+          ],
+          "{37070a8d}": 4,
+          "{cbcac618}": 4,
+          "{e6eebb2f}": 4
+        }
+      },
+      "dataValues": {},
+      "desc": "Her 4. sald\u0131r\u0131n fazladan <scaleMagic>b\u00fcy\u00fc hasar\u0131</scaleMagic> verir.",
+      "iconLarge": "assets/ux/cherry/augments/icons/lightemup_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/lightemup_small.2v2_mode_fighters.png",
+      "id": 51,
+      "name": "Atee\u015f!",
+      "rarity": 0,
+      "tooltip": "Her 4. sald\u0131r\u0131n fazladan <scaleMagic>@TOOLTIPONLYDamage@ B\u00fcy\u00fc Hasar\u0131</scaleMagic> verir.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "SearingDawn",
+      "calculations": {
+        "Damage": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 160.0,
+              "mStartValue": 24.0
+            }
+          ],
+          "{37070a8d}": 4,
+          "{cbcac618}": 4,
+          "{e6eebb2f}": 4
+        }
+      },
+      "dataValues": {
+        "ProcCooldown": 0.75
+      },
+      "desc": "Yeteneklerin rakipleri i\u015faretler. \u0130\u015faretli birimler, tak\u0131m arkada\u015f\u0131n\u0131n bir sonraki sald\u0131r\u0131 veya yetene\u011finden daha \u00e7ok hasar al\u0131r.",
+      "iconLarge": "assets/ux/cherry/augments/icons/searingdawn_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/searingdawn_small.2v2_mode_fighters.png",
+      "id": 72,
+      "name": "Kavuran \u015eafak",
+      "rarity": 4,
+      "tooltip": "Yeteneklerin rakipleri i\u015faretler. \u0130\u015faretli birimler, tak\u0131m arkada\u015f\u0131n\u0131n bir sonraki sald\u0131r\u0131s\u0131ndan veya yetene\u011finden fazladan <magicDamage>@Damage@ B\u00fcy\u00fc Hasar\u0131</magicDamage> al\u0131r.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "PhenomenalEvil",
+      "calculations": {},
+      "dataValues": {
+        "ProcCooldown": 0.75
+      },
+      "desc": "Yeteneklerin bir rakibe isabet etti\u011finde kal\u0131c\u0131 olarak <scaleAP>1 Yetenek G\u00fcc\u00fc</scaleAP> kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/phenomenalevil_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/phenomenalevil_small.2v2_mode_fighters.png",
+      "id": 65,
+      "name": "Acayip K\u00f6t\u00fcl\u00fck",
+      "rarity": 4,
+      "tooltip": "Yeteneklerin bir rakibe isabet etti\u011finde kal\u0131c\u0131 olarak <scaleAP>1 Yetenek G\u00fcc\u00fc</scaleAP> kazan\u0131rs\u0131n.<br><br>1 saniye bekleme s\u00fcresi vard\u0131r.<br><br>Kazan\u0131lan Yetenek G\u00fcc\u00fc: @f1@"
+    },
+    {
+      "apiName": "Vulnerability",
+      "calculations": {},
+      "dataValues": {
+        "CritChance": 0.20000000298023224,
+        "CritDamage": 0.5
+      },
+      "desc": "E\u015fyalar\u0131n ve zamanla hasar veren etkilerin kritik vuru\u015f yapabilir. Ayr\u0131ca %@CritChance*100@ Kritik Vuru\u015f \u0130htimali kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/vulnerability_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/vulnerability_small.2v2_mode_fighters.png",
+      "id": 92,
+      "name": "Zafiyet",
+      "rarity": 0,
+      "tooltip": "E\u015fyalar\u0131n ve zamanla hasar veren etkilerin kritik vuru\u015f yaparak %@CritDamage*100@ \u0130lave Hasar verebilir. Ayr\u0131ca %20 Kritik Vuru\u015f \u0130htimali kazan\u0131rs\u0131n.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "CannonFodder",
+      "calculations": {},
+      "dataValues": {},
+      "desc": "\u00c7at\u0131\u015fmaya bir toptan f\u0131rlat\u0131larak girersin.",
+      "iconLarge": "assets/ux/cherry/augments/icons/cannonfodder_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/cannonfodder_small.2v2_mode_fighters.png",
+      "id": 10,
+      "name": "Topun A\u011fz\u0131nda",
+      "rarity": 4,
+      "tooltip": "\u00c7at\u0131\u015fmaya bir toptan f\u0131rlat\u0131larak girersin."
+    },
+    {
+      "apiName": "MadScientist",
+      "calculations": {},
+      "dataValues": {
+        "ADAmp": 0.30000001192092896,
+        "APAmp": 0.30000001192092896,
+        "Haste": 70.0,
+        "HealthAmp": 0.20000000298023224,
+        "MovespeedAmp": 0.30000001192092896,
+        "SizeAmp": 0.30000001192092896
+      },
+      "desc": "Tur ba\u015flad\u0131\u011f\u0131nda b\u00fcy\u00fcyerek <scaleAD>de\u011fi\u015fken kuvvet</scaleAD> ve <healing>can</healing> ya da k\u00fc\u00e7\u00fclerek <scaleLevel>yetenek h\u0131z\u0131</scaleLevel> ve <speed>hareket h\u0131z\u0131</speed> kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/madscientist_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/madscientist_small.2v2_mode_fighters.png",
+      "id": 53,
+      "name": "\u00c7\u0131lg\u0131n Bilim \u0130nsan\u0131",
+      "rarity": 8,
+      "tooltip": "Tur ba\u015flad\u0131\u011f\u0131nda b\u00fcy\u00fcyerek <scaleAD>%@ADAmp*100@ De\u011fi\u015fken Kuvvet</scaleAD> ve <healing>%@HealthAmp*100@ Can</healing> ya da k\u00fc\u00e7\u00fclerek <scaleLevel>@Haste@ Yetenek H\u0131z\u0131</scaleLevel> ve <speed>%@MovespeedAmp*100@ Hareket H\u0131z\u0131</speed> kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "MountainSoul",
+      "calculations": {},
+      "dataValues": {},
+      "desc": "K\u0131sa s\u00fcreli\u011fine \u00e7at\u0131\u015fma d\u0131\u015f\u0131 kald\u0131\u011f\u0131nda sana <shield>kalkan</shield> sa\u011flayan Da\u011f Ruhu'nu kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/mountainsoul_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/mountainsoul_small.2v2_mode_fighters.png",
+      "id": 57,
+      "name": "Da\u011f Ruhu",
+      "rarity": 0,
+      "tooltip": "K\u0131sa s\u00fcreli\u011fine \u00e7at\u0131\u015fma d\u0131\u015f\u0131 kald\u0131\u011f\u0131nda sana <shield>kalkan</shield> sa\u011flayan Da\u011f Ruhu'nu kazan\u0131rs\u0131n.<br><br>Olu\u015fturulan Toplam Kalkan: @f1@"
+    },
+    {
+      "apiName": "UltimateRevolution",
+      "calculations": {},
+      "dataValues": {},
+      "desc": "Ultinin bekleme s\u00fcresi, tur ba\u015f\u0131na onu bir kez kulland\u0131ktan sonra s\u0131f\u0131rlan\u0131r.",
+      "iconLarge": "assets/ux/cherry/augments/icons/ultimaterevolution_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/ultimaterevolution_small.2v2_mode_fighters.png",
+      "id": 88,
+      "name": "Ulti Devrimi",
+      "rarity": 8,
+      "tooltip": "Ultinin bekleme s\u00fcresi, tur ba\u015f\u0131na onu bir kez kulland\u0131ktan sonra s\u0131f\u0131rlan\u0131r."
+    },
+    {
+      "apiName": "FrostWraith",
+      "calculations": {},
+      "dataValues": {
+        "Cooldown": 7.0,
+        "Radius": 450.0,
+        "RootDuration": 1.0
+      },
+      "desc": "Yak\u0131n\u0131ndaki rakipleri her @Cooldown@ saniyede bir <keywordMajor>otomatik olarak</keywordMajor> @RootDuration@ saniyeli\u011fine <status>sabitlersin</status>.<br>",
+      "iconLarge": "assets/ux/cherry/augments/icons/frostwraith_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/frostwraith_small.2v2_mode_fighters.png",
+      "id": 39,
+      "name": "Buz Hortla\u011f\u0131",
+      "rarity": 0,
+      "tooltip": "Yak\u0131n\u0131ndaki rakipleri her @Cooldown@ saniyede bir <keywordMajor>otomatik olarak</keywordMajor> @RootDuration@ saniyeli\u011fine <status>sabitlersin</status>.<br><br>Bu Tur Sabitlenen Rakip: @f1@<br>Sabitlenen Toplam Rakip: @f2@"
+    },
+    {
+      "apiName": "SymphonyofWar",
+      "calculations": {
+        "{a1f7d79a}": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelBreakpointsCalculationPart",
+              "mBreakpoints": [
+                {
+                  "__type": "Breakpoint",
+                  "mLevel": 3,
+                  "{d5fd07ed}": 0.009999999776482582
+                },
+                {
+                  "__type": "Breakpoint",
+                  "mLevel": 6,
+                  "{d5fd07ed}": 0.009999999776482582
+                },
+                {
+                  "__type": "Breakpoint",
+                  "mLevel": 9,
+                  "{d5fd07ed}": 0.009999999776482582
+                },
+                {
+                  "__type": "Breakpoint",
+                  "mLevel": 12,
+                  "{d5fd07ed}": 0.009999999776482582
+                }
+              ],
+              "mLevel1Value": 0.05000000074505806
+            }
+          ]
+        },
+        "{fe9405b3}": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelBreakpointsCalculationPart",
+              "mBreakpoints": [
+                {
+                  "__type": "Breakpoint",
+                  "mLevel": 3,
+                  "{d5fd07ed}": 0.009999999776482582
+                },
+                {
+                  "__type": "Breakpoint",
+                  "mLevel": 6,
+                  "{d5fd07ed}": 0.009999999776482582
+                },
+                {
+                  "__type": "Breakpoint",
+                  "mLevel": 9,
+                  "{d5fd07ed}": 0.009999999776482582
+                },
+                {
+                  "__type": "Breakpoint",
+                  "mLevel": 12,
+                  "{d5fd07ed}": 0.009999999776482582
+                },
+                {
+                  "__type": "Breakpoint",
+                  "mLevel": 15,
+                  "{d5fd07ed}": 0.009999999776482582
+                }
+              ],
+              "mLevel1Value": 0.10000000149011612
+            }
+          ]
+        }
+      },
+      "dataValues": {
+        "ASCap": 10.0,
+        "BuffDuration": 5.0,
+        "Duration": 6.0,
+        "HealingPercent": 0.07999999821186066,
+        "MaxAdaptivePerStack": 4.5,
+        "MaxStacks": 12.0,
+        "MinAdaptivePerStack": 2.0,
+        "PerCastIDLockout": 10.0,
+        "RangeBonus": 50.0,
+        "RangedHealingPercent": 0.05000000074505806,
+        "StackCap": 6.0,
+        "TimeUntilNextStackFromSameSpell": 5.0
+      },
+      "desc": "<spellName>\u00d6l\u00fcmc\u00fcl Tempo</spellName> ve <spellName>Yenilmez</spellName> anahtar r\u00fcnlerini kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/symphonyofwar_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/symphonyofwar_small.2v2_mode_fighters.png",
+      "id": 79,
+      "name": "Sava\u015f Senfonisi",
+      "rarity": 8,
+      "tooltip": "<spellName>\u00d6l\u00fcmc\u00fcl Tempo</spellName> ve <spellName>Yenilmez</spellName> anahtar r\u00fcnlerini kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "TrueshotProdigy",
+      "calculations": {
+        "Damage": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 700.0,
+              "mStartValue": 200.0
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 1.0,
+              "mStat": 2,
+              "mStatFormula": 2
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 0.8999999761581421
+            }
+          ],
+          "{37070a8d}": 4,
+          "{cbcac618}": 4,
+          "{e6eebb2f}": 4
+        }
+      },
+      "dataValues": {
+        "Cooldown": 5.0,
+        "SnipeDistance": 700.0
+      },
+      "desc": "Uzaktan hasar verdi\u011fin \u015fampiyonlara <keywordMajor>otomatik olarak</keywordMajor> bir <abilityName>\u0130sabet Dalgas\u0131</abilityName> g\u00f6nderirsin.",
+      "iconLarge": "assets/ux/cherry/augments/icons/trueshotprodigy_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/trueshotprodigy_small.2v2_mode_fighters.png",
+      "id": 86,
+      "name": "\u0130sabet Dehas\u0131",
+      "rarity": 8,
+      "tooltip": "Birine @SnipeDistance@ birim uzaktan hasar verdi\u011finde ona <keywordMajor>otomatik olarak</keywordMajor> s\u0131n\u0131rs\u0131z menzile sahip bir <abilityName>\u0130sabet Dalgas\u0131</abilityName> g\u00f6ndererek @Damage@ Hasar verirsin (@Cooldown@ sn. bekleme s\u00fcresi).<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "Eureka",
+      "calculations": {},
+      "dataValues": {
+        "APToHasteConversion": 0.25
+      },
+      "desc": "Yetenek h\u0131z\u0131n <scaleAP>yetenek g\u00fcc\u00fcn\u00fcn %@APToHasteConversion*100@ kadar\u0131na e\u015fde\u011fer miktarda</scaleAP> artar.",
+      "iconLarge": "assets/ux/cherry/augments/icons/eureka_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/eureka_small.2v2_mode_fighters.png",
+      "id": 30,
+      "name": "Evreka!",
+      "rarity": 8,
+      "tooltip": "Yetenek h\u0131z\u0131n <scaleAP>yetenek g\u00fcc\u00fcn\u00fcn %@APToHasteConversion*100@ kadar\u0131na e\u015fde\u011fer miktarda</scaleAP> artar."
+    },
+    {
+      "apiName": "OceanSoul",
+      "calculations": {},
+      "dataValues": {},
+      "desc": "Rakiplere hasar verdikten sonra y\u00fcksek miktarda <healing>can</healing> ve <scaleMana>mana</scaleMana> yenilenmesi sa\u011flayan Okyanus Ruhu'nu kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/oceansoul_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/oceansoul_small.2v2_mode_fighters.png",
+      "id": 60,
+      "name": "Okyanus Ruhu",
+      "rarity": 0,
+      "tooltip": "Rakiplere hasar verdikten sonra y\u00fcksek miktarda <healing>can</healing> ve <scaleMana>mana</scaleMana> yenilenmesi sa\u011flayan Okyanus Ruhu'nu kazan\u0131rs\u0131n.<br><br>Bu Tur Yap\u0131lan \u0130yile\u015ftirme: @f1@<br>Yap\u0131lan Toplam \u0130yile\u015ftirme: @f2@"
+    },
+    {
+      "apiName": "CircleofDeath",
+      "calculations": {},
+      "dataValues": {
+        "DamageRange": 1000.0,
+        "HealToDamageConversion": 0.5
+      },
+      "desc": "Yapt\u0131\u011f\u0131n <health>iyile\u015ftirmenin</health> ve can yenilemenin bir k\u0131sm\u0131n\u0131 en yak\u0131n\u0131ndaki rakip \u015fampiyona <scaleAP>b\u00fcy\u00fc hasar\u0131</scaleAP> olarak verirsin.",
+      "iconLarge": "assets/ux/cherry/augments/icons/circleofdeath_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/circleofdeath_small.2v2_mode_fighters.png",
+      "id": 15,
+      "name": "\u00d6l\u00fcm D\u00f6ng\u00fcs\u00fc",
+      "rarity": 8,
+      "tooltip": "En yak\u0131n\u0131ndaki rakip \u015fampiyona, yapt\u0131\u011f\u0131n <health>iyile\u015ftirmenin</health> ve can yenilemenin <magicDamage>%@HealToDamageConversion*100@ kadar\u0131na e\u015fde\u011fer miktarda b\u00fcy\u00fc hasar\u0131</magicDamage> verirsin.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "Earthwake",
+      "calculations": {
+        "Damage": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 2200.0,
+              "mStartValue": 220.0
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 0.8999999761581421
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 1.600000023841858,
+              "mStat": 2,
+              "mStatFormula": 2
+            }
+          ],
+          "{37070a8d}": 4,
+          "{cbcac618}": 4,
+          "{e6eebb2f}": 4
+        }
+      },
+      "dataValues": {
+        "ExplosionDelayTime": 0.75,
+        "ExplosionRadius": 300.0
+      },
+      "desc": "At\u0131lma, z\u0131plama, yer de\u011fi\u015ftirme ve \u0131\u015f\u0131nlanma yeteneklerin arkalar\u0131nda 1 saniye sonra patlayan bir iz b\u0131rak\u0131r.",
+      "iconLarge": "assets/ux/cherry/augments/icons/earthwake_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/earthwake_small.2v2_mode_fighters.png",
+      "id": 27,
+      "name": "Topra\u011f\u0131n Uyan\u0131\u015f\u0131",
+      "rarity": 8,
+      "tooltip": "At\u0131lma, z\u0131plama, yer de\u011fi\u015ftirme ve \u0131\u015f\u0131nlanma yeteneklerin arkalar\u0131nda 1 saniye sonra patlayarak @Damage@ Fiziksel Hasar veren bir iz b\u0131rak\u0131r.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "ScopedWeapons",
+      "calculations": {},
+      "dataValues": {
+        "MeleeRangeIncrease": 200.0,
+        "RangedRangeIncrease": 100.0
+      },
+      "desc": "Yak\u0131n d\u00f6v\u00fc\u015f\u00e7\u00fcysen @MeleeRangeIncrease@, menzilliysen @RangedRangeIncrease@ Sald\u0131r\u0131 Menzili kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/scopedweapons_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/scopedweapons_small.2v2_mode_fighters.png",
+      "id": 71,
+      "name": "D\u00fcrb\u00fcnl\u00fc Silahlar",
+      "rarity": 4,
+      "tooltip": "Yak\u0131n d\u00f6v\u00fc\u015f\u00e7\u00fcysen @MeleeRangeIncrease@, menzilliysen @RangedRangeIncrease@ Sald\u0131r\u0131 Menzili kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "TheBrutalizer",
+      "calculations": {},
+      "dataValues": {
+        "AD": 25.0,
+        "AbilityHaste": 10.0,
+        "Lethality": 15.0
+      },
+      "desc": "<scaleAD>@AD@ Sald\u0131r\u0131 G\u00fcc\u00fc</scaleAD>, <scaleLevel>@AbilityHaste@ Yetenek H\u0131z\u0131</scaleLevel> ve <scaleAD>@Lethality@ Z\u0131rh De\u015fme</scaleAD> kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/thebrutalizer_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/thebrutalizer_small.2v2_mode_fighters.png",
+      "id": 82,
+      "name": "H\u0131rpalayan",
+      "rarity": 4,
+      "tooltip": "<scaleAD>@AD@ Sald\u0131r\u0131 G\u00fcc\u00fc</scaleAD>, <scaleLevel>@AbilityHaste@ Yetenek H\u0131z\u0131</scaleLevel> ve <scaleAD>@Lethality@ Z\u0131rh De\u015fme</scaleAD> kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "SonicBoom",
+      "calculations": {
+        "Damage": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 160.0,
+              "mStartValue": 40.0
+            }
+          ],
+          "{37070a8d}": 2,
+          "{cbcac618}": 2,
+          "{e6eebb2f}": 2
+        }
+      },
+      "dataValues": {
+        "ProcCooldown": 2.0,
+        "Radius": 450.0
+      },
+      "desc": "G\u00fc\u00e7lendirdi\u011fin, <healing>iyile\u015ftirdi\u011fin</healing> veya <shield>kalkan sa\u011flad\u0131\u011f\u0131n</shield> tak\u0131m arkada\u015f\u0131n\u0131n etraf\u0131ndaki rakiplere hasar verirsin ve onlar\u0131 <status>yava\u015flat\u0131rs\u0131n</status>.",
+      "iconLarge": "assets/ux/cherry/augments/icons/sonicboom_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/sonicboom_small.2v2_mode_fighters.png",
+      "id": 76,
+      "name": "Ses Patlamas\u0131",
+      "rarity": 0,
+      "tooltip": "G\u00fc\u00e7lendirdi\u011fin, <healing>iyile\u015ftirdi\u011fin</healing> veya <shield>kalkan sa\u011flad\u0131\u011f\u0131n</shield> tak\u0131m arkada\u015f\u0131n\u0131n etraf\u0131ndaki rakiplere <trueDamage>@Damage@ Ger\u00e7ek Hasar</trueDamage> verirsin ve onlar\u0131 2 saniyeli\u011fine %30 <status>yava\u015flat\u0131rs\u0131n</status>.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "Evocation",
+      "calculations": {},
+      "dataValues": {
+        "Duration": 4.0,
+        "MSBuffAmount": 0.5,
+        "MSBuffDuration": 2.0,
+        "TotalHealAmount": 0.6000000238418579
+      },
+      "desc": "<spellName>Ayin</spellName> sihirdar b\u00fcy\u00fcs\u00fcn\u00fc kazan\u0131rs\u0131n.<br><br><rules><spellName>Ayin</spellName>, yo\u011funla\u015farak <healing>can</healing> ve <scaleMana>mana</scaleMana> yenilemeni sa\u011flar.</rules>",
+      "iconLarge": "assets/ux/cherry/augments/icons/evocation_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/evocation_small.2v2_mode_fighters.png",
+      "id": 31,
+      "name": "Ayin",
+      "rarity": 0,
+      "tooltip": "<rules>Yo\u011funla\u015farak <healing>can</healing> ve <scaleMana>mana</scaleMana> yenilemeni sa\u011flar. Ard\u0131ndan @MSBuffDuration@ saniyeli\u011fine %@MSBuffAmount*100@ Hareket H\u0131z\u0131 kazan\u0131rs\u0131n.</rules><br><br>Bu Tur Yap\u0131lan \u0130yile\u015ftirme: @f1@<br>Yap\u0131lan Toplam \u0130yile\u015ftirme: @f2@"
+    },
+    {
+      "apiName": "CelestialBody",
+      "calculations": {},
+      "dataValues": {
+        "DamageReduction": 0.10000000149011612,
+        "Health": 1000.0
+      },
+      "desc": "<health>@Health@ Can</health> kazan\u0131rs\u0131n ama verdi\u011fin hasar %@DamageReduction*100@ azal\u0131r.",
+      "iconLarge": "assets/ux/cherry/augments/icons/celestialbody_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/celestialbody_small.2v2_mode_fighters.png",
+      "id": 13,
+      "name": "Semavi Beden",
+      "rarity": 4,
+      "tooltip": "<health>@Health@ Can</health> kazan\u0131rs\u0131n ama verdi\u011fin hasar %@DamageReduction*100@ azal\u0131r."
+    },
+    {
+      "apiName": "WithHaste",
+      "calculations": {},
+      "dataValues": {
+        "AbilityHasteToMSConversion": 1.5
+      },
+      "desc": "<scaleLevel>Yetenek h\u0131z\u0131n\u0131n</scaleLevel> @AbilityHasteToMSConversion@ kat\u0131 kadar <moveSpeed>hareket h\u0131z\u0131</moveSpeed> kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/withhaste_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/withhaste_small.2v2_mode_fighters.png",
+      "id": 98,
+      "name": "S\u00fcratle",
+      "rarity": 4,
+      "tooltip": "<scaleLevel>Yetenek h\u0131z\u0131n\u0131n</scaleLevel> @AbilityHasteToMSConversion@ kat\u0131 kadar <moveSpeed>hareket h\u0131z\u0131</moveSpeed> kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "FallenAegis",
+      "calculations": {
+        "ShieldAmount": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 350.0,
+              "mStartValue": 50.0
+            }
+          ],
+          "{37070a8d}": 4,
+          "{cbcac618}": 4,
+          "{e6eebb2f}": 4
+        }
+      },
+      "dataValues": {
+        "ShieldDuration": 12.0
+      },
+      "desc": "\u00c7at\u0131\u015fmaya @ShieldDuration@ saniyeli\u011fine varl\u0131\u011f\u0131n\u0131 koruyan bir <abilityName>Kara Kalkan</abilityName>'la ba\u015flars\u0131n.<br><br><rules><abilityName>Kara Kalkan</abilityName> b\u00fcy\u00fc hasar\u0131n\u0131 ve <status>hareketsiz b\u0131rakma</status> etkilerini engeller.</rules>",
+      "iconLarge": "assets/ux/cherry/augments/icons/fallenaegis_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/fallenaegis_small.2v2_mode_fighters.png",
+      "id": 34,
+      "name": "D\u00fc\u015fm\u00fc\u015f Kalkan",
+      "rarity": 0,
+      "tooltip": "\u00c7at\u0131\u015fmaya @ShieldDuration@ saniyeli\u011fine varl\u0131\u011f\u0131n\u0131 koruyan ve @ShieldAmount@ B\u00fcy\u00fc Hasar\u0131 engelleyen bir <abilityName>Kara Kalkan</abilityName>'la ba\u015flars\u0131n.<br><br><rules><abilityName>Kara Kalkan</abilityName> b\u00fcy\u00fc hasar\u0131n\u0131 ve <status>hareketsiz b\u0131rakma</status> etkilerini engeller.</rules><br><br>Olu\u015fturulan Toplam Kalkan: @f1@<br>Engellenen Toplam Hareketsiz B\u0131rakma Yetene\u011fi: @f2@"
+    },
+    {
+      "apiName": "FeeltheBurn",
+      "calculations": {
+        "{7c50d74e}": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 410.0,
+              "mStartValue": 70.0
+            }
+          ]
+        }
+      },
+      "dataValues": {
+        "DamageReductionTOOLTIPONLY": 0.3499999940395355,
+        "ExhaustDuration": 3.0,
+        "Range": 1000.0,
+        "SlowAmount": 0.30000001192092896
+      },
+      "desc": "<spellName>S\u0131ca\u011f\u0131 Hisset</spellName> sihirdar b\u00fcy\u00fcs\u00fcn\u00fc kazan\u0131rs\u0131n.<br><br><rules><spellName>S\u0131ca\u011f\u0131 Hisset</spellName>, yak\u0131n\u0131ndaki t\u00fcm rakip \u015fampiyonlar\u0131n \u00fcst\u00fcnde <spellName>Tutu\u015ftur</spellName> ve <spellName>Bitkinlik</spellName> sihirdar b\u00fcy\u00fclerini kullan\u0131r.</rules>",
+      "iconLarge": "assets/ux/cherry/augments/icons/feeltheburn_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/feeltheburn_small.2v2_mode_fighters.png",
+      "id": 35,
+      "name": "S\u0131ca\u011f\u0131 Hisset",
+      "rarity": 8,
+      "tooltip": "<rules>Yak\u0131n\u0131ndaki t\u00fcm rakip \u015fampiyonlar\u0131n \u00fcst\u00fcnde <spellName>Tutu\u015ftur</spellName> ve <spellName>Bitkinlik</spellName> sihirdar b\u00fcy\u00fclerini kullan\u0131r.</rules><br><br>Verilen Toplam Hasar: @f1@<br>Azalt\u0131lan Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "GuiltyPleasure",
+      "calculations": {},
+      "dataValues": {
+        "HealPercentage": 0.03999999910593033
+      },
+      "desc": "Bir rakip \u015fampiyonu <status>hareketsiz b\u0131rakt\u0131\u011f\u0131nda</status> <healing>azami can\u0131n\u0131n %@HealPercentage*100@ kadar\u0131n\u0131 yenilersin</healing>.",
+      "iconLarge": "assets/ux/cherry/augments/icons/guiltypleasure_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/guiltypleasure_small.2v2_mode_fighters.png",
+      "id": 42,
+      "name": "Enerji Emici",
+      "rarity": 0,
+      "tooltip": "Bir rakip \u015fampiyonu <status>hareketsiz b\u0131rakt\u0131\u011f\u0131nda</status> <healing>azami can\u0131n\u0131n %@HealPercentage*100@ kadar\u0131n\u0131 yenilersin</healing>.<br><br>Bu Tur Yap\u0131lan \u0130yile\u015ftirme: @f1@<br>Yap\u0131lan Toplam \u0130yile\u015ftirme: @f2@"
+    },
+    {
+      "apiName": "BuffBuddies",
+      "calculations": {},
+      "dataValues": {},
+      "desc": "Kal\u0131c\u0131 olarak K\u0131rm\u0131z\u0131 ve Mavi G\u00fc\u00e7lendirme kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/buffbuddies_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/buffbuddies_small.2v2_mode_fighters.png",
+      "id": 9,
+      "name": "K\u0131rm\u0131z\u0131yla Mavinin Uyumu",
+      "rarity": 0,
+      "tooltip": "Kal\u0131c\u0131 olarak K\u0131rm\u0131z\u0131 ve Mavi G\u00fc\u00e7lendirme kazan\u0131rs\u0131n.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "OutlawsGrit",
+      "calculations": {},
+      "dataValues": {
+        "MaxStacks": 5.0,
+        "ResistsPerStack": 15.0
+      },
+      "desc": "At\u0131lma, z\u0131plama, yer de\u011fi\u015ftirme ve \u0131\u015f\u0131nlanma yeteneklerini kulland\u0131ktan sonra <scaleArmor>@ResistsPerStack@ Z\u0131rh</scaleArmor> ve <scaleMR>B\u00fcy\u00fc Direnci</scaleMR> kazan\u0131rs\u0131n.<br><br>Bu etki en fazla @MaxStacks@ defa birikir.",
+      "iconLarge": "assets/ux/cherry/augments/icons/outlawsgrit_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/outlawsgrit_small.2v2_mode_fighters.png",
+      "id": 63,
+      "name": "Kanun Ka\u00e7a\u011f\u0131 Cesareti",
+      "rarity": 4,
+      "tooltip": "At\u0131lma, z\u0131plama, yer de\u011fi\u015ftirme ve \u0131\u015f\u0131nlanma yeteneklerini kulland\u0131ktan sonra <scaleArmor>@ResistsPerStack@ Z\u0131rh</scaleArmor> ve <scaleMR>B\u00fcy\u00fc Direnci</scaleMR> kazan\u0131rs\u0131n.<br><br>Bu etki en fazla @MaxStacks@ defa birikir."
+    },
+    {
+      "apiName": "DontBlink",
+      "calculations": {},
+      "dataValues": {
+        "BonusDamagePerMSDifference": 0.0010000000474974513
+      },
+      "desc": "Rakiplerine k\u0131yasla ne kadar h\u0131zl\u0131ysan o kadar fazla hasar verirsin.",
+      "iconLarge": "assets/ux/cherry/augments/icons/dontblink_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/dontblink_small.2v2_mode_fighters.png",
+      "id": 26,
+      "name": "G\u00f6z\u00fcn\u00fc K\u0131rpma",
+      "rarity": 0,
+      "tooltip": "Hedefine k\u0131yasla sahip oldu\u011fun her fazladan <moveSpeed>10 Hareket H\u0131z\u0131</moveSpeed> ba\u015f\u0131na %@BonusDamagePerMSDifference*1000@ \u0130lave Hasar kazan\u0131rs\u0131n.<br><br>Bu Tur Verilen \u0130lave Hasar: @f1@<br>Toplam \u0130lave Hasar: @f2@"
+    },
+    {
+      "apiName": "ShadowRunner",
+      "calculations": {},
+      "dataValues": {
+        "BuffDuration": 2.0,
+        "MSAmount": 300.0
+      },
+      "desc": "At\u0131lma, z\u0131plama, yer de\u011fi\u015ftirme ve \u0131\u015f\u0131nlanma yetene\u011fi kulland\u0131ktan ya da <stealth>gizlenme</stealth> etkisinden \u00e7\u0131kt\u0131ktan sonra @BuffDuration@ saniyeli\u011fine @MSAmount@ Hareket H\u0131z\u0131 kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/shadowrunner_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/shadowrunner_small.2v2_mode_fighters.png",
+      "id": 73,
+      "name": "G\u00f6lge Ko\u015fucu",
+      "rarity": 0,
+      "tooltip": "At\u0131lma, z\u0131plama, yer de\u011fi\u015ftirme ve \u0131\u015f\u0131nlanma yetene\u011fi kulland\u0131ktan ya da <stealth>gizlenme</stealth> etkisinden \u00e7\u0131kt\u0131ktan sonra @BuffDuration@ saniyeli\u011fine @MSAmount@ Hareket H\u0131z\u0131 kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "InfernalConduit",
+      "calculations": {
+        "{0a242b94}": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 60.0,
+              "mStartValue": 6.0
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 0.10000000149011612
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 0.14000000059604645,
+              "mStat": 2,
+              "mStatFormula": 2
+            }
+          ]
+        },
+        "{cfa0b3a1}": {
+          "__type": "GameCalculationModified",
+          "mModifiedGameCalculation": "{0a242b94}",
+          "mMultiplier": {
+            "__type": "NumberCalculationPart",
+            "mNumber": 0.20000000298023224
+          },
+          "{37070a8d}": 4,
+          "{cbcac618}": 4,
+          "{e6eebb2f}": 4
+        }
+      },
+      "dataValues": {
+        "BleedDuration": 5.0,
+        "FlatCooldownRefundPerTick": 0.11999999731779099,
+        "ProcCooldown": 1.0
+      },
+      "desc": "Yeteneklerin birikebilen ve zaman i\u00e7inde <scaleAP>b\u00fcy\u00fc hasar\u0131</scaleAP> veren bir <keywordMajor>yakma</keywordMajor> etkisi uygular.<br><br>Uygulad\u0131\u011f\u0131n <keywordMajor>yakma</keywordMajor> etkileri temel yeteneklerinin bekleme s\u00fcrelerini azalt\u0131r.",
+      "iconLarge": "assets/ux/cherry/augments/icons/infernalconduit_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/infernalconduit_small.2v2_mode_fighters.png",
+      "id": 45,
+      "name": "Alev Ge\u00e7idi",
+      "rarity": 8,
+      "tooltip": "Yeteneklerin birikebilen ve @BleedDuration@ saniye boyunca <scaleAP>@BleedDamageTooltip@ B\u00fcy\u00fc Hasar\u0131</scaleAP> veren bir <keywordMajor>yakma</keywordMajor> etkisi uygular. <keywordMajor>Yakma</keywordMajor> etkisi s\u0131n\u0131rs\u0131z kez birikebilir.<br><br>Rakiplere hasar veren t\u00fcm <keywordMajor>yakma</keywordMajor> etkilerin, temel yeteneklerinin bekleme s\u00fcrelerini @FlatCooldownRefundPerTick@ saniye azalt\u0131r.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@<br>"
+    },
+    {
+      "apiName": "BacktoBasics",
+      "calculations": {},
+      "dataValues": {
+        "DamageAmp": 0.3499999940395355,
+        "Haste": 60.0,
+        "HealingAmp": 0.3499999940395355,
+        "ShieldingAmp": 0.3499999940395355
+      },
+      "desc": "<scaleLevel>Hasar\u0131n</scaleLevel>, <healing>iyile\u015ftirme g\u00fcc\u00fcn</healing> ve <shield>kalkan g\u00fcc\u00fcn</shield> artar. Ayr\u0131ca <scaleBonus>yetenek h\u0131z\u0131</scaleBonus> kazan\u0131rs\u0131n ama <keywordMajor>ultini kullanamazs\u0131n</keywordMajor>.",
+      "iconLarge": "assets/ux/cherry/augments/icons/backtobasics_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/backtobasics_small.2v2_mode_fighters.png",
+      "id": 4,
+      "name": "Temeli Sa\u011flam",
+      "rarity": 8,
+      "tooltip": "Ultin m\u00fch\u00fcrlenir. <scaleLevel>Hasar\u0131n</scaleLevel>, <healing>iyile\u015ftirme g\u00fcc\u00fcn</healing> ve <shield>kalkan g\u00fcc\u00fcn</shield> %@DamageAmp*100@ artar. Ayr\u0131ca <scaleBonus>@Haste@ Yetenek H\u0131z\u0131</scaleBonus> kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "ThiefsGloves",
+      "calculations": {},
+      "dataValues": {
+        "ItemDamageAmp": 0.30000001192092896,
+        "ItemStatAmp": 0.30000001192092896
+      },
+      "desc": "Her \u00e7at\u0131\u015fmada mevcut e\u015fyalar\u0131n\u0131 kaybeder, onlar\u0131n yerine rasgele e\u015fyalar kazan\u0131rs\u0131n. Bu e\u015fyalar\u0131n sa\u011flad\u0131\u011f\u0131 ilave nitelikler ve e\u015fya hasar\u0131 %@ItemStatAmp*100@ artar.",
+      "iconLarge": "assets/ux/cherry/augments/icons/thiefsgloves_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/thiefsgloves_small.2v2_mode_fighters.png",
+      "id": 83,
+      "name": "H\u0131rs\u0131z Eldiveni",
+      "rarity": 8,
+      "tooltip": "Her \u00e7at\u0131\u015fmada mevcut e\u015fyalar\u0131n\u0131 kaybeder, onlar\u0131n yerine rasgele e\u015fyalar kazan\u0131rs\u0131n. Bu e\u015fyalar\u0131n sa\u011flad\u0131\u011f\u0131 ilave nitelikler ve e\u015fya hasar\u0131 %@ItemStatAmp*100@ artar."
+    },
+    {
+      "apiName": "SoulSiphon",
+      "calculations": {},
+      "dataValues": {
+        "CritChance": 0.20000000298023224,
+        "HealPercentage": 0.30000001192092896
+      },
+      "desc": "<crit>%@CritChance*100@ Kritik Vuru\u015f \u0130htimali</crit> kazan\u0131rs\u0131n ve <crit>kritik vuru\u015flar\u0131n</crit> %@HealPercentage*100@ Can \u00c7alma kazan\u0131r.",
+      "iconLarge": "assets/ux/cherry/augments/icons/soulsiphon_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/soulsiphon_small.2v2_mode_fighters.png",
+      "id": 77,
+      "name": "Ruh S\u00f6m\u00fcr\u00fcs\u00fc",
+      "rarity": 4,
+      "tooltip": "<crit>%@CritChance*100@ Kritik Vuru\u015f \u0130htimali</crit> kazan\u0131rs\u0131n ve <crit>kritik vuru\u015flar\u0131n</crit> %@HealPercentage*100@ Can \u00c7alma kazan\u0131r.<br><br>Bu Tur Yap\u0131lan \u0130yile\u015ftirme: @f1@<br>Yap\u0131lan Toplam \u0130yile\u015ftirme: @f2@"
+    },
+    {
+      "apiName": "WindspeakersBlessing",
+      "calculations": {
+        "Resists": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 90.0,
+              "mStartValue": 30.0
+            }
+          ]
+        }
+      },
+      "dataValues": {},
+      "desc": "Yapt\u0131\u011f\u0131n <healing>iyile\u015ftirme</healing> ve sa\u011flad\u0131\u011f\u0131n <shield>kalkan</shield>, ayn\u0131 zamanda hedefin <scaleArmor>z\u0131rh\u0131n\u0131</scaleArmor> ve <scaleMR>b\u00fcy\u00fc direncini</scaleMR> 3 saniyeli\u011fine artt\u0131r\u0131r.",
+      "iconLarge": "assets/ux/cherry/augments/icons/windspeakersblessing_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/windspeakersblessing_small.2v2_mode_fighters.png",
+      "id": 95,
+      "name": "R\u00fczg\u00e2ra F\u0131s\u0131ldayan'\u0131n L\u00fctfu",
+      "rarity": 8,
+      "tooltip": "Yapt\u0131\u011f\u0131n <healing>iyile\u015ftirme</healing> ve sa\u011flad\u0131\u011f\u0131n <shield>kalkan</shield>, ayn\u0131 zamanda hedefin <scaleArmor>z\u0131rh\u0131n\u0131</scaleArmor> ve <scaleMR>b\u00fcy\u00fc direncini</scaleMR> 3 saniyeli\u011fine @Resists@ artt\u0131r\u0131r."
+    },
+    {
+      "apiName": "ThreadtheNeedle",
+      "calculations": {},
+      "dataValues": {
+        "PercentPen": 0.25
+      },
+      "desc": "%@PercentPen*100@ <scaleAD>Z\u0131rh Delme</scaleAD> ve <scaleAP>B\u00fcy\u00fc N\u00fcfuzu</scaleAP> kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/threadtheneedle_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/threadtheneedle_small.2v2_mode_fighters.png",
+      "id": 84,
+      "name": "\u0130\u011fne Deli\u011finden",
+      "rarity": 4,
+      "tooltip": "%@PercentPen*100@ <scaleAD>Z\u0131rh Delme</scaleAD> ve <scaleAP>B\u00fcy\u00fc N\u00fcfuzu</scaleAP> kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "ExtendoArm",
+      "calculations": {},
+      "dataValues": {
+        "Cooldown": 12.0
+      },
+      "desc": "Her 12 saniyede bir yak\u0131n\u0131ndaki bir rakibe <keywordMajor>otomatik olarak</keywordMajor> Blitzcrank Q'su g\u00f6nderirsin.",
+      "iconLarge": "assets/ux/cherry/augments/icons/extendoarm_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/extendoarm_small.2v2_mode_fighters.png",
+      "id": 33,
+      "name": "Roket Eller Havaya",
+      "rarity": 4,
+      "tooltip": "Her 12 saniyede bir yak\u0131n\u0131ndaki bir rakibe <keywordMajor>otomatik olarak</keywordMajor> Blitzcrank Q'su g\u00f6nderirsin.<br><br>\u0130sabet Etme Say\u0131s\u0131: @f1@"
+    },
+    {
+      "apiName": "SlowCooker",
+      "calculations": {
+        "{0a242b94}": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 0.02500000037252903,
+              "mStat": 11
+            }
+          ]
+        },
+        "{cfa0b3a1}": {
+          "__type": "GameCalculationModified",
+          "mModifiedGameCalculation": "{0a242b94}",
+          "mMultiplier": {
+            "__type": "NumberCalculationPart",
+            "mNumber": 0.20000000298023224
+          },
+          "{37070a8d}": 4,
+          "{cbcac618}": 4,
+          "{e6eebb2f}": 4
+        }
+      },
+      "dataValues": {
+        "BleedDuration": 5.0,
+        "Range": 500.0
+      },
+      "desc": "Her saniye yak\u0131n\u0131ndaki rakip \u015fampiyonlara birikebilen ve <health>azami can\u0131na</health> ba\u011fl\u0131 olarak hasar veren bir <keywordMajor>yakma</keywordMajor> etkisi uygulars\u0131n. <keywordMajor>Yakma</keywordMajor> etkisi s\u0131n\u0131rs\u0131z kez birikebilir.",
+      "iconLarge": "assets/ux/cherry/augments/icons/slowcooker_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/slowcooker_small.2v2_mode_fighters.png",
+      "id": 75,
+      "name": "Yava\u015f Pi\u015fmi\u015f",
+      "rarity": 8,
+      "tooltip": "Her saniye @Range@ birim yak\u0131n\u0131ndaki \u015fampiyonlara birikebilen ve <health>@BleedDuration@ saniye boyunca her saniye @BleedDamageTooltip@ <scaleAP>B\u00fcy\u00fc Hasar\u0131</scaleAP></health> veren bir <keywordMajor>yakma</keywordMajor> etkisi uygulars\u0131n. <keywordMajor>Yakma</keywordMajor> etkisi s\u0131n\u0131rs\u0131z kez birikebilir.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "DieAnotherDay",
+      "calculations": {},
+      "dataValues": {
+        "HealFlatTooltip": 250.0
+      },
+      "desc": "<spellName>Bug\u00fcn De \u00d6lmedik</spellName> sihirdar b\u00fcy\u00fcs\u00fcn\u00fc kazan\u0131rs\u0131n.<br><br><rules><spellName>Bug\u00fcn De \u00d6lmedik</spellName>, 4 saniye boyunca i\u00e7inde hi\u00e7bir birimin katledilemedi\u011fi bir alan olu\u015fturur.</rules>",
+      "iconLarge": "assets/ux/cherry/augments/icons/dieanotherday_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/dieanotherday_small.2v2_mode_fighters.png",
+      "id": 24,
+      "name": "Bug\u00fcn De \u00d6lmedik",
+      "rarity": 4,
+      "tooltip": "\u00dcst\u00fcnde durdu\u011fun zemini 4 saniyeli\u011fine kutsayarak i\u00e7indeki birimlerin can\u0131n\u0131n %10'un alt\u0131na d\u00fc\u015fmesini engelleyen bir alan olu\u015fturursun. S\u00fcrenin sonunda alanda bulunan birimler <healing>@HealFlatTooltip@ Can</healing> iyile\u015fir. "
+    },
+    {
+      "apiName": "SpiritLink",
+      "calculations": {},
+      "dataValues": {
+        "DamageRedirectPercentage": 0.25,
+        "HealCopyPercentage": 0.44999998807907104
+      },
+      "desc": "Tak\u0131m arkada\u015f\u0131na verilen hasar\u0131n %@DamageRedirectPercentage*100@ kadar\u0131 ve tak\u0131m arkada\u015f\u0131n\u0131n elde etti\u011fi <healing>iyile\u015ftirmenin</healing> %@HealCopyPercentage*100@ kadar\u0131 sana y\u00f6nlendirilir.",
+      "iconLarge": "assets/ux/cherry/augments/icons/spiritlink_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/spiritlink_small.2v2_mode_fighters.png",
+      "id": 78,
+      "name": "Ruh Ba\u011f\u0131",
+      "rarity": 8,
+      "tooltip": "Tak\u0131m arkada\u015f\u0131na verilen hasar\u0131n %@DamageRedirectPercentage*100@ kadar\u0131 ve tak\u0131m arkada\u015f\u0131n\u0131n elde etti\u011fi <healing>iyile\u015ftirmenin</healing> %@HealCopyPercentage*100@ kadar\u0131 sana y\u00f6nlendirilir.<br><br>Y\u00f6nlendirilen Toplam Hasar: @f1@<br>Yap\u0131lan Toplam \u0130yile\u015ftirme: @f2@<br>"
+    },
+    {
+      "apiName": "ContractKiller",
+      "calculations": {},
+      "dataValues": {
+        "DamageAmp": 0.15000000596046448,
+        "Gold": 350.0
+      },
+      "desc": "Her tur bir rakibi i\u015faretleyerek onun %@DamageAmp*100@ daha fazla hasar almas\u0131n\u0131 ve katledildi\u011finde fazladan @Gold@ Alt\u0131n kazand\u0131rmas\u0131n\u0131 sa\u011flars\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/contractkiller_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/contractkiller_small.2v2_mode_fighters.png",
+      "id": 17,
+      "name": "Kiral\u0131k Katil",
+      "rarity": 0,
+      "tooltip": "Her tur bir rakip \u015fampiyonu i\u015faretlersin. \u0130\u015faretledi\u011fin \u015fampiyon %@DamageAmp*100@ daha fazla hasar al\u0131r ve katledildi\u011finde hem sana hem de tak\u0131m arkada\u015f\u0131na @Gold@ Alt\u0131n kazand\u0131r\u0131r.<br><br>Bu Tur Verilen \u0130lave Hasar: @f1@<br>Toplam \u0130lave Hasar: @f2@<br>Tak\u0131m Arkada\u015f\u0131 Ba\u015f\u0131na Kazan\u0131lan Toplam Alt\u0131n: @f3@"
+    },
+    {
+      "apiName": "FirstAidKit",
+      "calculations": {},
+      "dataValues": {
+        "HealShieldAmp": 0.25
+      },
+      "desc": "<healing>%@HealShieldAmp*100@ \u0130yile\u015ftirme ve Kalkan G\u00fcc\u00fc</healing> kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/firstaidkit_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/firstaidkit_small.2v2_mode_fighters.png",
+      "id": 37,
+      "name": "\u0130lk Yard\u0131m Seti",
+      "rarity": 0,
+      "tooltip": "<healing>%@HealShieldAmp*100@ \u0130yile\u015ftirme ve Kalkan G\u00fcc\u00fc</healing> kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "OkBoomerang",
+      "calculations": {
+        "Damage": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 225.0,
+              "mStartValue": 45.0
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 0.25,
+              "mStat": 2,
+              "mStatFormula": 2
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 0.17000000178813934
+            }
+          ],
+          "{37070a8d}": 4,
+          "{cbcac618}": 4,
+          "{e6eebb2f}": 4
+        }
+      },
+      "dataValues": {},
+      "desc": "Yak\u0131n\u0131ndaki bir rakibe her 7 saniyede bir <keywordMajor>otomatik olarak</keywordMajor> bumerang g\u00f6nderirsin.",
+      "iconLarge": "assets/ux/cherry/augments/icons/okboomerang_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/okboomerang_small.2v2_mode_fighters.png",
+      "id": 61,
+      "name": "D\u00f6nerse Senindir",
+      "rarity": 4,
+      "tooltip": "Yak\u0131n\u0131ndaki bir rakibe her 7 saniyede bir <keywordMajor>otomatik olarak</keywordMajor> bir bumerang g\u00f6ndererek isabet halinde @Damage@ De\u011fi\u015fken Hasar verirsin.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "JuiceBox",
+      "calculations": {},
+      "dataValues": {},
+      "desc": "Sen ve tak\u0131m arkada\u015f\u0131n her tur fazladan bedelsiz bir Nektar kazan\u0131rs\u0131n\u0131z.",
+      "iconLarge": "assets/ux/cherry/augments/icons/juicebox_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/juicebox_small.2v2_mode_fighters.png",
+      "id": 49,
+      "name": "Nektar",
+      "rarity": 0,
+      "tooltip": "Sen ve tak\u0131m arkada\u015f\u0131n her tur fazladan bedelsiz bir Nektar kazan\u0131rs\u0131n\u0131z."
+    },
+    {
+      "apiName": "Firebrand",
+      "calculations": {},
+      "dataValues": {
+        "BleedDuration": 5.0,
+        "PercentMaxHPDamagePer5Seconds": 0.029999999329447746
+      },
+      "desc": "Sald\u0131r\u0131lar\u0131n zamanla hasar veren ve s\u0131n\u0131rs\u0131z kez birikebilen bir <keywordMajor>yakma</keywordMajor> etkisi uygular.",
+      "iconLarge": "assets/ux/cherry/augments/icons/firebrand_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/firebrand_small.2v2_mode_fighters.png",
+      "id": 36,
+      "name": "Yak\u0131c\u0131 Damga",
+      "rarity": 4,
+      "tooltip": "Sald\u0131r\u0131lar\u0131n @BleedDuration@ saniye boyunca <scaleAP>azami can\u0131n\u0131n %@PercentMaxHPDamagePer5Seconds*20@ kadar\u0131na e\u015fde\u011fer miktarda b\u00fcy\u00fc hasar\u0131</scaleAP> veren bir <keywordMajor>yakma</keywordMajor> etkisi uygular. <keywordMajor>Yakma</keywordMajor> etkisi s\u0131n\u0131rs\u0131z kez birikebilir.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "TapDancer",
+      "calculations": {},
+      "dataValues": {
+        "MSPerHit": 10.0,
+        "MSToASConversion": 0.0010000000474974513
+      },
+      "desc": "Normal sald\u0131r\u0131lar\u0131n sana s\u0131n\u0131rs\u0131z kez birikecek \u015fekilde <moveSpeed>@MSPerHit@ Hareket H\u0131z\u0131</moveSpeed> kazand\u0131r\u0131r. Ayr\u0131ca hareket h\u0131z\u0131n\u0131n %@MSToASConversion*10000@ kadar\u0131na e\u015fde\u011fer miktarda sald\u0131r\u0131 h\u0131z\u0131 kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/tapdancer_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/tapdancer_small.2v2_mode_fighters.png",
+      "id": 81,
+      "name": "Step Dans\u0131",
+      "rarity": 8,
+      "tooltip": "Normal sald\u0131r\u0131lar\u0131n sana s\u0131n\u0131rs\u0131z kez birikecek \u015fekilde <moveSpeed>@MSPerHit@ Hareket H\u0131z\u0131</moveSpeed> kazand\u0131r\u0131r. Ayr\u0131ca hareket h\u0131z\u0131n\u0131n %@MSToASConversion*10000@ kadar\u0131na e\u015fde\u011fer miktarda sald\u0131r\u0131 h\u0131z\u0131 kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "Tormentor",
+      "calculations": {},
+      "dataValues": {
+        "BleedDuration": 5.0,
+        "PercentMaxHPDamagePer5Seconds": 0.05000000074505806
+      },
+      "desc": "<status>Hareketsiz b\u0131rakt\u0131\u011f\u0131n</status> rakip \u015fampiyonlara s\u0131n\u0131rs\u0131z kez birikebilen ve zamanla hasar veren bir <keywordMajor>yakma</keywordMajor> etkisi uygulars\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/tormentor_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/tormentor_small.2v2_mode_fighters.png",
+      "id": 85,
+      "name": "\u0130\u015fkenceci",
+      "rarity": 0,
+      "tooltip": "<status>Hareketsiz b\u0131rakt\u0131\u011f\u0131n</status> rakip \u015fampiyonlara s\u0131n\u0131rs\u0131z kez birikebilen ve @BleedDuration@ saniye boyunca <scaleAP>azami canlar\u0131n\u0131n %@PercentMaxHPDamagePer5Seconds*20@ kadar\u0131na e\u015fde\u011fer miktarda b\u00fcy\u00fc hasar\u0131</scaleAP> veren bir <keywordMajor>yakma</keywordMajor> etkisi uygulars\u0131n. <keywordMajor>Yakma</keywordMajor> etkisi s\u0131n\u0131rs\u0131z kez birikebilir.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "EtherealWeapon",
+      "calculations": {},
+      "dataValues": {},
+      "desc": "Yeteneklerin isabet etkilerini uygular (hedef ba\u015f\u0131na 1 saniye bekleme s\u00fcresi).",
+      "iconLarge": "assets/ux/cherry/augments/icons/etherealweapon_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/etherealweapon_small.2v2_mode_fighters.png",
+      "id": 29,
+      "name": "Ola\u011fand\u0131\u015f\u0131 Silah",
+      "rarity": 4,
+      "tooltip": "Yeteneklerin isabet etkilerini uygular (hedef ba\u015f\u0131na 1 saniye bekleme s\u00fcresi).<br><br>Bu Tur Tetiklenme Say\u0131s\u0131: @f1@<br>Toplam Tetiklenme Say\u0131s\u0131: @f2@"
+    },
+    {
+      "apiName": "OmniSoul",
+      "calculations": {},
+      "dataValues": {},
+      "desc": "3 rasgele ejder ruhu kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/omnisoul_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/omnisoul_small.2v2_mode_fighters.png",
+      "id": 62,
+      "name": "Ruhlar\u0131n H\u00e2kimi",
+      "rarity": 8,
+      "tooltip": "3 rasgele ejder ruhu kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "DawnbringersResolve",
+      "calculations": {
+        "HealCalc": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "StatByNamedDataValueCalculationPart",
+              "mDataValue": "HealAmount",
+              "mStat": 11
+            }
+          ],
+          "mMultiplier": {
+            "__type": "NumberCalculationPart",
+            "mNumber": 0.08299999684095383
+          },
+          "{37070a8d}": 4,
+          "{cbcac618}": 4,
+          "{e6eebb2f}": 4
+        }
+      },
+      "dataValues": {
+        "Duration": 3.0,
+        "HealAmount": 0.30000001192092896,
+        "HealthThreshold": 0.5
+      },
+      "desc": "Can\u0131n %@HealthThreshold*100@ de\u011ferinin alt\u0131na d\u00fc\u015ft\u00fc\u011f\u00fcnde 3 saniye boyunca azami can\u0131n\u0131n %@HealAmount*100@ kadar\u0131n\u0131 yenilersin.<br>",
+      "iconLarge": "assets/ux/cherry/augments/icons/dawnbringersresolve_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/dawnbringersresolve_small.2v2_mode_fighters.png",
+      "id": 20,
+      "name": "\u015eafakgetiren'in Azmi",
+      "rarity": 4,
+      "tooltip": "Can\u0131n %@HealthThreshold*100@ de\u011ferinin alt\u0131na d\u00fc\u015ft\u00fc\u011f\u00fcnde 3 saniye boyunca azami can\u0131n\u0131n %@HealAmount*100@ kadar\u0131n\u0131 yenilersin.<br><br>Bu Tur Yap\u0131lan \u0130yile\u015ftirme: @f1@<br>Yap\u0131lan Toplam \u0130yile\u015ftirme: @f2@"
+    },
+    {
+      "apiName": "FromBeginningToEnd",
+      "calculations": {
+        "ChampRange": {
+          "__type": "GameCalculationConditional",
+          "mConditionalGameCalculation": "{06387172}",
+          "mDefaultGameCalculation": "{792cf56b}",
+          "{37070a8d}": 5,
+          "{c0482365}": {
+            "__type": "{dc65ffe4}"
+          },
+          "{cbcac618}": 5,
+          "{e6eebb2f}": 5
+        },
+        "Cooldown": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ProductOfSubPartsCalculationPart",
+              "mPart1": {
+                "__type": "ByCharLevelInterpolationCalculationPart",
+                "mEndValue": 15.0,
+                "mStartValue": 25.0
+              },
+              "mPart2": {
+                "__type": "NamedDataValueCalculationPart",
+                "mDataValue": "{e367b19b}"
+              }
+            }
+          ]
+        },
+        "{06387172}": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "NumberCalculationPart",
+              "mNumber": 2.0
+            }
+          ]
+        },
+        "{792cf56b}": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "NumberCalculationPart",
+              "mNumber": 1.0
+            }
+          ]
+        }
+      },
+      "dataValues": {
+        "ADRatio": 0.3499999940395355,
+        "APRatio": 0.25,
+        "BaseDamageHigh": 100.0,
+        "BaseDamageLow": 50.0,
+        "CooldownResetValue": 1.5,
+        "DHCooldown": 45.0,
+        "DamageAmp": 0.15000000596046448,
+        "DamagePerSoulEssence": 10.0,
+        "Duration": 3.0,
+        "GoldPercentBonus": 1.2000000476837158,
+        "GoldPercentBonusRanged": 0.8999999761581421,
+        "GoldProcBonus": 6.0,
+        "GraceWindow": 0.25,
+        "HarvestThreshold": 0.5,
+        "MissileNoiseNumberLimiter": 3.0,
+        "MissileNoiseRangeLimiter": 1500.0,
+        "ModesCooldownReduction": 1.0,
+        "OOCTimer": 10.0
+      },
+      "desc": "<spellName>\u0130lk Vuru\u015f</spellName> ve <spellName>Kara Hasat</spellName> anahtar r\u00fcnlerini kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/frombeginningtoend_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/frombeginningtoend_small.2v2_mode_fighters.png",
+      "id": 38,
+      "name": "Ba\u015ftan Sona",
+      "rarity": 4,
+      "tooltip": "<spellName>\u0130lk Vuru\u015f</spellName> ve <spellName>Kara Hasat</spellName> anahtar r\u00fcnlerini kazan\u0131rs\u0131n.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@<br>Kazan\u0131lan Toplam Alt\u0131n: @f3@"
+    },
+    {
+      "apiName": "CantTouchThis",
+      "calculations": {},
+      "dataValues": {
+        "Cooldown": 8.0,
+        "InvulnDuration": 2.0
+      },
+      "desc": "Ultini kulland\u0131\u011f\u0131nda k\u0131sa s\u00fcreli\u011fine <status>hasar g\u00f6rmez</status> hale gelirsin.",
+      "iconLarge": "assets/ux/cherry/augments/icons/canttouchthis_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/canttouchthis_small.2v2_mode_fighters.png",
+      "id": 11,
+      "name": "Dokunulmaz",
+      "rarity": 8,
+      "tooltip": "Ultini kulland\u0131\u011f\u0131nda @InvulnDuration@ saniyeli\u011fine <status>hasar g\u00f6rmez</status> hale gelirsin (@Cooldown@ sn. bekleme s\u00fcresi)."
+    },
+    {
+      "apiName": "ItsCritical",
+      "calculations": {},
+      "dataValues": {
+        "CritChance": 0.4000000059604645
+      },
+      "desc": "<crit>%@CritChance*100@ Kritik Vuru\u015f \u0130htimali</crit> kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/itscritical_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/itscritical_small.2v2_mode_fighters.png",
+      "id": 47,
+      "name": "\u00c7ok Kritik",
+      "rarity": 4,
+      "tooltip": "<crit>%@CritChance*100@ Kritik Vuru\u015f \u0130htimali</crit> kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "Recursion",
+      "calculations": {},
+      "dataValues": {
+        "AbilityHaste": 60.0
+      },
+      "desc": "<scaleLevel>@AbilityHaste@ Yetenek H\u0131z\u0131</scaleLevel> kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/recursion_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/recursion_small.2v2_mode_fighters.png",
+      "id": 68,
+      "name": "Yineleme",
+      "rarity": 4,
+      "tooltip": "<scaleLevel>@AbilityHaste@ Yetenek H\u0131z\u0131</scaleLevel> kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "Deft",
+      "calculations": {},
+      "dataValues": {
+        "AttackSpeed": 0.5
+      },
+      "desc": "%@AttackSpeed*100@ Sald\u0131r\u0131 H\u0131z\u0131 kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/deft_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/deft_small.2v2_mode_fighters.png",
+      "id": 22,
+      "name": "Eli \u00c7abuk",
+      "rarity": 0,
+      "tooltip": "%@AttackSpeed*100@ Sald\u0131r\u0131 H\u0131z\u0131 kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "Goliath",
+      "calculations": {},
+      "dataValues": {
+        "ADAmp": 0.15000000596046448,
+        "APAmp": 0.15000000596046448,
+        "HealthAmp": 0.3499999940395355,
+        "SizeAmp": 0.5
+      },
+      "desc": "Boyutunu b\u00fcy\u00fcterek <scaleHealth>%@HealthAmp*100@ Can</scaleHealth> ve <scaleAP>%@ADAmp*100@ De\u011fi\u015fken Kuvvet</scaleAP> kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/goliath_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/goliath_small.2v2_mode_fighters.png",
+      "id": 41,
+      "name": "Izbandut",
+      "rarity": 8,
+      "tooltip": "Boyutunu b\u00fcy\u00fcterek <scaleHealth>%@HealthAmp*100@ Can</scaleHealth> ve <scaleAP>%@ADAmp*100@ De\u011fi\u015fken Kuvvet</scaleAP> kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "AcceleratingSorcery",
+      "calculations": {},
+      "dataValues": {
+        "HastePerCast": 8.0
+      },
+      "desc": "Yetenek kullanmak s\u0131n\u0131rs\u0131z kez birikecek \u015fekilde <scaleBonus>yetenek h\u0131z\u0131</scaleBonus> kazand\u0131r\u0131r.",
+      "iconLarge": "assets/ux/cherry/augments/icons/acceleratingsorcery_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/acceleratingsorcery_small.2v2_mode_fighters.png",
+      "id": 1,
+      "name": "\u0130vmeli B\u00fcy\u00fc",
+      "rarity": 8,
+      "tooltip": "Yetenek kulland\u0131\u011f\u0131nda s\u0131n\u0131rs\u0131z kez birikecek \u015fekilde <scaleBonus>@HastePerCast@ Yetenek H\u0131z\u0131</scaleBonus> kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "MysticPunch",
+      "calculations": {},
+      "dataValues": {
+        "CooldownRefund": 1.0
+      },
+      "desc": "Sald\u0131r\u0131lar\u0131n bekleme s\u00fcrelerini @CooldownRefund@ saniye azalt\u0131r.",
+      "iconLarge": "assets/ux/cherry/augments/icons/mysticpunch_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/mysticpunch_small.2v2_mode_fighters.png",
+      "id": 58,
+      "name": "Mistik Yumruk",
+      "rarity": 8,
+      "tooltip": "Sald\u0131r\u0131lar\u0131n bekleme s\u00fcrelerini @CooldownRefund@ saniye azalt\u0131r."
+    },
+    {
+      "apiName": "RabbleRousing",
+      "calculations": {
+        "HealAmount": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "StatByNamedDataValueCalculationPart",
+              "mDataValue": "{3e163221}",
+              "mStat": 11
+            }
+          ]
+        }
+      },
+      "dataValues": {
+        "MaxHealthPercentageHeal": 0.019999999552965164
+      },
+      "desc": "Bir yetenek kulland\u0131\u011f\u0131nda <healing>azami can\u0131n\u0131n %@MaxHealthPercentageHeal*100@ kadar\u0131na e\u015fde\u011fer miktarda</healing> iyile\u015firsin.",
+      "iconLarge": "assets/ux/cherry/augments/icons/rabblerousing_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/rabblerousing_small.2v2_mode_fighters.png",
+      "id": 67,
+      "name": "Yaman Kavga",
+      "rarity": 4,
+      "tooltip": "Bir yetenek kulland\u0131\u011f\u0131nda <healing>azami can\u0131n\u0131n %@MaxHealthPercentageHeal*100@ kadar\u0131na e\u015fde\u011fer miktarda</healing> iyile\u015firsin.<br><br>Bu Tur Yap\u0131lan \u0130yile\u015ftirme: @f1@<br>Yap\u0131lan Toplam \u0130yile\u015ftirme: @f2@"
+    },
+    {
+      "apiName": "FrozenFoundations",
+      "calculations": {},
+      "dataValues": {
+        "ChampPushDistance": 120.0,
+        "NonChampPushDistance": 250.0,
+        "WallDuration": 5.0,
+        "WallWidth": 400.0
+      },
+      "desc": "<spellName>Donmu\u015f Temeller</spellName> sihirdar b\u00fcy\u00fcs\u00fcn\u00fc kazan\u0131rs\u0131n.<br><br><rules><spellName>Donmu\u015f Temeller</spellName>, hedeflenen konumda bir buz duvar\u0131 olu\u015fturur.</rules>",
+      "iconLarge": "assets/ux/cherry/augments/icons/frozenfoundations_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/frozenfoundations_small.2v2_mode_fighters.png",
+      "id": 40,
+      "name": "Donmu\u015f Temeller",
+      "rarity": 0,
+      "tooltip": "<rules>Hedeflenen konumda bir buz duvar\u0131 olu\u015fturursun.</rules>"
+    },
+    {
+      "apiName": "ApexInventor",
+      "calculations": {},
+      "dataValues": {
+        "ItemHaste": 300.0,
+        "TooltipCDR": 75.0
+      },
+      "desc": "<scaleBonus>@ItemHaste@ E\u015fya H\u0131z\u0131</scaleBonus> (e\u015fya bekleme s\u00fcresinde %@TooltipCDR@ azalmaya e\u015fde\u011fer) kazan\u0131rs\u0131n.<br><br><rules>E\u015fya h\u0131z\u0131 t\u00fcm e\u015fya yeteneklerinin bekleme s\u00fcrelerini azalt\u0131r.</rules>",
+      "iconLarge": "assets/ux/cherry/augments/icons/apexinventor_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/apexinventor_small.2v2_mode_fighters.png",
+      "id": 2,
+      "name": "D\u00e2hi Mucit",
+      "rarity": 4,
+      "tooltip": "<scaleBonus>@ItemHaste@ E\u015fya H\u0131z\u0131</scaleBonus> (e\u015fya bekleme s\u00fcresinde %@TooltipCDR@ azalmaya e\u015fde\u011fer) kazan\u0131rs\u0131n.<br><br><rules>E\u015fya h\u0131z\u0131 t\u00fcm e\u015fya yeteneklerinin bekleme s\u00fcrelerini azalt\u0131r.</rules>"
+    },
+    {
+      "apiName": "KeystoneConjurer",
+      "calculations": {},
+      "dataValues": {
+        "ADRatio": 0.3499999940395355,
+        "APRatio": 0.20000000298023224,
+        "AoEPercentRefund": 0.10000000149011612,
+        "DamageADRatio": 0.15000000596046448,
+        "DamageAPRatio": 0.10000000149011612,
+        "DamageBase": 10.0,
+        "DamageMax": 40.0,
+        "DotPercentRefund": 0.05000000074505806,
+        "PercentRefund": 0.20000000298023224,
+        "RechargeTime": 20.0,
+        "RechargeTimeMin": 8.0,
+        "ShieldBase": 30.0,
+        "ShieldMax": 75.0,
+        "ShieldRatio": 0.22499999403953552,
+        "ShieldRatioAD": 0.3499999940395355
+      },
+      "desc": "<spellName>Aery'yi \u00c7a\u011f\u0131r</spellName> ve <spellName>Sihirli Y\u0131ld\u0131z</spellName> anahtar r\u00fcnlerini kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/keystoneconjurer_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/keystoneconjurer_small.2v2_mode_fighters.png",
+      "id": 50,
+      "name": "Anahtar R\u00fcn Sihirbaz\u0131",
+      "rarity": 4,
+      "tooltip": "<spellName>Aery'yi \u00c7a\u011f\u0131r</spellName> ve <spellName>Sihirli Y\u0131ld\u0131z</spellName> anahtar r\u00fcnlerini kazan\u0131rs\u0131n.<br><br>Verilen Toplam Hasar: @f1@<br>Olu\u015fturulan Toplam Kalkan: @f2@"
+    },
+    {
+      "apiName": "MidnightExpress",
+      "calculations": {},
+      "dataValues": {},
+      "desc": "Tak\u0131m arkada\u015f\u0131na do\u011fru her 12 saniyede bir <keywordMajor>otomatik olarak</keywordMajor> fener f\u0131rlat\u0131rs\u0131n.<br><br><rules>Tak\u0131m arkada\u015f\u0131n fenere t\u0131klayarak yan\u0131na at\u0131labilir.</rules>",
+      "iconLarge": "assets/ux/cherry/augments/icons/midnightexpress_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/midnightexpress_small.2v2_mode_fighters.png",
+      "id": 55,
+      "name": "Gece Yar\u0131s\u0131 Ekspresi",
+      "rarity": 0,
+      "tooltip": "Tak\u0131m arkada\u015f\u0131na do\u011fru her 12 saniyede bir <keywordMajor>otomatik olarak</keywordMajor> fener f\u0131rlat\u0131rs\u0131n.<br><br><rules>Tak\u0131m arkada\u015f\u0131n fenere t\u0131klayarak yan\u0131na at\u0131labilir.</rules>"
+    },
+    {
+      "apiName": "Mythical",
+      "calculations": {},
+      "dataValues": {},
+      "desc": "\u0130stedi\u011fin kadar ihti\u015faml\u0131 e\u015fya alabilirsin.",
+      "iconLarge": "assets/ux/cherry/augments/icons/mythical_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/mythical_small.2v2_mode_fighters.png",
+      "id": 59,
+      "name": "\u0130hti\u015fam Pe\u015finde",
+      "rarity": 4,
+      "tooltip": "\u0130stedi\u011fin kadar ihti\u015faml\u0131 e\u015fya alabilirsin."
+    },
+    {
+      "apiName": "BuckleUp",
+      "calculations": {},
+      "dataValues": {},
+      "desc": "Her \u00e7at\u0131\u015fman\u0131n ba\u015f\u0131nda bir Sava\u015f K\u0131za\u011f\u0131 ortaya \u00e7\u0131kar.",
+      "iconLarge": "assets/ux/cherry/augments/icons/buckleup_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/buckleup_small.2v2_mode_fighters.png",
+      "id": 8,
+      "name": "Kemerini Ba\u011fla",
+      "rarity": 0,
+      "tooltip": "Her \u00e7at\u0131\u015fman\u0131n ba\u015f\u0131nda bir Sava\u015f K\u0131za\u011f\u0131 ortaya \u00e7\u0131kar."
+    },
+    {
+      "apiName": "Dashing",
+      "calculations": {},
+      "dataValues": {
+        "Haste": 200.0
+      },
+      "desc": "At\u0131lma, z\u0131plama, yer de\u011fi\u015ftirme ve \u0131\u015f\u0131nlanma yeteneklerin <scaleLevel>@Haste@ Yetenek H\u0131z\u0131</scaleLevel> kazan\u0131r.",
+      "iconLarge": "assets/ux/cherry/augments/icons/dashing_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/dashing_small.2v2_mode_fighters.png",
+      "id": 19,
+      "name": "At\u0131lgan",
+      "rarity": 8,
+      "tooltip": "At\u0131lma, z\u0131plama, yer de\u011fi\u015ftirme ve \u0131\u015f\u0131nlanma yeteneklerin <scaleLevel>@Haste@ Yetenek H\u0131z\u0131</scaleLevel> kazan\u0131r."
+    },
+    {
+      "apiName": "LightningStrikes",
+      "calculations": {},
+      "dataValues": {
+        "ASToADConversion": 30.0
+      },
+      "desc": "<attackSpeed>Sald\u0131r\u0131 h\u0131z\u0131na</attackSpeed> ba\u011fl\u0131 olarak artacak \u015fekilde <scaleAD>sald\u0131r\u0131 g\u00fcc\u00fc</scaleAD> kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/lightningstrikes_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/lightningstrikes_small.2v2_mode_fighters.png",
+      "id": 52,
+      "name": "Y\u0131ld\u0131r\u0131m Darbeleri",
+      "rarity": 4,
+      "tooltip": "Her <attackSpeed>0,1 Sald\u0131r\u0131 H\u0131z\u0131</attackSpeed> ba\u015f\u0131na <scaleAD>@ASToADConversion*.1@ Sald\u0131r\u0131 G\u00fcc\u00fc</scaleAD> kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "Repulsor",
+      "calculations": {},
+      "dataValues": {
+        "HealthThreshold1": 0.6000000238418579,
+        "HealthThreshold2": 0.30000001192092896,
+        "KnockbackDistance": 750.0,
+        "KnockbackRange": 500.0
+      },
+      "desc": "Can\u0131n %@HealthThreshold1*100@ veya %@HealthThreshold2*100@ de\u011ferinin alt\u0131na d\u00fc\u015ft\u00fc\u011f\u00fcnde yak\u0131n\u0131ndaki rakipleri <status>geri savurursun</status>.",
+      "iconLarge": "assets/ux/cherry/augments/icons/repulsor_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/repulsor_small.2v2_mode_fighters.png",
+      "id": 69,
+      "name": "\u0130tici",
+      "rarity": 0,
+      "tooltip": "Can\u0131n %@HealthThreshold1*100@ veya %@HealthThreshold2*100@ de\u011ferinin alt\u0131na d\u00fc\u015ft\u00fc\u011f\u00fcnde yak\u0131n\u0131ndaki rakipleri <status>geri savurursun</status>."
+    },
+    {
+      "apiName": "RestlessRestoration",
+      "calculations": {
+        "{8eb9fc77}": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "StatByNamedDataValueCalculationPart",
+              "mDataValue": "{9f86324f}",
+              "mStat": 11
+            },
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 150.0,
+              "mStartValue": 30.0
+            }
+          ],
+          "{37070a8d}": 4,
+          "{cbcac618}": 4,
+          "{e6eebb2f}": 4
+        }
+      },
+      "dataValues": {
+        "HealthRatioPer1000Units": 0.02500000037252903
+      },
+      "desc": "Hareket ettik\u00e7e <healing>can</healing> yenilersin. Bu miktar kat etti\u011fin mesafeye ba\u011fl\u0131 olarak artar.",
+      "iconLarge": "assets/ux/cherry/augments/icons/restlessrestoration_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/restlessrestoration_small.2v2_mode_fighters.png",
+      "id": 70,
+      "name": "Sa\u011flam Sa\u011fl\u0131k",
+      "rarity": 4,
+      "tooltip": "Kat etti\u011fin her 1000 birim ba\u015f\u0131na @HealCalcPer1000Units@ Can yenilersin.<br><br>Bu Tur Yap\u0131lan \u0130yile\u015ftirme: @f1@<br>Yap\u0131lan Toplam \u0130yile\u015ftirme: @f2@"
+    },
+    {
+      "apiName": "DiveBomber",
+      "calculations": {},
+      "dataValues": {
+        "ExplosionRadius": 500.0,
+        "PercentMaxHPDamage": 0.20000000298023224
+      },
+      "desc": "Her tur tak\u0131m\u0131nda ilk katledilen \u015fampiyon patlayarak y\u00fcksek miktarda hasar verir.",
+      "iconLarge": "assets/ux/cherry/augments/icons/divebomber_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/divebomber_small.2v2_mode_fighters.png",
+      "id": 25,
+      "name": "Kamikaze",
+      "rarity": 4,
+      "tooltip": "Her tur tak\u0131m\u0131nda ilk katledilen \u015fampiyon patlayarak yak\u0131n\u0131ndaki rakiplere <trueDamage>azami canlar\u0131n\u0131n %@PercentMaxHPDamage*100@ kadar\u0131na e\u015fde\u011fer miktarda ger\u00e7ek hasar</trueDamage> verir.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "BluntForce",
+      "calculations": {},
+      "dataValues": {
+        "ADIncrease": 0.15000000596046448
+      },
+      "desc": "<scaleAD>%@ADIncrease*100@ Sald\u0131r\u0131 G\u00fcc\u00fc</scaleAD> sa\u011flar.",
+      "iconLarge": "assets/ux/cherry/augments/icons/bluntforce_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/bluntforce_small.2v2_mode_fighters.png",
+      "id": 7,
+      "name": "Kaba Kuvvet",
+      "rarity": 0,
+      "tooltip": "<scaleAD>%@ADIncrease*100@ Sald\u0131r\u0131 G\u00fcc\u00fc</scaleAD> sa\u011flar."
+    },
+    {
+      "apiName": "VirtuousCycle",
+      "calculations": {},
+      "dataValues": {
+        "HealFromShieldPercentage": 0.20000000298023224,
+        "MinimumTrigger": 1.0,
+        "ShieldDuration": 5.0,
+        "ShieldFromHealPercentage": 0.20000000298023224
+      },
+      "desc": "Yapt\u0131\u011f\u0131n <healing>iyile\u015ftirmeler</healing> fazladan <shield>kalkan</shield>, sa\u011flad\u0131\u011f\u0131n <shield>kalkanlar</shield> da fazladan <healing>iyile\u015ftirme</healing> kazand\u0131r\u0131r.",
+      "iconLarge": "assets/ux/cherry/augments/icons/virtuouscycle_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/virtuouscycle_small.2v2_mode_fighters.png",
+      "id": 91,
+      "name": "Erdem D\u00f6ng\u00fcs\u00fc",
+      "rarity": 0,
+      "tooltip": "Yapt\u0131\u011f\u0131n <healing>iyile\u015ftirmeler</healing> fazladan <shield>%@ShieldFromHealPercentage*100@ Kalkan</shield>, sa\u011flad\u0131\u011f\u0131n <shield>kalkanlar</shield> da fazladan <healing>%@HealFromShieldPercentage@ \u0130yile\u015ftirme</healing> kazand\u0131r\u0131r.<br><br>Yap\u0131lan Toplam \u0130yile\u015ftirme: @f1@<br>Olu\u015fturulan Toplam Kalkan: @f2@"
+    },
+    {
+      "apiName": "ShrinkRay",
+      "calculations": {},
+      "dataValues": {
+        "DamageReduction": 0.15000000596046448
+      },
+      "desc": "Sald\u0131r\u0131lar\u0131n rakibinin hasar\u0131n\u0131 3 saniyeli\u011fine %@DamageReduction*100@ azalt\u0131r.",
+      "iconLarge": "assets/ux/cherry/augments/icons/shrinkray_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/shrinkray_small.2v2_mode_fighters.png",
+      "id": 74,
+      "name": "K\u00fc\u00e7\u00fcltme I\u015f\u0131n\u0131",
+      "rarity": 4,
+      "tooltip": "Sald\u0131r\u0131lar\u0131n rakibinin hasar\u0131n\u0131 3 saniyeli\u011fine %@DamageReduction*100@ azalt\u0131r.<br><br>Bu Tur Azalt\u0131lan Hasar: @f1@<br>Azalt\u0131lan Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "Castle",
+      "calculations": {},
+      "dataValues": {
+        "MSBuffAmount": 0.5,
+        "MSBuffDuration": 2.0
+      },
+      "desc": "<spellName>Rok</spellName> sihirdar b\u00fcy\u00fcs\u00fcn\u00fc kazan\u0131rs\u0131n.<br><br><rules><spellName>Rok</spellName>, tak\u0131m arkada\u015f\u0131nla yer de\u011fi\u015ftirmeni sa\u011flar.</rules>",
+      "iconLarge": "assets/ux/cherry/augments/icons/castle_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/castle_small.2v2_mode_fighters.png",
+      "id": 12,
+      "name": "Rok",
+      "rarity": 0,
+      "tooltip": "<spellName>Rok</spellName> sihirdar b\u00fcy\u00fcs\u00fcn\u00fc kazan\u0131rs\u0131n.<br><br><rules>Tak\u0131m arkada\u015f\u0131nla yer de\u011fi\u015ftirmeni sa\u011flar. Ard\u0131ndan @MSBuffDuration@ saniyeli\u011fine %@MSBuffAmount*100@ Hareket H\u0131z\u0131 kazan\u0131rs\u0131n.</rules>"
+    },
+    {
+      "apiName": "Executioner",
+      "calculations": {},
+      "dataValues": {
+        "BonusDamage": 0.15000000596046448,
+        "HealthThreshold": 0.5
+      },
+      "desc": "Can\u0131 %@HealthThreshold*100@ de\u011ferinin alt\u0131ndaki rakiplere %@BonusDamage*100@ daha fazla hasar verirsin. Alt etme halinde temel yeteneklerinin bekleme s\u00fcresi s\u0131f\u0131rlan\u0131r.",
+      "iconLarge": "assets/ux/cherry/augments/icons/executioner_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/executioner_small.2v2_mode_fighters.png",
+      "id": 32,
+      "name": "Cellat",
+      "rarity": 0,
+      "tooltip": "Can\u0131 %@HealthThreshold*100@ de\u011ferinin alt\u0131ndaki rakiplere %@BonusDamage*100@ daha fazla hasar verirsin. Alt etme halinde temel yeteneklerinin bekleme s\u00fcresi s\u0131f\u0131rlan\u0131r.<br><br>Bu Tur Verilen \u0130lave Hasar: @f1@<br>Toplam \u0130lave Hasar: @f2@"
+    },
+    {
+      "apiName": "CourageoftheColossus",
+      "calculations": {
+        "TotalShield": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "NamedDataValueCalculationPart",
+              "mDataValue": "ShieldBase"
+            },
+            {
+              "__type": "StatByNamedDataValueCalculationPart",
+              "mDataValue": "{5d235963}",
+              "mStat": 11
+            }
+          ],
+          "{37070a8d}": 4,
+          "{cbcac618}": 4,
+          "{e6eebb2f}": 4
+        }
+      },
+      "dataValues": {
+        "HealthScalar": 0.05999999865889549,
+        "ShieldBase": 200.0
+      },
+      "desc": "Bir rakip \u015fampiyonu <status>hareketsiz b\u0131rakt\u0131ktan</status> sonra azami can\u0131na ba\u011fl\u0131 olarak artan bir <shield>kalkan</shield> kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/courageofthecolossus_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/courageofthecolossus_small.2v2_mode_fighters.png",
+      "id": 18,
+      "name": "Heyulan\u0131n Cesareti",
+      "rarity": 8,
+      "tooltip": "Bir rakip \u015fampiyonu <status>hareketsiz b\u0131rakt\u0131ktan</status> sonra <shield>azami can\u0131n\u0131n @TotalShield@ kadar\u0131na e\u015fde\u011fer miktarda kalkan</shield> kazan\u0131rs\u0131n.<br><br>Bu Tur Olu\u015fturulan Kalkan: @f1@<br>Olu\u015fturulan Toplam Kalkan: @f2@"
+    },
+    {
+      "apiName": "InfernalSoul",
+      "calculations": {},
+      "dataValues": {},
+      "desc": "Yeteneklerin veya sald\u0131r\u0131lar\u0131ndan isabet alan rakiplere ilave hasar vermeni sa\u011flayan Alev Ruhu'nu kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/infernalsoul_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/infernalsoul_small.2v2_mode_fighters.png",
+      "id": 46,
+      "name": "Alev Ruhu",
+      "rarity": 0,
+      "tooltip": "Yeteneklerin veya sald\u0131r\u0131lar\u0131ndan isabet alan rakiplere ilave hasar vermeni sa\u011flayan Alev Ruhu'nu kazan\u0131rs\u0131n.<br><br>Bu Tur Verilen Hasar: @f1@<br>Verilen Toplam Hasar: @f2@"
+    },
+    {
+      "apiName": "ComboMaster",
+      "calculations": {
+        "Cooldown": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 10.0,
+              "mStartValue": 20.0
+            }
+          ]
+        },
+        "{4120d321}": {
+          "__type": "GameCalculation",
+          "mFormulaParts": [
+            {
+              "__type": "ByCharLevelInterpolationCalculationPart",
+              "mEndValue": 250.0,
+              "mStartValue": 50.0
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 0.44999998807907104,
+              "mStat": 2,
+              "mStatFormula": 2
+            },
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 0.30000001192092896
+            }
+          ]
+        }
+      },
+      "dataValues": {
+        "HasteBase": 0.20000000298023224,
+        "HasteBaseMelee": 0.30000001192092896,
+        "HasteDuration": 3.0,
+        "HasteMax": 0.6000000238418579,
+        "HasteMaxMelee": 0.6000000238418579,
+        "MaxBonusSeconds": 4.0,
+        "NumberToProc": 3.0,
+        "SlowResist": 0.75,
+        "WindowDuration": 4.0
+      },
+      "desc": "<spellName>Elektrik Ver</spellName> ve <spellName>S\u00fcrat Co\u015fkusu</spellName> anahtar r\u00fcnlerini kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/combomaster_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/combomaster_small.2v2_mode_fighters.png",
+      "id": 16,
+      "name": "Kombo Erbab\u0131",
+      "rarity": 4,
+      "tooltip": "<spellName>Elektrik Ver</spellName> ve <spellName>S\u00fcrat Co\u015fkusu</spellName> anahtar r\u00fcnlerini kazan\u0131rs\u0131n.<br><br>Elektrik Ver'in Bu Tur Verdi\u011fi Hasar: @f1@<br>Toplam Elektrik Ver Hasar\u0131: @f2@"
+    },
+    {
+      "apiName": "MindtoMatter",
+      "calculations": {},
+      "dataValues": {
+        "ManaToHealthConversion": 0.5
+      },
+      "desc": "<healing>Azami can\u0131n</healing> <scaleMana>manan\u0131n</scaleMana> yar\u0131s\u0131 kadar artar.",
+      "iconLarge": "assets/ux/cherry/augments/icons/mindtomatter_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/mindtomatter_small.2v2_mode_fighters.png",
+      "id": 56,
+      "name": "Zihinden Bedene",
+      "rarity": 0,
+      "tooltip": "<healing>Azami can\u0131n</healing> <scaleMana>manan\u0131n</scaleMana> yar\u0131s\u0131 kadar artar."
+    },
+    {
+      "apiName": "WisdomofAges",
+      "calculations": {},
+      "dataValues": {},
+      "desc": "Hemen 1 seviye atlars\u0131n ve her iki turda bir fazladan 1 seviye atlamaya devam edersin. Seviye s\u0131n\u0131r\u0131n kalkar.",
+      "iconLarge": "assets/ux/cherry/augments/icons/wisdomofages_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/wisdomofages_small.2v2_mode_fighters.png",
+      "id": 96,
+      "name": "As\u0131rl\u0131k Bilgi",
+      "rarity": 8,
+      "tooltip": "Hemen 1 seviye atlars\u0131n ve her iki turda bir fazladan 1 seviye atlamaya devam edersin. Seviye s\u0131n\u0131r\u0131n kalkar."
+    },
+    {
+      "apiName": "NowYouSeeMe",
+      "calculations": {},
+      "dataValues": {
+        "MSBuffAmount": 0.5,
+        "MSBuffDuration": 2.0
+      },
+      "desc": "<spellName>Hokkabaz</spellName> sihirdar b\u00fcy\u00fcs\u00fcn\u00fc kazan\u0131rs\u0131n.<br><br><rules><spellName>Hokkabaz</spellName>, son kulland\u0131\u011f\u0131n hareket yetene\u011finin ba\u015flang\u0131\u00e7 noktas\u0131na \u0131\u015f\u0131nlanman\u0131 sa\u011flar.</rules>",
+      "iconLarge": "assets/ux/cherry/augments/icons/houdini_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/houdini_small.2v2_mode_fighters.png",
+      "id": 43,
+      "name": "Hokkabaz",
+      "rarity": 0,
+      "tooltip": "<passive>Pasif:</passive> Bir hareket yetene\u011fi kulland\u0131\u011f\u0131nda ard\u0131nda bir i\u015faret b\u0131rak\u0131rs\u0131n.<br><br><active>Aktif:</active> B\u0131rakt\u0131\u011f\u0131n son i\u015farete geri d\u00f6nersin. Ard\u0131ndan @MSBuffDuration@ saniyeli\u011fine %@MSBuffAmount*100@ Hareket H\u0131z\u0131 kazan\u0131rs\u0131n."
+    },
+    {
+      "apiName": "Perseverance",
+      "calculations": {},
+      "dataValues": {
+        "AmpedHPThreshold": 0.25,
+        "AmpedRegen": 12.0,
+        "BaseRegen": 6.0
+      },
+      "desc": "Y\u00fcksek miktarda <healing>can yenilenmesi</healing> kazan\u0131rs\u0131n. Bu miktar, can\u0131n azald\u0131k\u00e7a daha da artar.",
+      "iconLarge": "assets/ux/cherry/augments/icons/perseverance_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/perseverance_small.2v2_mode_fighters.png",
+      "id": 64,
+      "name": "Metanet",
+      "rarity": 4,
+      "tooltip": "<healing>%@BaseRegen*100@ Taban Can Yenilenmesi</healing> kazan\u0131rs\u0131n. Bu miktar can\u0131n %25'in alt\u0131na d\u00fc\u015ft\u00fc\u011f\u00fcnde artarak <healing>%@AmpedRegen*100@ Taban Can Yenilenmesi</healing> olur.<br><br>Bu Tur Yap\u0131lan \u0130yile\u015ftirme: @f1@<br>Yap\u0131lan Toplam \u0130yile\u015ftirme: @f2@"
+    },
+    {
+      "apiName": "JeweledGauntlet",
+      "calculations": {
+        "{438db135}": {
+          "__type": "GameCalculation",
+          "mDisplayAsPercent": true,
+          "mFormulaParts": [
+            {
+              "__type": "StatByCoefficientCalculationPart",
+              "mCoefficient": 0.0005000000237487257
+            }
+          ]
+        }
+      },
+      "dataValues": {
+        "CritChance": 0.20000000298023224,
+        "CritDamage": 1.5
+      },
+      "desc": "Yeteneklerin kritik vuru\u015f yapabilir. Ayr\u0131ca %20 Kritik Vuru\u015f \u0130htimali kazan\u0131rs\u0131n.",
+      "iconLarge": "assets/ux/cherry/augments/icons/jeweledgauntlet_large.2v2_mode_fighters.png",
+      "iconSmall": "assets/ux/cherry/augments/icons/jeweledgauntlet_small.2v2_mode_fighters.png",
+      "id": 48,
+      "name": "M\u00fccevherli Eldiven",
+      "rarity": 8,
+      "tooltip": "Yeteneklerin kritik vuru\u015f yaparak toplamda %140 Hasar verebilir. Ayr\u0131ca %20 Kritik Vuru\u015f \u0130htimali kazan\u0131rs\u0131n. Yetenek g\u00fcc\u00fcne ba\u011fl\u0131 olarak artacak \u015fekilde fazladan @APToCritConversion@ Kritik Vuru\u015f \u0130htimali kazan\u0131rs\u0131n.<br><br>Bu Tur Verilen \u0130lave Hasar: @f1@<br>Verilen Toplam \u0130lave Hasar: @f2@"
+    }
+  ]
+}

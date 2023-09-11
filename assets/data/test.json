@@ -1,0 +1,30 @@
+[
+  {
+    "id": 8100,
+    "key": "Domination",
+    "icon": "perk-images/Styles/7200_Domination.png",
+    "name": "Hâkimiyet",
+    "slots": [
+      {
+        "runes": [
+          {
+            "id": 8112,
+            "key": "Electrocute",
+            "icon": "perk-images/Styles/Domination/Electrocute/Electrocute.png",
+            "name": "Elektrik Ver",
+            "shortDesc": "Bir şampiyona 3 saniye içerisinde 3 <b>farklı</b> saldırı veya yetenek isabet ettirmek, ilave <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>değişken hasar</lol-uikit-tooltipped-keyword> verir.",
+            "longDesc": "Bir şampiyona 3 saniye içerisinde 3 <b>farklı</b> saldırı veya yetenek isabet ettirmek ilave <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>değişken hasar</font></lol-uikit-tooltipped-keyword> verir.<br><br>Hasar: 30 ila 180 (+0.4 ilave SG, +0.25 YG).<br><br>Bekleme Süresi: 25 ila 20 sn.<br><br><hr><i>''Yıldırımların Efendisi derken başımıza geleceklerden haberimiz yoktu.''</i>"
+          },
+          {
+            "id": 8124,
+            "key": "Predator",
+            "icon": "perk-images/Styles/Domination/Predator/Predator.png",
+            "name": "Yırtıcı",
+            "shortDesc": "Çizmelerine büyük miktarda <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>HH</lol-uikit-tooltipped-keyword> artışı ve bir sonraki saldırı veya yeteneğinin ilave <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'>değişken hasar</lol-uikit-tooltipped-keyword> vermesini sağlayan bir aktif etki ekler.",
+            "longDesc": "Çizmelerini '<font color='#c60300'>Yırtıcı</font>' aktif etkisiyle efsunlar.<br><br>Hareket hızı artışı sağlar. Bu etki, rakip şampiyonları kovalarken 1 saniye içinde artarak en fazla %25 ila %50 olur. Artış tamamlandıktan sonra şampiyonlara hasar veren saldırı veya yetenekler bu etkiyi sonlandırır ve 20 ila 180 (+<scaleAD>0,25</scaleAD> İlave SG) (+<scaleAP>0,15</scaleAP> YG) İlave <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Değişken Hasar</font></lol-uikit-tooltipped-keyword> verir.<br><br>Bekleme Süresi: 120-60 sn."
+          }
+        ]
+      }
+    ]
+  }
+]

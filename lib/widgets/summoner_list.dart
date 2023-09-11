@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_json/model/summoner_model.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_json/cubit/summoner/summoner_cubit.dart';
 import 'package:flutter_json/services/lol_api.dart';
 import 'package:flutter_json/widgets/loading_widget.dart';
 import 'package:flutter_json/widgets/summoner_item.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../constants/constants.dart';
+import '../cubit/spell/spell_cubit.dart';
 
 class SummonerList extends StatefulWidget {
   const SummonerList({super.key});
@@ -13,37 +16,38 @@ class SummonerList extends StatefulWidget {
 }
 
 class _SummonerListState extends State<SummonerList> {
-  late Future<List<SummonerSpellModel>> __summonerListFuture;
+  LolApi dioClient = LolApi();
+  late SpellCubit spellCubit;
 
   @override
   void initState() {
     super.initState();
-    __summonerListFuture = LolApi.getSummonerSpellList();
+    spellCubit = BlocProvider.of<SpellCubit>(context);
+    spellCubit.getSpells(dioClient);
   }
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: __summonerListFuture,
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          List<SummonerSpellModel> myList = snapshot.data!;
+    return BlocBuilder<SpellCubit, SpellState>(
+      bloc: spellCubit,
+      builder: (context, state) {
+        if (state.status == Status.loading) {
+          return CustomLoadingWidget();
+        } else if (state.status == Status.loaded) {
           return GridView.builder(
+            padding: EdgeInsets.zero,
+            physics: BouncingScrollPhysics(),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount:
                     ScreenUtil().orientation == Orientation.portrait ? 4 : 8),
-            itemCount: myList.length - 2,
+            itemCount: state.spellList.length - 2,
             itemBuilder: (BuildContext context, int index) => SummonerItem(
-              spell: myList[index],
+              spell: state.spellList[index],
             ),
           );
-        } else if (snapshot.hasError) {
-          return const Center(
-            child: Text('Hata 404'),
-          );
         } else {
-          return Center(
-            child: CustomLoadingWidget(),
+          return const Center(
+            child: Text("404"),
           );
         }
       },

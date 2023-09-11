@@ -1,47 +1,116 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_json/model/tag_model.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Constants {
-  Constants._();
+enum Status {
+  initial,
+  loading,
+  loaded,
+  error,
+}
 
-  static const String championTitle = 'Şampiyonlar';
-  static const String summonerTitle = 'Sihirdar Büyüleri';
-  static const String runeTitle = 'Rünler';
-  static const String itemTitle = 'Eşyalar';
+List<String> hiddenItems = [
+  "Super Mech Armor",
+  "Super Mech Power Field",
+  "Structure Bounty",
+  "OvererchargedHA",
+  "Fortification",
+  "Vanguard",
+  "Penetrating Bullets",
+  "Reinforced Armor",
+  "Warden's Eye",
+  "Overcharged",
+  "Anti-tower Socks",
+  "Gusto",
+  "Phreakish Gusto",
+  "Turret Plating",
+  "Tower Power-Up",
+  "Gangplank Placeholder",
+  "<rarityLegendary>Fire at Will</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
+  "<rarityLegendary>Death's Daughter</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
+  "<rarityLegendary>Raise Morale</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>"
+];
+
+List<TagModel> tagList = [
+  TagModel(tag: "Armor", isCheck: false),
+  TagModel(tag: "SpellBlock", isCheck: false),
+  TagModel(tag: "LifeSteal", isCheck: false),
+  TagModel(tag: "CriticalStrike", isCheck: false),
+  TagModel(tag: "AttackSpeed", isCheck: false),
+  TagModel(tag: "Damage", isCheck: false),
+  TagModel(tag: "Mana", isCheck: false),
+  TagModel(tag: "SpellDamage", isCheck: false),
+  TagModel(tag: "CooldownReduction", isCheck: false),
+  TagModel(tag: "ManaRegen", isCheck: false),
+  TagModel(tag: "Boots", isCheck: false),
+  TagModel(tag: "NonbootsMovement", isCheck: false),
+  TagModel(tag: "HealthRegen", isCheck: false),
+  TagModel(tag: "Health", isCheck: false),
+  TagModel(tag: "Stealth", isCheck: false),
+  TagModel(tag: "Active", isCheck: false),
+  TagModel(tag: "MagicPenetration", isCheck: false),
+  TagModel(tag: "ArmorPenetration", isCheck: false),
+  TagModel(tag: "Aura", isCheck: false),
+  TagModel(tag: "OnHit", isCheck: false),
+  TagModel(tag: "Trinket", isCheck: false),
+  TagModel(tag: "Slow", isCheck: false),
+  TagModel(tag: "SpellVamp", isCheck: false),
+  TagModel(tag: "Tenacity", isCheck: false),
+  TagModel(tag: "Lane", isCheck: false),
+  TagModel(tag: "Jungle", isCheck: false),
+  TagModel(tag: "GoldPer", isCheck: false),
+  TagModel(tag: "Consumable", isCheck: false),
+  TagModel(tag: "Vision", isCheck: false),
+];
+
+class Constants {
+  static const String championTitle = 'Champions';
+  static const String summonerTitle = 'Summoner Spells';
+  static const String runeTitle = 'Runes';
+  static const String itemTitle = 'Items';
+  static const String tftTitle = "Teamfight Tactics";
+  static const String RGAPI = "RGAPI-83e3e64b-d417-4e40-aad2-fd8b2f173e8e";
 
   static TextStyle championTitleStyle() {
     return TextStyle(
         color: Colors.lime,
         fontWeight: FontWeight.bold,
-        fontSize: _calculateFontSize(48));
+        fontSize: _calculateFontSize(40));
+  }
+
+  static TextStyle tftTitleStyle() {
+    return TextStyle(
+        color: Colors.lime,
+        fontWeight: FontWeight.bold,
+        fontSize: _calculateFontSize(32));
   }
 
   static TextStyle itemTitleStyle() {
     return TextStyle(
         color: Colors.lime,
         fontWeight: FontWeight.bold,
-        fontSize: _calculateFontSize(48));
+        fontSize: _calculateFontSize(40));
   }
 
   static TextStyle summonerTitleStyle() {
     return TextStyle(
         color: Colors.lime,
         fontWeight: FontWeight.bold,
-        fontSize: _calculateFontSize(48));
+        fontSize: _calculateFontSize(40));
   }
 
   static TextStyle runeTitleStyle() {
     return TextStyle(
         color: Colors.lime,
         fontWeight: FontWeight.bold,
-        fontSize: _calculateFontSize(42));
+        fontSize: _calculateFontSize(32));
   }
 
   static TextStyle championNameStyle() {
     return TextStyle(
         color: Colors.lime,
         fontWeight: FontWeight.bold,
-        fontSize: _calculateFontSize(22));
+        fontSize: _calculateFontSize(20));
   }
 
   static TextStyle championSearchNameStyle() {

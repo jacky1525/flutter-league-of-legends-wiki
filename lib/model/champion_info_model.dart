@@ -238,15 +238,15 @@ class Spell {
   final String name;
   final String description;
   final String tooltip;
-  final Leveltip leveltip;
+  final Leveltip? leveltip;
   final int maxrank;
   final List<double> cooldown;
   final String cooldownBurn;
   final List<int> cost;
   final String costBurn;
   final Datavalues datavalues;
-  final List<List<double>> effect;
-  final List<String> effectBurn;
+  final List<List<dynamic>>? effect;
+  final List<String>? effectBurn;
   final List<dynamic> vars;
   final String costType;
   final String maxammo;
@@ -260,17 +260,25 @@ class Spell {
         name: json["name"],
         description: json["description"],
         tooltip: json["tooltip"],
-        leveltip: Leveltip.fromMap(json["leveltip"]),
+        leveltip: json["leveltip"] != null
+            ? Leveltip.fromMap(json["leveltip"])
+            : null,
         maxrank: json["maxrank"],
         cooldown: List<double>.from(json["cooldown"].map((x) => x.toDouble())),
         cooldownBurn: json["cooldownBurn"],
         cost: List<int>.from(json["cost"].map((x) => x)),
         costBurn: json["costBurn"],
         datavalues: Datavalues.fromMap(json["datavalues"]),
-        effect: List<List<double>>.from(json["effect"].map((x) =>
-            x == null ? null : List<double>.from(x.map((x) => x.toDouble())))),
-        effectBurn: List<String>.from(
-            json["effectBurn"].map((x) => x == null ? null : x)),
+        effect: json["effect"] != null
+            ? (json["effect"] as List<dynamic>?)
+                ?.map<List<dynamic>>(
+                    (x) => x != null ? (x as List<dynamic>?) ?? [] : [])
+                .toList()
+            : null,
+        effectBurn: json["effectBurn"] != null
+            ? List<String>.from(
+                json["effectBurn"].map((x) => x != null ? x.toString() : ''))
+            : null,
         vars: List<dynamic>.from(json["vars"].map((x) => x)),
         costType: json["costType"],
         maxammo: json["maxammo"],
@@ -285,17 +293,17 @@ class Spell {
         "name": name,
         "description": description,
         "tooltip": tooltip,
-        "leveltip": leveltip.toMap(),
+        "leveltip": leveltip?.toMap(),
         "maxrank": maxrank,
         "cooldown": List<dynamic>.from(cooldown.map((x) => x)),
         "cooldownBurn": cooldownBurn,
         "cost": List<dynamic>.from(cost.map((x) => x)),
         "costBurn": costBurn,
         "datavalues": datavalues.toMap(),
-        "effect": List<dynamic>.from(effect.map(
+        "effect": List<dynamic>.from(effect!.map(
             (x) => x == null ? null : List<dynamic>.from(x.map((x) => x)))),
         "effectBurn":
-            List<dynamic>.from(effectBurn.map((x) => x == null ? null : x)),
+            List<dynamic>.from(effectBurn!.map((x) => x == null ? null : x)),
         "vars": List<dynamic>.from(vars.map((x) => x)),
         "costType": costType,
         "maxammo": maxammo,

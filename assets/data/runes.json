@@ -105,7 +105,7 @@
             "icon": "perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png",
             "name": "Hazine Avcısı",
             "shortDesc": "<b>Farklı</b> rakipler ilk kez <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>alt edildiklerinde</lol-uikit-tooltipped-keyword> fazladan altın kazandırır. ",
-            "longDesc": "Bir dahaki sefere <i>Kelle Avcısı</i> yükü elde ettiğinde fazladan <gold>70 Altın</gold> kazanırsın. Her <i>Kelle Avcısı</i> yükü başına edinilen altın <gold>20</gold> artar. En fazla <gold>150 Altın</gold> olabilir.<br><br><i>Kelle Avcısı</i> yükleri her bir rakip şampiyonu ilk alt edişinde kazanılır."
+            "longDesc": "Bir dahaki sefere <i>Kelle Avcısı</i> yükü elde ettiğinde fazladan <gold>50 Altın</gold> kazanırsın. Her <i>Kelle Avcısı</i> yükü başına edinilen altın <gold>20</gold> artar. En fazla <gold>130 Altın</gold> olabilir.<br><br><i>Kelle Avcısı</i> yükleri her bir rakip şampiyonu ilk alt edişinde kazanılır."
           },
           {
             "id": 8134,
@@ -149,7 +149,7 @@
             "icon": "perk-images/Styles/Inspiration/GlacialAugment/GlacialAugment.png",
             "name": "Buzul Takviyesi",
             "shortDesc": "Bir rakip şampiyonu hareketsiz bırakmak yakındaki rakipleri yavaşlatan ve onların takım arkadaşlarına verdiği hasarı azaltan 3 buzul ışın ortaya çıkarır.",
-            "longDesc": "Bir rakip şampiyonu hareketsiz bırakmak o şampiyondan sana ve yakındaki diğer şampiyonlara doğru 3 buzul ışın çıkarır. Işınlar 3 (+ hareketsiz bırakma etkisinin süresinin %100 kadarı) saniyeliğine rakipleri %30 (+ her %10 İyileştirme ve Kalkan Gücü başına %9) (+ her 100 Yetenek Gücü başına %3) (+ her 100 İlave Saldırı Gücü başına %4) yavaşlatan ve (sen hariç) takım arkadaşlarına verdikleri hasarı %15 azaltan donmuş alanlar oluşturur. <br><br>Bekleme Süresi: 25 sn."
+            "longDesc": "Bir rakip şampiyonu hareketsiz bırakmak o şampiyondan sana ve yakındaki diğer şampiyonlara doğru 3 buzul ışın çıkarır. Işınlar 3 (+ hareketsiz bırakma etkisinin süresinin %100 kadarı) saniyeliğine rakipleri %20 (+ her %10 İyileştirme ve Kalkan Gücü başına %9) (+ her 100 Yetenek Gücü başına %6) (+ her 100 İlave Saldırı Gücü başına %7) yavaşlatan ve (sen hariç) takım arkadaşlarına verdikleri hasarı %15 azaltan donmuş alanlar oluşturur. <br><br>Bekleme Süresi: 25 sn."
           },
           {
             "id": 8360,
@@ -205,7 +205,7 @@
             "icon": "perk-images/Styles/Inspiration/FuturesMarket/FuturesMarket.png",
             "name": "Geleceğin Pazarı",
             "shortDesc": "Eşya almak için borca girebilirsin.",
-            "longDesc": "Eşya almak için borca girebilirsin. Alabileceğin borç miktarı zaman içinde artar.<br><br>Borç bedeli: 50 Altın"
+            "longDesc": "Eşya almak için borca girebilirsin. Alabileceğin borç miktarı zaman içinde artar. Borca girersen <attention>50</attention> Altınlık bir borç bedeli ödersin."
           },
           {
             "id": 8316,
@@ -277,7 +277,7 @@
             "icon": "perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
             "name": "Ölümcül Tempo",
             "shortDesc": "Bir rakip şampiyona saldırdığında en fazla 6 defa birikecek şekilde saldırı hızı kazanırsın. Azami yüke ulaştığında saldırı menzili kazanırsın ve saldırı hızı sınırın kaldırılır.",
-            "longDesc": "Bir rakip şampiyona saldırdığında 6 saniyeliğine %60 ila %90 (yakın dövüşçüler için) veya %30 ila %54 (menzilli şampiyonlar için) Saldırı Hızı kazanırsın. Bu etki en fazla 6 defa birikir.<br><br>Etki tam yüke ulaştığında saldırı hızın 2,5'i aşabilir ve 50 Saldırı Menzili kazanırsın."
+            "longDesc": "Bir rakip şampiyona saldırdığında 6 saniyeliğine %60 ila %90 (yakın dövüşçüler için) veya %24 ila %54 (menzilli şampiyonlar için) Saldırı Hızı kazanırsın. Bu etki en fazla 6 defa birikir.<br><br>Etki tam yüke ulaştığında saldırı hızın 2,5'i aşabilir ve 50 Saldırı Menzili kazanırsın."
           },
           {
             "id": 8021,
@@ -305,15 +305,15 @@
             "icon": "perk-images/Styles/Precision/Overheal.png",
             "name": "Şifa Taşkını",
             "shortDesc": "Aldığın fazlalık iyileştirme bir kalkana dönüşür.",
-            "longDesc": "Maruz kaldığın fazlalık iyileştirme, en fazla 10 <scaleHealth>(+%9 Azami Can)</scaleHealth> Hasar engelleyen bir kalkan oluşturur.<br><br>Kalkan, sen veya takım arkadaşların tarafından uygulanan fazlalık iyileştirmenin %20 ila %100 kadarından oluşur."
+            "longDesc": "Maruz kaldığın fazlalık iyileştirme, azami canının %11 kadarına eşdeğer miktarda kalkan oluşturur.<br><br>Kalkan, sen veya takım arkadaşların tarafından uygulanan fazlalık iyileştirmenin %20 ila %100 kadarından oluşur."
           },
           {
             "id": 9111,
             "key": "Triumph",
             "icon": "perk-images/Styles/Precision/Triumph.png",
             "name": "Zafer",
-            "shortDesc": "<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>Alt etmeler</lol-uikit-tooltipped-keyword> eksik canının %10 kadarını yeniler ve fazladan 20 Altın kazandırır.",
-            "longDesc": "Alt etmeler eksik canının %10 kadarını yeniler ve fazladan 20 Altın sağlar.<br><br><hr><br><i>''En büyük zafer en tehlikeli oyundan gelir.''<br>-Noxus Hesapçısı</i>"
+            "shortDesc": "<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>Alt etmeler</lol-uikit-tooltipped-keyword> eksik canının %5 kadarını yeniler ve fazladan 20 Altın kazandırır.",
+            "longDesc": "Alt etmeler eksik canının %5, azami canının %2.5 kadarını yeniler ve fazladan 20 Altın kazandırır. <br><br><hr><br><i>''En büyük zafer en tehlikeli oyundan gelir.''<br>-Noxus Hesapçısı</i>"
           },
           {
             "id": 8009,
@@ -349,7 +349,7 @@
             "icon": "perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png",
             "name": "Efsane: Kan",
             "shortDesc": "Rakipleri <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>alt etmek</lol-uikit-tooltipped-keyword> belli bir sınıra kadar kalıcı olarak <b>can çalma</b> sağlar. Bu sınıra ulaştığında azami canın artar. Diğer Efsane rünlerine kıyasla oyunun erken safhalarında daha zayıf, ileri safhalarındaysa daha güçlüdür.",
-            "longDesc": "Her <i>Efsane</i> yükü başına %0.4 Can Çalma kazanırsın (<statGood>en fazla 15 yük</statGood>). Azami <i>Efsane</i> yüküne ulaştığında 100 Azami Can kazanırsın.<br><br>Her şampiyon alt etme, destansı canavar alt etme, büyük canavar kesme ve minyon biçme <i>Efsane</i> yükü biriktirmede ilerleme sağlar."
+            "longDesc": "Her <i>Efsane</i> yükü başına <scaleAD>%0.35 Can Çalma</scaleAD> kazanırsın (<statGood>en fazla 15 yük</statGood>). Azami <i>Efsane</i> yüküne ulaştığında <scaleHealth>85 Azami Can</scaleHealth> kazanırsın.<br><br>Her şampiyon alt etme, destansı canavar alt etme, büyük canavar kesme ve minyon biçme <i>Efsane</i> yükü biriktirmede ilerleme sağlar."
           }
         ]
       },
@@ -397,7 +397,7 @@
             "icon": "perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
             "name": "Hortlağın Pençesi",
             "shortDesc": "Her 4 saniyede, bir şampiyona yönelik sonraki saldırın ilave büyü hasarı verir, seni iyileştirir ve kalıcı olarak can değerini arttırır.",
-            "longDesc": "Çatışmada olduğun her 4 saniye, bir şampiyona yönelik bir sonraki normal saldırın: <li>Azami can miktarının %3.5 kadarına eşdeğer ilave büyü hasarı verir</li><li>Seni azami can miktarının %1.7 kadarına eşdeğer miktarda iyileştirir</li><li>Can miktarını kalıcı olarak 5 arttırır</li><br><rules><i>Menzilli Şampiyonlar:</i> Hasar, iyileştirme ve kazanılan kalıcı can %40 azalır.</rules><br>"
+            "longDesc": "Çatışmada olduğun her 4 saniye, bir şampiyona yönelik sonraki normal saldırın:<li>Azami canının %3.5 kadarına eşdeğer miktarda ilave büyü hasarı verir.</li><li>Seni 3 (+ azami canının %1.2 kadarı) iyileştirir.</li><li>Canını kalıcı olarak 7 arttırır.</li><br><rules><i>Menzilli Şampiyonlar:</i> Hasar, iyileştirme ve kazanılan kalıcı can %40 azalır.</rules><br>"
           },
           {
             "id": 8439,
@@ -545,7 +545,7 @@
             "icon": "perk-images/Styles/Sorcery/NullifyingOrb/Pokeshield.png",
             "name": "Soğuran Küre",
             "shortDesc": "Büyü hasarıyla canın çok azaldığında büyü hasarına yönelik bir kalkan kazanırsın.",
-            "longDesc": "%30 Can miktarının altına düşmene neden olacak büyü hasarı aldığında 4 saniyeliğine, seviyene bağlı olarak 35 ila 110 büyü hasarı (<scaleAP>+0.09 YG</scaleAP> veya <scaleAD>+0.14 ilave SG</scaleAD>) engelleyen bir kalkan kazanırsın.<br><br>Bekleme süresi: 60 sn."
+            "longDesc": "Canını %30 değerinin altına düşürecek miktarda büyü hasarı aldığında seviyene bağlı olarak 4 saniyeliğine 35 ila 110 Büyü Hasarı (+%14 İlave Saldırı Gücü) + (%9 Yetenek Gücü) soğuran bir kalkan kazanırsın.<br><br>Bekleme Süresi: 60 sn."
           },
           {
             "id": 8226,

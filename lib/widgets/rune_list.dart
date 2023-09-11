@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_json/constants/constants.dart';
+import 'package:flutter_json/cubit/perk/perk_cubit.dart';
 import 'package:flutter_json/model/rune_model.dart';
 import 'package:flutter_json/services/lol_api.dart';
 import 'package:flutter_json/widgets/loading_widget.dart';
@@ -14,40 +17,44 @@ class RuneList extends StatefulWidget {
 }
 
 class _RuneListState extends State<RuneList> {
-  late Future<List<RuneModel>> __runeListFuture;
+  late PerkCubit perkCubit;
+  LolApi dioClient = LolApi();
 
   @override
   void initState() {
     super.initState();
-    __runeListFuture = LolApi.getRuneList();
+    perkCubit = BlocProvider.of<PerkCubit>(context);
   }
 
   @override
   Widget build(BuildContext context) {
-    var index;
-    return FutureBuilder(
-      future: __runeListFuture,
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
-        if (snapshot.hasData) {
-          List<RuneModel> myList = snapshot.data!;
+    //var index;
+    return BlocBuilder<PerkCubit, PerkState>(
+      bloc: perkCubit,
+      builder: (context, state) {
+        if (state.status == Status.loading) {
+          return CustomLoadingWidget();
+        } else if (state.status == Status.loaded) {
           return ScrollConfiguration(
-            behavior: ScrollBehavior(),
+            behavior: const ScrollBehavior(),
             child: GlowingOverscrollIndicator(
               axisDirection: AxisDirection.right,
               color: Colors.lime,
               child: SingleChildScrollView(
+                padding: EdgeInsets.zero,
                 scrollDirection: Axis.horizontal,
-                physics: const ClampingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 child: Row(
                   children: [
                     ListView.builder(
+                      padding: EdgeInsets.zero,
                       scrollDirection: Axis.horizontal,
                       physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
-                      itemCount: myList.length,
+                      itemCount: state.perkList.length,
                       itemBuilder: (BuildContext context, int index) =>
                           RuneItem(
-                        rune: myList[index],
+                        rune: state.perkList[index],
                         index: index,
                       ),
                     ),
@@ -56,13 +63,9 @@ class _RuneListState extends State<RuneList> {
               ),
             ),
           );
-        } else if (snapshot.hasError) {
+        } else {
           return const Center(
             child: Text('Hata 404'),
-          );
-        } else {
-          return  Center(
-            child: CustomLoadingWidget(),
           );
         }
       },

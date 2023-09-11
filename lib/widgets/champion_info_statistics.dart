@@ -27,7 +27,7 @@ class ChampionInfoStatistics extends StatelessWidget {
           children: [
             Column(
               children: [
-                const Text("Can"),
+                const Text("hp"),
                 const SizedBox(
                   height: 3,
                 ),
@@ -40,7 +40,7 @@ class ChampionInfoStatistics extends StatelessWidget {
             ),
             Column(
               children: [
-                const Text("Can Yenileme"),
+                const Text("hpregen"),
                 const SizedBox(
                   height: 3,
                 ),
@@ -53,7 +53,7 @@ class ChampionInfoStatistics extends StatelessWidget {
             ),
             Column(
               children: [
-                const Text("Mana"),
+                const Text("mp"),
                 const SizedBox(
                   height: 3,
                 ),
@@ -74,7 +74,7 @@ class ChampionInfoStatistics extends StatelessWidget {
           children: [
             Column(
               children: [
-                const Text("Mana Yenileme"),
+                const Text("mpregen"),
                 const SizedBox(
                   height: 3,
                 ),
@@ -87,7 +87,7 @@ class ChampionInfoStatistics extends StatelessWidget {
             ),
             Column(
               children: [
-                const Text("Menzil"),
+                const Text("attackrange"),
                 const SizedBox(
                   height: 3,
                 ),
@@ -100,7 +100,7 @@ class ChampionInfoStatistics extends StatelessWidget {
             ),
             Column(
               children: [
-                const Text("Saldırı Hasarı"),
+                const Text("attackdamage"),
                 const SizedBox(
                   height: 3,
                 ),
@@ -121,7 +121,7 @@ class ChampionInfoStatistics extends StatelessWidget {
           children: [
             Column(
               children: [
-                const Text("Saldırı Hızı"),
+                const Text("attackspeed"),
                 const SizedBox(
                   height: 3,
                 ),
@@ -134,7 +134,7 @@ class ChampionInfoStatistics extends StatelessWidget {
             ),
             Column(
               children: [
-                const Text("Zırh"),
+                const Text("armor"),
                 const SizedBox(
                   height: 3,
                 ),
@@ -147,12 +147,12 @@ class ChampionInfoStatistics extends StatelessWidget {
             ),
             Column(
               children: [
-                const Text("Büyü Direnci"),
+                const Text("spellblock"),
                 const SizedBox(
                   height: 3,
                 ),
                 Text(
-                  "${championInfo.stats.values.elementAt(7).toInt()} - ${championInfo.stats.values.elementAt(8) * 17 + championInfo.stats.values.elementAt(7)}",
+                  "${championInfo.stats.values.elementAt(7).toInt()} - ${championInfo.stats.values.elementAt(8).toInt() * 17 + championInfo.stats.values.elementAt(7).toInt()}",
                   style: const TextStyle(
                       fontWeight: FontWeight.bold, fontSize: 16),
                 ),
@@ -165,7 +165,7 @@ class ChampionInfoStatistics extends StatelessWidget {
         ),
         Column(
           children: [
-            const Text("Hareket Hızı"),
+            const Text("movespeed"),
             const SizedBox(
               height: 3,
             ),

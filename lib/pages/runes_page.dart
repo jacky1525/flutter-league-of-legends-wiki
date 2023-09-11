@@ -17,11 +17,12 @@ class _RunePageState extends State<RunePage> {
   @override
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Column(
-        children: const [
+        children: [
           AppTitleRune(),
           Expanded(
+            flex: 7,
             child: RuneList(),
           ),
         ],

@@ -17,6 +17,8 @@ class ChampionItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      splashColor: Colors.lime,
+      highlightColor: Colors.transparent,
       onTap: () {
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => ChampionSearchList(
