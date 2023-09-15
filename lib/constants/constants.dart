@@ -69,7 +69,7 @@ class Constants {
   static const String runeTitle = 'Runes';
   static const String itemTitle = 'Items';
   static const String tftTitle = "Teamfight Tactics";
-  static const String RGAPI = "RGAPI-83e3e64b-d417-4e40-aad2-fd8b2f173e8e";
+  static const String RGAPI = "";
 
   static TextStyle championTitleStyle() {
     return TextStyle(
