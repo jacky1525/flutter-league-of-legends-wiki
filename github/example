@@ -1,0 +1,842 @@
+// To parse this JSON data, do
+//
+//     final matchModel = matchModelFromMap(jsonString);
+
+import 'package:meta/meta.dart';
+import 'dart:convert';
+
+MatchModel matchModelFromMap(String str) => MatchModel.fromMap(json.decode(str));
+
+String matchModelToMap(MatchModel data) => json.encode(data.toMap());
+
+class MatchModel {
+    final Metadata metadata;
+    final Info info;
+
+    MatchModel({
+        required this.metadata,
+        required this.info,
+    });
+
+    factory MatchModel.fromMap(Map<String, dynamic> json) => MatchModel(
+        metadata: Metadata.fromMap(json["metadata"]),
+        info: Info.fromMap(json["info"]),
+    );
+
+    Map<String, dynamic> toMap() => {
+        "metadata": metadata.toMap(),
+        "info": info.toMap(),
+    };
+}
+
+class Info {
+    final int gameCreation;
+    final int gameDuration;
+    final int gameEndTimestamp;
+    final int gameId;
+    final String gameMode;
+    final String gameName;
+    final int gameStartTimestamp;
+    final String gameType;
+    final String gameVersion;
+    final int mapId;
+    final List<Participant> participants;
+    final String platformId;
+    final int queueId;
+    final List<Team> teams;
+    final String tournamentCode;
+
+    Info({
+        required this.gameCreation,
+        required this.gameDuration,
+        required this.gameEndTimestamp,
+        required this.gameId,
+        required this.gameMode,
+        required this.gameName,
+        required this.gameStartTimestamp,
+        required this.gameType,
+        required this.gameVersion,
+        required this.mapId,
+        required this.participants,
+        required this.platformId,
+        required this.queueId,
+        required this.teams,
+        required this.tournamentCode,
+    });
+
+    factory Info.fromMap(Map<String, dynamic> json) => Info(
+        gameCreation: json["gameCreation"],
+        gameDuration: json["gameDuration"],
+        gameEndTimestamp: json["gameEndTimestamp"],
+        gameId: json["gameId"],
+        gameMode: json["gameMode"],
+        gameName: json["gameName"],
+        gameStartTimestamp: json["gameStartTimestamp"],
+        gameType: json["gameType"],
+        gameVersion: json["gameVersion"],
+        mapId: json["mapId"],
+        participants: List<Participant>.from(json["participants"].map((x) => Participant.fromMap(x))),
+        platformId: json["platformId"],
+        queueId: json["queueId"],
+        teams: List<Team>.from(json["teams"].map((x) => Team.fromMap(x))),
+        tournamentCode: json["tournamentCode"],
+    );
+
+    Map<String, dynamic> toMap() => {
+        "gameCreation": gameCreation,
+        "gameDuration": gameDuration,
+        "gameEndTimestamp": gameEndTimestamp,
+        "gameId": gameId,
+        "gameMode": gameMode,
+        "gameName": gameName,
+        "gameStartTimestamp": gameStartTimestamp,
+        "gameType": gameType,
+        "gameVersion": gameVersion,
+        "mapId": mapId,
+        "participants": List<dynamic>.from(participants.map((x) => x.toMap())),
+        "platformId": platformId,
+        "queueId": queueId,
+        "teams": List<dynamic>.from(teams.map((x) => x.toMap())),
+        "tournamentCode": tournamentCode,
+    };
+}
+
+class Participant {
+    final int allInPings;
+    final int assistMePings;
+    final int assists;
+    final int baitPings;
+    final int baronKills;
+    final int basicPings;
+    final int bountyLevel;
+    final Map<String, double> challenges;
+    final int champExperience;
+    final int champLevel;
+    final int championId;
+    final String championName;
+    final int championTransform;
+    final int commandPings;
+    final int consumablesPurchased;
+    final int damageDealtToBuildings;
+    final int damageDealtToObjectives;
+    final int damageDealtToTurrets;
+    final int damageSelfMitigated;
+    final int dangerPings;
+    final int deaths;
+    final int detectorWardsPlaced;
+    final int doubleKills;
+    final int dragonKills;
+    final bool eligibleForProgression;
+    final int enemyMissingPings;
+    final int enemyVisionPings;
+    final bool firstBloodAssist;
+    final bool firstBloodKill;
+    final bool firstTowerAssist;
+    final bool firstTowerKill;
+    final bool gameEndedInEarlySurrender;
+    final bool gameEndedInSurrender;
+    final int getBackPings;
+    final int goldEarned;
+    final int goldSpent;
+    final int holdPings;
+    final String individualPosition;
+    final int inhibitorKills;
+    final int inhibitorTakedowns;
+    final int inhibitorsLost;
+    final int item0;
+    final int item1;
+    final int item2;
+    final int item3;
+    final int item4;
+    final int item5;
+    final int item6;
+    final int itemsPurchased;
+    final int killingSprees;
+    final int kills;
+    final String lane;
+    final int largestCriticalStrike;
+    final int largestKillingSpree;
+    final int largestMultiKill;
+    final int longestTimeSpentLiving;
+    final int magicDamageDealt;
+    final int magicDamageDealtToChampions;
+    final int magicDamageTaken;
+    final int needVisionPings;
+    final int neutralMinionsKilled;
+    final int nexusKills;
+    final int nexusLost;
+    final int nexusTakedowns;
+    final int objectivesStolen;
+    final int objectivesStolenAssists;
+    final int onMyWayPings;
+    final int participantId;
+    final int pentaKills;
+    final Perks perks;
+    final int physicalDamageDealt;
+    final int physicalDamageDealtToChampions;
+    final int physicalDamageTaken;
+    final int placement;
+    final int playerAugment1;
+    final int playerAugment2;
+    final int playerAugment3;
+    final int playerAugment4;
+    final int playerSubteamId;
+    final int profileIcon;
+    final int pushPings;
+    final String puuid;
+    final int quadraKills;
+    final String riotIdName;
+    final String riotIdTagline;
+    final String role;
+    final int sightWardsBoughtInGame;
+    final int spell1Casts;
+    final int spell2Casts;
+    final int spell3Casts;
+    final int spell4Casts;
+    final int subteamPlacement;
+    final int summoner1Casts;
+    final int summoner1Id;
+    final int summoner2Casts;
+    final int summoner2Id;
+    final String summonerId;
+    final int summonerLevel;
+    final String summonerName;
+    final bool teamEarlySurrendered;
+    final int teamId;
+    final String teamPosition;
+    final int timeCCingOthers;
+    final int timePlayed;
+    final int totalAllyJungleMinionsKilled;
+    final int totalDamageDealt;
+    final int totalDamageDealtToChampions;
+    final int totalDamageShieldedOnTeammates;
+    final int totalDamageTaken;
+    final int totalEnemyJungleMinionsKilled;
+    final int totalHeal;
+    final int totalHealsOnTeammates;
+    final int totalMinionsKilled;
+    final int totalTimeCcDealt;
+    final int totalTimeSpentDead;
+    final int totalUnitsHealed;
+    final int tripleKills;
+    final int trueDamageDealt;
+    final int trueDamageDealtToChampions;
+    final int trueDamageTaken;
+    final int turretKills;
+    final int turretTakedowns;
+    final int turretsLost;
+    final int unrealKills;
+    final int visionClearedPings;
+    final int visionScore;
+    final int visionWardsBoughtInGame;
+    final int wardsKilled;
+    final int wardsPlaced;
+    final bool win;
+
+    Participant({
+        required this.allInPings,
+        required this.assistMePings,
+        required this.assists,
+        required this.baitPings,
+        required this.baronKills,
+        required this.basicPings,
+        required this.bountyLevel,
+        required this.challenges,
+        required this.champExperience,
+        required this.champLevel,
+        required this.championId,
+        required this.championName,
+        required this.championTransform,
+        required this.commandPings,
+        required this.consumablesPurchased,
+        required this.damageDealtToBuildings,
+        required this.damageDealtToObjectives,
+        required this.damageDealtToTurrets,
+        required this.damageSelfMitigated,
+        required this.dangerPings,
+        required this.deaths,
+        required this.detectorWardsPlaced,
+        required this.doubleKills,
+        required this.dragonKills,
+        required this.eligibleForProgression,
+        required this.enemyMissingPings,
+        required this.enemyVisionPings,
+        required this.firstBloodAssist,
+        required this.firstBloodKill,
+        required this.firstTowerAssist,
+        required this.firstTowerKill,
+        required this.gameEndedInEarlySurrender,
+        required this.gameEndedInSurrender,
+        required this.getBackPings,
+        required this.goldEarned,
+        required this.goldSpent,
+        required this.holdPings,
+        required this.individualPosition,
+        required this.inhibitorKills,
+        required this.inhibitorTakedowns,
+        required this.inhibitorsLost,
+        required this.item0,
+        required this.item1,
+        required this.item2,
+        required this.item3,
+        required this.item4,
+        required this.item5,
+        required this.item6,
+        required this.itemsPurchased,
+        required this.killingSprees,
+        required this.kills,
+        required this.lane,
+        required this.largestCriticalStrike,
+        required this.largestKillingSpree,
+        required this.largestMultiKill,
+        required this.longestTimeSpentLiving,
+        required this.magicDamageDealt,
+        required this.magicDamageDealtToChampions,
+        required this.magicDamageTaken,
+        required this.needVisionPings,
+        required this.neutralMinionsKilled,
+        required this.nexusKills,
+        required this.nexusLost,
+        required this.nexusTakedowns,
+        required this.objectivesStolen,
+        required this.objectivesStolenAssists,
+        required this.onMyWayPings,
+        required this.participantId,
+        required this.pentaKills,
+        required this.perks,
+        required this.physicalDamageDealt,
+        required this.physicalDamageDealtToChampions,
+        required this.physicalDamageTaken,
+        required this.placement,
+        required this.playerAugment1,
+        required this.playerAugment2,
+        required this.playerAugment3,
+        required this.playerAugment4,
+        required this.playerSubteamId,
+        required this.profileIcon,
+        required this.pushPings,
+        required this.puuid,
+        required this.quadraKills,
+        required this.riotIdName,
+        required this.riotIdTagline,
+        required this.role,
+        required this.sightWardsBoughtInGame,
+        required this.spell1Casts,
+        required this.spell2Casts,
+        required this.spell3Casts,
+        required this.spell4Casts,
+        required this.subteamPlacement,
+        required this.summoner1Casts,
+        required this.summoner1Id,
+        required this.summoner2Casts,
+        required this.summoner2Id,
+        required this.summonerId,
+        required this.summonerLevel,
+        required this.summonerName,
+        required this.teamEarlySurrendered,
+        required this.teamId,
+        required this.teamPosition,
+        required this.timeCCingOthers,
+        required this.timePlayed,
+        required this.totalAllyJungleMinionsKilled,
+        required this.totalDamageDealt,
+        required this.totalDamageDealtToChampions,
+        required this.totalDamageShieldedOnTeammates,
+        required this.totalDamageTaken,
+        required this.totalEnemyJungleMinionsKilled,
+        required this.totalHeal,
+        required this.totalHealsOnTeammates,
+        required this.totalMinionsKilled,
+        required this.totalTimeCcDealt,
+        required this.totalTimeSpentDead,
+        required this.totalUnitsHealed,
+        required this.tripleKills,
+        required this.trueDamageDealt,
+        required this.trueDamageDealtToChampions,
+        required this.trueDamageTaken,
+        required this.turretKills,
+        required this.turretTakedowns,
+        required this.turretsLost,
+        required this.unrealKills,
+        required this.visionClearedPings,
+        required this.visionScore,
+        required this.visionWardsBoughtInGame,
+        required this.wardsKilled,
+        required this.wardsPlaced,
+        required this.win,
+    });
+
+    factory Participant.fromMap(Map<String, dynamic> json) => Participant(
+        allInPings: json["allInPings"],
+        assistMePings: json["assistMePings"],
+        assists: json["assists"],
+        baitPings: json["baitPings"],
+        baronKills: json["baronKills"],
+        basicPings: json["basicPings"],
+        bountyLevel: json["bountyLevel"],
+        challenges: Map.from(json["challenges"]).map((k, v) => MapEntry<String, double>(k, v?.toDouble())),
+        champExperience: json["champExperience"],
+        champLevel: json["champLevel"],
+        championId: json["championId"],
+        championName: json["championName"],
+        championTransform: json["championTransform"],
+        commandPings: json["commandPings"],
+        consumablesPurchased: json["consumablesPurchased"],
+        damageDealtToBuildings: json["damageDealtToBuildings"],
+        damageDealtToObjectives: json["damageDealtToObjectives"],
+        damageDealtToTurrets: json["damageDealtToTurrets"],
+        damageSelfMitigated: json["damageSelfMitigated"],
+        dangerPings: json["dangerPings"],
+        deaths: json["deaths"],
+        detectorWardsPlaced: json["detectorWardsPlaced"],
+        doubleKills: json["doubleKills"],
+        dragonKills: json["dragonKills"],
+        eligibleForProgression: json["eligibleForProgression"],
+        enemyMissingPings: json["enemyMissingPings"],
+        enemyVisionPings: json["enemyVisionPings"],
+        firstBloodAssist: json["firstBloodAssist"],
+        firstBloodKill: json["firstBloodKill"],
+        firstTowerAssist: json["firstTowerAssist"],
+        firstTowerKill: json["firstTowerKill"],
+        gameEndedInEarlySurrender: json["gameEndedInEarlySurrender"],
+        gameEndedInSurrender: json["gameEndedInSurrender"],
+        getBackPings: json["getBackPings"],
+        goldEarned: json["goldEarned"],
+        goldSpent: json["goldSpent"],
+        holdPings: json["holdPings"],
+        individualPosition: json["individualPosition"],
+        inhibitorKills: json["inhibitorKills"],
+        inhibitorTakedowns: json["inhibitorTakedowns"],
+        inhibitorsLost: json["inhibitorsLost"],
+        item0: json["item0"],
+        item1: json["item1"],
+        item2: json["item2"],
+        item3: json["item3"],
+        item4: json["item4"],
+        item5: json["item5"],
+        item6: json["item6"],
+        itemsPurchased: json["itemsPurchased"],
+        killingSprees: json["killingSprees"],
+        kills: json["kills"],
+        lane: json["lane"],
+        largestCriticalStrike: json["largestCriticalStrike"],
+        largestKillingSpree: json["largestKillingSpree"],
+        largestMultiKill: json["largestMultiKill"],
+        longestTimeSpentLiving: json["longestTimeSpentLiving"],
+        magicDamageDealt: json["magicDamageDealt"],
+        magicDamageDealtToChampions: json["magicDamageDealtToChampions"],
+        magicDamageTaken: json["magicDamageTaken"],
+        needVisionPings: json["needVisionPings"],
+        neutralMinionsKilled: json["neutralMinionsKilled"],
+        nexusKills: json["nexusKills"],
+        nexusLost: json["nexusLost"],
+        nexusTakedowns: json["nexusTakedowns"],
+        objectivesStolen: json["objectivesStolen"],
+        objectivesStolenAssists: json["objectivesStolenAssists"],
+        onMyWayPings: json["onMyWayPings"],
+        participantId: json["participantId"],
+        pentaKills: json["pentaKills"],
+        perks: Perks.fromMap(json["perks"]),
+        physicalDamageDealt: json["physicalDamageDealt"],
+        physicalDamageDealtToChampions: json["physicalDamageDealtToChampions"],
+        physicalDamageTaken: json["physicalDamageTaken"],
+        placement: json["placement"],
+        playerAugment1: json["playerAugment1"],
+        playerAugment2: json["playerAugment2"],
+        playerAugment3: json["playerAugment3"],
+        playerAugment4: json["playerAugment4"],
+        playerSubteamId: json["playerSubteamId"],
+        profileIcon: json["profileIcon"],
+        pushPings: json["pushPings"],
+        puuid: json["puuid"],
+        quadraKills: json["quadraKills"],
+        riotIdName: json["riotIdName"],
+        riotIdTagline: json["riotIdTagline"],
+        role: json["role"],
+        sightWardsBoughtInGame: json["sightWardsBoughtInGame"],
+        spell1Casts: json["spell1Casts"],
+        spell2Casts: json["spell2Casts"],
+        spell3Casts: json["spell3Casts"],
+        spell4Casts: json["spell4Casts"],
+        subteamPlacement: json["subteamPlacement"],
+        summoner1Casts: json["summoner1Casts"],
+        summoner1Id: json["summoner1Id"],
+        summoner2Casts: json["summoner2Casts"],
+        summoner2Id: json["summoner2Id"],
+        summonerId: json["summonerId"],
+        summonerLevel: json["summonerLevel"],
+        summonerName: json["summonerName"],
+        teamEarlySurrendered: json["teamEarlySurrendered"],
+        teamId: json["teamId"],
+        teamPosition: json["teamPosition"],
+        timeCCingOthers: json["timeCCingOthers"],
+        timePlayed: json["timePlayed"],
+        totalAllyJungleMinionsKilled: json["totalAllyJungleMinionsKilled"],
+        totalDamageDealt: json["totalDamageDealt"],
+        totalDamageDealtToChampions: json["totalDamageDealtToChampions"],
+        totalDamageShieldedOnTeammates: json["totalDamageShieldedOnTeammates"],
+        totalDamageTaken: json["totalDamageTaken"],
+        totalEnemyJungleMinionsKilled: json["totalEnemyJungleMinionsKilled"],
+        totalHeal: json["totalHeal"],
+        totalHealsOnTeammates: json["totalHealsOnTeammates"],
+        totalMinionsKilled: json["totalMinionsKilled"],
+        totalTimeCcDealt: json["totalTimeCCDealt"],
+        totalTimeSpentDead: json["totalTimeSpentDead"],
+        totalUnitsHealed: json["totalUnitsHealed"],
+        tripleKills: json["tripleKills"],
+        trueDamageDealt: json["trueDamageDealt"],
+        trueDamageDealtToChampions: json["trueDamageDealtToChampions"],
+        trueDamageTaken: json["trueDamageTaken"],
+        turretKills: json["turretKills"],
+        turretTakedowns: json["turretTakedowns"],
+        turretsLost: json["turretsLost"],
+        unrealKills: json["unrealKills"],
+        visionClearedPings: json["visionClearedPings"],
+        visionScore: json["visionScore"],
+        visionWardsBoughtInGame: json["visionWardsBoughtInGame"],
+        wardsKilled: json["wardsKilled"],
+        wardsPlaced: json["wardsPlaced"],
+        win: json["win"],
+    );
+
+    Map<String, dynamic> toMap() => {
+        "allInPings": allInPings,
+        "assistMePings": assistMePings,
+        "assists": assists,
+        "baitPings": baitPings,
+        "baronKills": baronKills,
+        "basicPings": basicPings,
+        "bountyLevel": bountyLevel,
+        "challenges": Map.from(challenges).map((k, v) => MapEntry<String, dynamic>(k, v)),
+        "champExperience": champExperience,
+        "champLevel": champLevel,
+        "championId": championId,
+        "championName": championName,
+        "championTransform": championTransform,
+        "commandPings": commandPings,
+        "consumablesPurchased": consumablesPurchased,
+        "damageDealtToBuildings": damageDealtToBuildings,
+        "damageDealtToObjectives": damageDealtToObjectives,
+        "damageDealtToTurrets": damageDealtToTurrets,
+        "damageSelfMitigated": damageSelfMitigated,
+        "dangerPings": dangerPings,
+        "deaths": deaths,
+        "detectorWardsPlaced": detectorWardsPlaced,
+        "doubleKills": doubleKills,
+        "dragonKills": dragonKills,
+        "eligibleForProgression": eligibleForProgression,
+        "enemyMissingPings": enemyMissingPings,
+        "enemyVisionPings": enemyVisionPings,
+        "firstBloodAssist": firstBloodAssist,
+        "firstBloodKill": firstBloodKill,
+        "firstTowerAssist": firstTowerAssist,
+        "firstTowerKill": firstTowerKill,
+        "gameEndedInEarlySurrender": gameEndedInEarlySurrender,
+        "gameEndedInSurrender": gameEndedInSurrender,
+        "getBackPings": getBackPings,
+        "goldEarned": goldEarned,
+        "goldSpent": goldSpent,
+        "holdPings": holdPings,
+        "individualPosition": individualPosition,
+        "inhibitorKills": inhibitorKills,
+        "inhibitorTakedowns": inhibitorTakedowns,
+        "inhibitorsLost": inhibitorsLost,
+        "item0": item0,
+        "item1": item1,
+        "item2": item2,
+        "item3": item3,
+        "item4": item4,
+        "item5": item5,
+        "item6": item6,
+        "itemsPurchased": itemsPurchased,
+        "killingSprees": killingSprees,
+        "kills": kills,
+        "lane": lane,
+        "largestCriticalStrike": largestCriticalStrike,
+        "largestKillingSpree": largestKillingSpree,
+        "largestMultiKill": largestMultiKill,
+        "longestTimeSpentLiving": longestTimeSpentLiving,
+        "magicDamageDealt": magicDamageDealt,
+        "magicDamageDealtToChampions": magicDamageDealtToChampions,
+        "magicDamageTaken": magicDamageTaken,
+        "needVisionPings": needVisionPings,
+        "neutralMinionsKilled": neutralMinionsKilled,
+        "nexusKills": nexusKills,
+        "nexusLost": nexusLost,
+        "nexusTakedowns": nexusTakedowns,
+        "objectivesStolen": objectivesStolen,
+        "objectivesStolenAssists": objectivesStolenAssists,
+        "onMyWayPings": onMyWayPings,
+        "participantId": participantId,
+        "pentaKills": pentaKills,
+        "perks": perks.toMap(),
+        "physicalDamageDealt": physicalDamageDealt,
+        "physicalDamageDealtToChampions": physicalDamageDealtToChampions,
+        "physicalDamageTaken": physicalDamageTaken,
+        "placement": placement,
+        "playerAugment1": playerAugment1,
+        "playerAugment2": playerAugment2,
+        "playerAugment3": playerAugment3,
+        "playerAugment4": playerAugment4,
+        "playerSubteamId": playerSubteamId,
+        "profileIcon": profileIcon,
+        "pushPings": pushPings,
+        "puuid": puuid,
+        "quadraKills": quadraKills,
+        "riotIdName": riotIdName,
+        "riotIdTagline": riotIdTagline,
+        "role": role,
+        "sightWardsBoughtInGame": sightWardsBoughtInGame,
+        "spell1Casts": spell1Casts,
+        "spell2Casts": spell2Casts,
+        "spell3Casts": spell3Casts,
+        "spell4Casts": spell4Casts,
+        "subteamPlacement": subteamPlacement,
+        "summoner1Casts": summoner1Casts,
+        "summoner1Id": summoner1Id,
+        "summoner2Casts": summoner2Casts,
+        "summoner2Id": summoner2Id,
+        "summonerId": summonerId,
+        "summonerLevel": summonerLevel,
+        "summonerName": summonerName,
+        "teamEarlySurrendered": teamEarlySurrendered,
+        "teamId": teamId,
+        "teamPosition": teamPosition,
+        "timeCCingOthers": timeCCingOthers,
+        "timePlayed": timePlayed,
+        "totalAllyJungleMinionsKilled": totalAllyJungleMinionsKilled,
+        "totalDamageDealt": totalDamageDealt,
+        "totalDamageDealtToChampions": totalDamageDealtToChampions,
+        "totalDamageShieldedOnTeammates": totalDamageShieldedOnTeammates,
+        "totalDamageTaken": totalDamageTaken,
+        "totalEnemyJungleMinionsKilled": totalEnemyJungleMinionsKilled,
+        "totalHeal": totalHeal,
+        "totalHealsOnTeammates": totalHealsOnTeammates,
+        "totalMinionsKilled": totalMinionsKilled,
+        "totalTimeCCDealt": totalTimeCcDealt,
+        "totalTimeSpentDead": totalTimeSpentDead,
+        "totalUnitsHealed": totalUnitsHealed,
+        "tripleKills": tripleKills,
+        "trueDamageDealt": trueDamageDealt,
+        "trueDamageDealtToChampions": trueDamageDealtToChampions,
+        "trueDamageTaken": trueDamageTaken,
+        "turretKills": turretKills,
+        "turretTakedowns": turretTakedowns,
+        "turretsLost": turretsLost,
+        "unrealKills": unrealKills,
+        "visionClearedPings": visionClearedPings,
+        "visionScore": visionScore,
+        "visionWardsBoughtInGame": visionWardsBoughtInGame,
+        "wardsKilled": wardsKilled,
+        "wardsPlaced": wardsPlaced,
+        "win": win,
+    };
+}
+
+class Perks {
+    final StatPerks statPerks;
+    final List<Style> styles;
+
+    Perks({
+        required this.statPerks,
+        required this.styles,
+    });
+
+    factory Perks.fromMap(Map<String, dynamic> json) => Perks(
+        statPerks: StatPerks.fromMap(json["statPerks"]),
+        styles: List<Style>.from(json["styles"].map((x) => Style.fromMap(x))),
+    );
+
+    Map<String, dynamic> toMap() => {
+        "statPerks": statPerks.toMap(),
+        "styles": List<dynamic>.from(styles.map((x) => x.toMap())),
+    };
+}
+
+class StatPerks {
+    final int defense;
+    final int flex;
+    final int offense;
+
+    StatPerks({
+        required this.defense,
+        required this.flex,
+        required this.offense,
+    });
+
+    factory StatPerks.fromMap(Map<String, dynamic> json) => StatPerks(
+        defense: json["defense"],
+        flex: json["flex"],
+        offense: json["offense"],
+    );
+
+    Map<String, dynamic> toMap() => {
+        "defense": defense,
+        "flex": flex,
+        "offense": offense,
+    };
+}
+
+class Style {
+    final String description;
+    final List<Selection> selections;
+    final int style;
+
+    Style({
+        required this.description,
+        required this.selections,
+        required this.style,
+    });
+
+    factory Style.fromMap(Map<String, dynamic> json) => Style(
+        description: json["description"],
+        selections: List<Selection>.from(json["selections"].map((x) => Selection.fromMap(x))),
+        style: json["style"],
+    );
+
+    Map<String, dynamic> toMap() => {
+        "description": description,
+        "selections": List<dynamic>.from(selections.map((x) => x.toMap())),
+        "style": style,
+    };
+}
+
+class Selection {
+    final int perk;
+    final int var1;
+    final int var2;
+    final int var3;
+
+    Selection({
+        required this.perk,
+        required this.var1,
+        required this.var2,
+        required this.var3,
+    });
+
+    factory Selection.fromMap(Map<String, dynamic> json) => Selection(
+        perk: json["perk"],
+        var1: json["var1"],
+        var2: json["var2"],
+        var3: json["var3"],
+    );
+
+    Map<String, dynamic> toMap() => {
+        "perk": perk,
+        "var1": var1,
+        "var2": var2,
+        "var3": var3,
+    };
+}
+
+class Team {
+    final List<dynamic> bans;
+    final Objectives objectives;
+    final int teamId;
+    final bool win;
+
+    Team({
+        required this.bans,
+        required this.objectives,
+        required this.teamId,
+        required this.win,
+    });
+
+    factory Team.fromMap(Map<String, dynamic> json) => Team(
+        bans: List<dynamic>.from(json["bans"].map((x) => x)),
+        objectives: Objectives.fromMap(json["objectives"]),
+        teamId: json["teamId"],
+        win: json["win"],
+    );
+
+    Map<String, dynamic> toMap() => {
+        "bans": List<dynamic>.from(bans.map((x) => x)),
+        "objectives": objectives.toMap(),
+        "teamId": teamId,
+        "win": win,
+    };
+}
+
+class Objectives {
+    final Baron baron;
+    final Baron champion;
+    final Baron dragon;
+    final Baron horde;
+    final Baron inhibitor;
+    final Baron riftHerald;
+    final Baron tower;
+
+    Objectives({
+        required this.baron,
+        required this.champion,
+        required this.dragon,
+        required this.horde,
+        required this.inhibitor,
+        required this.riftHerald,
+        required this.tower,
+    });
+
+    factory Objectives.fromMap(Map<String, dynamic> json) => Objectives(
+        baron: Baron.fromMap(json["baron"]),
+        champion: Baron.fromMap(json["champion"]),
+        dragon: Baron.fromMap(json["dragon"]),
+        horde: Baron.fromMap(json["horde"]),
+        inhibitor: Baron.fromMap(json["inhibitor"]),
+        riftHerald: Baron.fromMap(json["riftHerald"]),
+        tower: Baron.fromMap(json["tower"]),
+    );
+
+    Map<String, dynamic> toMap() => {
+        "baron": baron.toMap(),
+        "champion": champion.toMap(),
+        "dragon": dragon.toMap(),
+        "horde": horde.toMap(),
+        "inhibitor": inhibitor.toMap(),
+        "riftHerald": riftHerald.toMap(),
+        "tower": tower.toMap(),
+    };
+}
+
+class Baron {
+    final bool first;
+    final int kills;
+
+    Baron({
+        required this.first,
+        required this.kills,
+    });
+
+    factory Baron.fromMap(Map<String, dynamic> json) => Baron(
+        first: json["first"],
+        kills: json["kills"],
+    );
+
+    Map<String, dynamic> toMap() => {
+        "first": first,
+        "kills": kills,
+    };
+}
+
+class Metadata {
+    final String dataVersion;
+    final String matchId;
+    final List<String> participants;
+
+    Metadata({
+        required this.dataVersion,
+        required this.matchId,
+        required this.participants,
+    });
+
+    factory Metadata.fromMap(Map<String, dynamic> json) => Metadata(
+        dataVersion: json["dataVersion"],
+        matchId: json["matchId"],
+        participants: List<String>.from(json["participants"].map((x) => x)),
+    );
+
+    Map<String, dynamic> toMap() => {
+        "dataVersion": dataVersion,
+        "matchId": matchId,
+        "participants": List<dynamic>.from(participants.map((x) => x)),
+    };
+}
